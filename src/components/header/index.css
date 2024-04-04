@@ -1,0 +1,152 @@
+/* // $slimeColor: #14ee0c; */
+.main_drip_container {
+  position: absolute;
+  top: 87px;
+  left: 0;
+  height: 300px;
+  width: 100%;
+  margin: 0px;
+
+  overflow: hidden;
+  display: grid;
+  grid-auto-columns: 1fr;
+  grid-auto-flow: column;
+  z-index: 99;
+}
+.crazy_drip_container {
+  position: absolute;
+  top: 87px;
+  left: 0;
+  height: 60%;
+  width: 100%;
+  margin: 0px;
+
+  overflow: hidden;
+  display: grid;
+  grid-auto-flow: column;
+}
+.main_drop_container {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  top: 87px;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  z-index: 99;
+}
+.drip-xs {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  animation: drip-effect ease-in-out 10s infinite;
+  height: 20%;
+  animation-delay: 0s;
+}
+.drip-small {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  animation: drip-effect ease-in-out 10s infinite;
+  height: 20%;
+  animation-delay: 2s;
+}
+.drip-medium {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  animation: drip-effect ease-in-out 10s infinite;
+  height: 20%;
+  animation-delay: 5s;
+}
+.drip-big {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  animation: drip-effect ease-in-out 10s infinite;
+  height: 20%;
+  animation-delay: 7s;
+}
+#base_rect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+@keyframes drip-effect {
+  0% {
+    height: 20%;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 20%;
+  }
+}
+.drop_container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: 100px;
+  height: 100%;
+  overflow: hidden;
+}
+.drop-xs {
+  width: 1px;
+  height: 1px;
+  animation: drop-effect 10s infinite;
+
+  animation-delay: 0s;
+}
+.drop-small {
+  width: 1px;
+  height: 1px;
+  animation: drop-effect 10s infinite;
+
+  animation-delay: 2s;
+}
+.drop-medium {
+  width: 1px;
+  height: 1px;
+  animation: drop-effect 10s infinite;
+
+  animation-delay: 5s;
+}
+.drop-big {
+  width: 1px;
+  height: 1px;
+  animation: drop-effect 10s infinite;
+
+  animation-delay: 7s;
+}
+@keyframes drop-effect {
+  0%,
+  50% {
+    width: 1px;
+    height: 1px;
+
+    transform: translateY(0px);
+  }
+  51% {
+    width: 100px;
+    height: 100px;
+  }
+  70% {
+    width: 200px;
+    height: 200px;
+  }
+  100% {
+    width: 200px;
+    height: 200px;
+    transform: translateY(900%);
+  }
+}
+@media only screen and (min-device-width: 300px) and (max-device-width: 812px) {
+  .drop-xs {
+    display: none;
+  }
+}

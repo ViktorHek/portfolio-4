@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  background-color: rgb(10, 30, 50);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  padding-top: 100px;
+}
+
+.app-container {
+  background-color: rgb(213, 213, 213);
+  border: 2px solid black;
+  max-width: 800px;
+  max-height: 700px;
+  padding: 2px;
+}
+
+.mini-app-container {
+  background-color: rgb(213, 213, 213);
+  border: 2px solid black;
+  max-width: 300px;
+  max-height: 30px;
+  padding: 2px;
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+}
+
+.app-inner-container {
+  max-width: 100%;
+  max-height: 100%;
+  background-color: grey;
+  border: 1px solid black;
+  /* padding: 2px; */
+}
+
+.btn {
+  height: 26px;
+  width: 26px;
+  background-color: #7b7e79;
+  border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-right: 2px solid rgb(105, 106, 104);
+  border-bottom: 2px solid rgb(105, 106, 104);
+  border-top: 2px solid #c1d2b5;
+  border-left: 2px solid #c1d2b5;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.btn-dropdown {
+  justify-content: space-between;
+  width: 45px;
+  padding: 0px 5px;
+  align-items: center;
+  height: 26px;
+  transition: height 0.3s ease;
+}
+
+.btn-dropdown-open {
+  height: 100px;
+  justify-content: flex-end;
+  width: 45px;
+  padding: 0px 5px;
+  align-items: center;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.btn-dropdown .arrow-down {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(45deg);
+  height: 6px;
+  width: 6px;
+  transition: 0.3s;
+}
+
+.btn-dropdown-open .arrow-down {
+  border-right: 2px solid black;
+  border-bottom: 2px solid black;
+  transform: rotate(225deg);
+  height: 6px;
+  width: 6px;
+  transition: 0.3s;
+}
+
+.dropdown-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+}
+
+.dropdown-list > span {
+  width: 15px;
+  height: 15px;
+  padding: 2px;
+  border-radius: 5px;
+}
+
+.dropdown-list > span:hover {
+  background-color: aquamarine;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: rgb(86, 85, 85);
+  border-right: 2px solid rgb(57, 56, 56);
+  border-bottom: 2px solid rgb(57, 56, 56);
+  border-left: 2px solid rgb(114, 111, 111);
+  border-top: 2px solid rgb(114, 111, 111);
+}
+.btn-active {
+  color: rgb(10, 69, 69);
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-right: 2px solid rgb(39, 85, 111);
+  border-bottom: 2px solid rgb(39, 85, 111);
+  border-left: 2px solid rgb(21, 132, 197);
+  border-top: 2px solid rgb(21, 132, 197);
+  transition: 0.4s ease-out;
+}
+.btn-active:hover {
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  border-right: 2px solid rgb(39, 85, 111);
+  border-bottom: 2px solid rgb(39, 85, 111);
+  border-left: 2px solid rgb(21, 132, 197);
+  border-top: 2px solid rgb(21, 132, 197);
+}
+
+.btn-dropdown-open:hover {
+  background-color: #7c7e7a;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: grey;
+
+  flex-direction: column;
+  margin: 2px;
+}
+
+.editor {
+  min-height: 20px;
+  max-height: 100%;
+  width: 400px;
+  background-color: whitesmoke;
+  cursor: text;
+}
+
+.editor > span {
+  word-wrap: break-word;
+  display: flex;
+  flex-flow: wrap;
+  max-width: 100%;
+}
+.editor > span > span {
+  word-wrap: break-word;
+  display: flex;
+  flex-flow: wrap;
+  max-width: 100%;
+}
+/* .editor > span > span > p::selection {
+  background-color: #42ecf1;
+}
+.editor > span > span > p {
+  border-right: 1px solid whitesmoke;
+  height: 16px;
+  margin-right: 1px;
+  overflow: visible;
+} */
+
+.editor > span > span > p {
+  margin-right: 1px;
+  
+}
+
+/* .editor-letter-focus {
+  min-height: 20px;
+  max-height: 100%;
+  width: 400px;
+  background-color: whitesmoke;
+  cursor: text;
+} */
+/* .editor-letter-focus > span {
+  word-wrap: break-word;
+  display: flex;
+  flex-flow: wrap;
+  max-width: 100%;
+}
+.editor-letter-focus > span > span {
+  word-wrap: break-word;
+  display: flex;
+  flex-flow: wrap;
+  max-width: 100%;
+} */
+/* .editor-letter-focus > span > span > p {
+  border-right: 1px solid whitesmoke;
+  height: 16px;
+}
+.editor-letter-focus > span > span > p::selection {
+  background-color: #42ecf1;
+} */
+
+.placeholder {
+  margin-right: 0px;
+  height: 16px;
+  border-right: 1px solid transparent;
+  animation: blink-animation 1.5s infinite;
+  -webkit-animation: blink-animation 1.5s infinite;
+}
+/* .editor-active > span > span > .focus-letter {
+  animation: blink-animation 1.5s infinite;
+  -webkit-animation: blink-animation 1.5s infinite;
+}
+.editor-last-focus > span > span > .focus-letter {
+  animation: blink-animation 1.5s infinite;
+  -webkit-animation: blink-animation 1.5s infinite;
+} */
+
+.editor-backgrond {
+  height: 300px;
+  width: 400px;
+  overflow: scroll;
+  padding: 4px;
+  background-color: whitesmoke;
+  border: 1px solid whitesmoke;
+}
+
+.editor-backgrond-active {
+  border: 1px solid rgb(175, 184, 225);
+  box-shadow: -3px 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes blink-animation {
+  0% {
+    border-right: 1px solid transparent;
+  }
+  50% {
+    border-right: 1px solid black;
+  }
+  100% {
+    border-right: 1px solid transparent;
+  }
+}
+@-webkit-keyframes blink-animation {
+  0% {
+    border-right: 1px solid transparent;
+  }
+  50% {
+    border-right: 1px solid black;
+  }
+  100% {
+    border-right: 1px solid transparent;
+  }
+}
