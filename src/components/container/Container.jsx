@@ -1,52 +1,36 @@
-import { useState, useEffect } from "react";
 import "./index.css";
 
-function Container() {
-  const [isClosed, setIsClosed] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
-  const shit = "Hello. To interact with the site, close this";
-  
-  // const [text, setText] = useState("");
-  // let index = 0;
-  // useEffect(() => {
-  //   writeText();
-  // }, []);
 
-  // function writeText() {
-  //   let min = 5;
-  //   let max = 10;
-  //   var rand = Math.floor(Math.random() * (max - min + 1) + min); //Generate Random number between 5 - 10
-  //   index = index + 1
-  //   setText(shit.slice(0,index))
-  //   if(text.length > shit.length) {
-  //     setTimeout(writeText, rand * 100);
-  //   }
-  // }
+function Container(props) {
+
+  const { clickMin, clickClose, title, text, isMinimized } = props;
 
   return (
     <>
       {isMinimized ? (
-        <div className="mini-app-container" style={{ display: isClosed ? "none" : "block" }}>
+        <div className="mini-app-container">
+          {/* <div className="mini-app-container" style={{ display: isClosed ? "none" : "block" }}> */}
           <div className="header-container">
-            <div className="header-min-btn btn" onClick={() => setIsMinimized(!isMinimized)}>
+            <div className="header-min-btn btn" onClick={() => clickMin()}>
               <span></span>
             </div>
-            <span className="header-text">TinyHans</span>
-            <div className="header-close-btn btn" onClick={() => setIsClosed(!isClosed)}>
+            <span className="header-text">{title}</span>
+            <div className="header-close-btn btn" onClick={() => clickClose()}>
               <span></span>
               <span></span>
             </div>
           </div>
         </div>
       ) : (
-        <div className="app-container" style={{ display: isClosed ? "none" : "block" }}>
+        <div className="app-container">
+          {/* <div className="app-container" style={{ display: isClosed ? "none" : "block" }}> */}
           <div className="app-inner-container">
             <div className="header-container">
-              <div className="header-min-btn btn" onClick={() => setIsMinimized(!isMinimized)}>
+              <div className="header-min-btn btn" onClick={() => clickMin()}>
                 <span></span>
               </div>
-              <span className="header-text">TinyHans</span>
-              <div className="header-close-btn btn" onClick={() => setIsClosed(!isClosed)}>
+              <span className="header-text">{title}</span>
+              <div className="header-close-btn btn" onClick={() => clickClose()}>
                 <span></span>
                 <span></span>
               </div>
@@ -55,7 +39,7 @@ function Container() {
             <div className="box">
               <div className="editor-backgrond">
                 <div className="editor">
-                  <p style={{ animation: `typing 5s steps(${shit.length})` }}>{shit}</p>
+                  <p>{text}</p>
                 </div>
               </div>
             </div>

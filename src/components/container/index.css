@@ -253,7 +253,7 @@
   font-size: 1.4em;
   margin: 0px 5px;
 }
-
+/* 
 .editor > p {
   width: 100%;
 white-space: nowrap;
@@ -262,4 +262,4 @@ overflow: hidden;
 
 @keyframes typing {
   from {width: 0;}
-}
+} */
