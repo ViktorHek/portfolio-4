@@ -17,21 +17,20 @@ function App() {
     left: "auto",
     right: "auto",
   };
+  const initCon = {
+    title: "Welcome!",
+    text: `<h1>Viktor Karlsson</h1><p>för att</p>`,
+    isMinimized: false,
+    pos: { ...basePos, top: 200, left: 200 },
+    id: 1337,
+  };
 
-  const [isMinimized, setIsMinimized] = useState(false);
-  const [isOpen, setIsOpen] = useState(true);
   const [atBottom, setAtBottom] = useState(false);
-  const [text, setText] = useState("text");
-  const [title, setTitle] = useState("title");
-  const [conPos, setConPos] = useState({
-    ...basePos,
-    top: 200,
-    left: 200,
-  });
+  const [conList, setConList] = useState([initCon]);
 
   useEffect(() => {
     const onscroll = () => {
-      setAtBottom(document.body.scrollHeight === window.scrollY + window.innerHeight)
+      setAtBottom(document.body.scrollHeight === window.scrollY + window.innerHeight);
     };
     window.addEventListener("scroll", onscroll);
     return () => {
@@ -48,44 +47,94 @@ function App() {
       bottom: atBottom ? 50 : "auto",
       right: toWide ? window.innerWidth - event.clientX : "auto",
     };
-    setConPos(obj);
-    if (!isOpen) {
-      setIsOpen(!isOpen);
+    let isClosed = conList
+      .map((el) => {return el.id})
+      .includes(id);
+    if (!isClosed) {
+      let arr = conList;
+      arr.push({ title: "ny", text: "ny", isMinimized: false, pos: obj, id: id });
     }
+  }
+
+  function minimized(id) {
+    let arr = conList;
+    console.log({ arr });
+    arr.forEach((el) => {
+      if (el.id === id) {
+        el.isMinimized = !el.isMinimized;
+      }
+    });
+    setConList([]);
+    setConList(arr);
+    console.log({ arr });
+    console.log({ conList });
+  }
+
+  function removeCon(id) {
+    console.log({ id });
+    let arr = [];
+    conList.forEach((el) => {
+      if (el.id !== id) {
+        arr.push(el);
+      }
+    });
+    setConList(arr);
+    console.log({ arr });
+    console.log({ conList });
   }
 
   return (
     <div className="App" style={{ width: "100%" }}>
+      <div
+        style={{
+          position: "absolute",
+          height: 100,
+          top: 0,
+          left: 0,
+          width: "70%",
+          display: "flex",
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "space-evenly",
+        }}>
+        <p style={{ fontSize: "2em", color: "#68f0fb", whiteSpace: "nowrap" }}>
+          Viktor Karlsson === Front End Developer
+        </p>
+      </div>
       <Header />
       <div className="bg-container">
         <SmallBg clickBg={clickBg} />
       </div>
-      {/* <wusiwygEditor /> */}
-      {isOpen ? (
-        <div
-          style={
-            isMinimized
-              ? {
-                  position: "fixed",
-                  bottom: 0,
-                  right: 0,
-                  zIndex: 10000,
-                  width: "100%",
-                  display: "flex",
-                  flexDirection: "row-reverse",
+      {conList.length
+        ? conList.map((con) => {
+            return (
+              <div
+                style={
+                  con.isMinimized
+                    ? {
+                        position: "fixed",
+                        bottom: 0,
+                        right: 0,
+                        zIndex: 10000,
+                        width: "100%",
+                        display: "flex",
+                        flexDirection: "row-reverse",
+                      }
+                    : con.pos
                 }
-              : conPos
-          }
-          id="containercontainer">
-          <Container
-            clickMin={() => setIsMinimized(!isMinimized)}
-            clickClose={() => setIsOpen(!isOpen)}
-            title={title}
-            text={text}
-            isMinimized={isMinimized}
-          />
-        </div>
-      ) : null}
+                id={con.id}>
+                <Container
+                  clickMin={minimized}
+                  clickClose={removeCon}
+                  title={con.title}
+                  text={con.text}
+                  isMinimized={con.isMinimized}
+                  id={con.id}
+                />
+              </div>
+            );
+          })
+        : null}
     </div>
   );
 }
