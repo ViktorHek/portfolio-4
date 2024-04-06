@@ -8,19 +8,15 @@ import Container from "./components/container/Container";
 
 function App() {
   const basePos = {
-    position: "fixed",
+    position: "absolute",
     zIndex: 10000,
     maxWidth: "500px",
     maxHeight: "500px",
-
-    top: "50%",
+    top: "auto",
     bottom: "auto",
-    left: "50%",
+    left: "auto",
     right: "auto",
-
-    transform: "translate(-50%, -50%)",
   };
-
 
   const [isMinimized, setIsMinimized] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
@@ -28,12 +24,9 @@ function App() {
   const [text, setText] = useState("text");
   const [title, setTitle] = useState("title");
   const [conPos, setConPos] = useState({
-    position: "absolute",
+    ...basePos,
     top: 200,
     left: 200,
-    zIndex: 10000,
-    maxWidth: "500px",
-    maxHeight: "500px",
   });
 
   useEffect(() => {
@@ -41,9 +34,9 @@ function App() {
       const scrolledTo = window.scrollY + window.innerHeight;
       const isReachBottom = document.body.scrollHeight === scrolledTo;
       if (isReachBottom) {
-        setAtBottom(true)
+        setAtBottom(true);
       } else {
-        setAtBottom(false)
+        setAtBottom(false);
       }
     };
     window.addEventListener("scroll", onscroll);
@@ -51,7 +44,6 @@ function App() {
       window.removeEventListener("scroll", onscroll);
     };
   }, []);
-
 
   function clickBg(event, id) {
     let toWide = event.clientX > 600;
