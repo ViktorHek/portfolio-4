@@ -31,13 +31,7 @@ function App() {
 
   useEffect(() => {
     const onscroll = () => {
-      const scrolledTo = window.scrollY + window.innerHeight;
-      const isReachBottom = document.body.scrollHeight === scrolledTo;
-      if (isReachBottom) {
-        setAtBottom(true);
-      } else {
-        setAtBottom(false);
-      }
+      setAtBottom(document.body.scrollHeight === window.scrollY + window.innerHeight)
     };
     window.addEventListener("scroll", onscroll);
     return () => {
