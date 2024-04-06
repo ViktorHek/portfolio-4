@@ -12,9 +12,10 @@
   max-width: 300px;
   max-height: 30px;
   padding: 2px;
-  position: absolute;
+  margin-left: 2px;
+  /* position: absolute;
   bottom: 1px;
-  right: 1px;
+  right: 1px; */
 }
 
 .app-inner-container {
@@ -150,7 +151,6 @@
 }
 
 .editor > p {
-
 }
 
 .placeholder {

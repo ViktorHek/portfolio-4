@@ -19,13 +19,19 @@ function App() {
   };
   const initCon = {
     title: "Welcome!",
-    text: `<h1>Viktor Karlsson</h1><p>för att</p>`,
+    text: (
+      <div className="dd">
+        <h1>tjo</h1>
+        <p>bajs</p>
+      </div>
+    ),
     isMinimized: false,
     pos: { ...basePos, top: 200, left: 200 },
     id: 1337,
   };
 
   const [atBottom, setAtBottom] = useState(false);
+  const [uppdate, setUpdate] = useState(false);
   const [conList, setConList] = useState([initCon]);
 
   useEffect(() => {
@@ -48,11 +54,26 @@ function App() {
       right: toWide ? window.innerWidth - event.clientX : "auto",
     };
     let isClosed = conList
-      .map((el) => {return el.id})
+      .map((el) => {
+        return el.id;
+      })
       .includes(id);
     if (!isClosed) {
       let arr = conList;
-      arr.push({ title: "ny", text: "ny", isMinimized: false, pos: obj, id: id });
+      arr.push({
+        title: "ny",
+        text: (
+          <div className="dd">
+            <h1>tjo</h1>
+            <p>bajs</p>
+          </div>
+        ),
+        isMinimized: false,
+        pos: obj,
+        id: id,
+      });
+      setConList(arr);
+      setUpdate(!uppdate);
     }
   }
 
@@ -64,10 +85,8 @@ function App() {
         el.isMinimized = !el.isMinimized;
       }
     });
-    setConList([]);
     setConList(arr);
-    console.log({ arr });
-    console.log({ conList });
+    setUpdate(!uppdate);
   }
 
   function removeCon(id) {
@@ -107,34 +126,63 @@ function App() {
       </div>
       {conList.length
         ? conList.map((con) => {
-            return (
-              <div
-                style={
-                  con.isMinimized
-                    ? {
-                        position: "fixed",
-                        bottom: 0,
-                        right: 0,
-                        zIndex: 10000,
-                        width: "100%",
-                        display: "flex",
-                        flexDirection: "row-reverse",
-                      }
-                    : con.pos
-                }
-                id={con.id}>
-                <Container
-                  clickMin={minimized}
-                  clickClose={removeCon}
-                  title={con.title}
-                  text={con.text}
-                  isMinimized={con.isMinimized}
-                  id={con.id}
-                />
-              </div>
-            );
+            if (!con.isMinimized) {
+              return (
+                <div style={con.pos} id={con.id}>
+                  <Container
+                    clickMin={minimized}
+                    clickClose={removeCon}
+                    title={con.title}
+                    text={con.text}
+                    isMinimized={con.isMinimized}
+                    id={con.id}
+                  />
+                </div>
+              );
+            }
           })
         : null}
+      {conList.length ? (
+        <div
+          style={{
+            position: "fixed",
+            bottom: 0,
+            right: 0,
+            display: "flex",
+            flexDirection: "row-reverse",
+            width: "100%",
+            zIndex: 99999,
+          }}>
+          {conList.map((con) => {
+            if (con.isMinimized) {
+              return (
+                <div
+                  style={
+                    {
+                      // position: "fixed",
+                      // bottom: 0,
+                      // right: 0,
+                      // zIndex: 10000,
+                      // width: "100%",
+                      // display: "flex",
+                      // flexDirection: "row-reverse",
+                    }
+                  }
+                  id={con.id}>
+                  <Container
+                    clickMin={minimized}
+                    clickClose={removeCon}
+                    title={con.title}
+                    text={con.text}
+                    isMinimized={con.isMinimized}
+                    id={con.id}
+                  />
+                </div>
+              );
+            }
+          })}
+        </div>
+      ) : null}
     </div>
   );
 }
