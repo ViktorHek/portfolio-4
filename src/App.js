@@ -43,6 +43,16 @@ function App() {
       window.removeEventListener("scroll", onscroll);
     };
   }, []);
+  useEffect(() => {
+    window.addEventListener("click", checkClick);
+    return () => {
+      window.removeEventListener("click", checkClick);
+    };
+  }, []);
+
+  function checkClick(event) {
+    console.log({ event });
+  }
 
   function clickBg(event, id) {
     let toWide = event.clientX > 600;
@@ -90,7 +100,6 @@ function App() {
   }
 
   function removeCon(id) {
-    console.log({ id });
     let arr = [];
     conList.forEach((el) => {
       if (el.id !== id) {
@@ -98,12 +107,38 @@ function App() {
       }
     });
     setConList(arr);
-    console.log({ arr });
-    console.log({ conList });
+  }
+
+  function startDrag(event) {
+    var style = window.getComputedStyle(event.target, null);
+    var str =
+      parseInt(style.getPropertyValue("left")) -
+      event.clientX +
+      "," +
+      (parseInt(style.getPropertyValue("top")) - event.clientY) +
+      "," +
+      event.target.id;
+    event.dataTransfer.setData("Text", str);
+  }
+
+  function drop(event) {
+    var offset = event.dataTransfer.getData("Text").split(",");
+    var dm = document.getElementById(offset[2]);
+    dm.style.left = event.clientX + parseInt(offset[0], 10) + "px";
+    dm.style.top = event.clientY + parseInt(offset[1], 10) + "px";
+    dm.style.bottom = "auto";
+    dm.style.right = "auto";
+    event.preventDefault();
+    return false;
+  }
+
+  function dragOver(event) {
+    event.preventDefault();
+    return false;
   }
 
   return (
-    <div className="App" style={{ width: "100%" }}>
+    <div className="App" style={{ width: "100%" }} onDragOver={dragOver} onDrop={drop}>
       <div
         style={{
           position: "absolute",
@@ -128,16 +163,16 @@ function App() {
         ? conList.map((con) => {
             if (!con.isMinimized) {
               return (
-                <div style={con.pos} id={con.id}>
-                  <Container
-                    clickMin={minimized}
-                    clickClose={removeCon}
-                    title={con.title}
-                    text={con.text}
-                    isMinimized={con.isMinimized}
-                    id={con.id}
-                  />
-                </div>
+                <Container
+                  clickMin={minimized}
+                  clickClose={removeCon}
+                  title={con.title}
+                  text={con.text}
+                  isMinimized={con.isMinimized}
+                  id={con.id}
+                  style={con.pos}
+                  startDrag={startDrag}
+                />
               );
             }
           })
