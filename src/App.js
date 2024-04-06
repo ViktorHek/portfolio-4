@@ -71,7 +71,7 @@ function App() {
     if (!isClosed) {
       let arr = conList;
       arr.push({
-        title: "ny",
+        title: "Work Experience",
         text: (
           <div className="dd">
             <h1>tjo</h1>
@@ -145,14 +145,15 @@ function App() {
           height: 100,
           top: 0,
           left: 0,
-          width: "70%",
+          width: "50%",
           display: "flex",
-          flexDirection: "row",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent: "space-evenly",
         }}>
-        <p style={{ fontSize: "2em", color: "#68f0fb", whiteSpace: "nowrap" }}>
-          Viktor Karlsson === Front End Developer
+        <p style={{ fontSize: "2.2em", color: "#41b4be", whiteSpace: "nowrap" }}>Viktor Karlsson</p>
+        <p style={{ fontSize: "1.5em", color: "#41b4be", whiteSpace: "nowrap" }}>
+          Front End Developer
         </p>
       </div>
       <Header />
@@ -185,6 +186,7 @@ function App() {
             right: 0,
             display: "flex",
             flexDirection: "row-reverse",
+            flexWrap: "wrap-reverse",
             width: "100%",
             zIndex: 99999,
           }}>
