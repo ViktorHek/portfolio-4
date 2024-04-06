@@ -16,7 +16,7 @@ const  drips = [
   ]
 
   return(
-<div style={{zIndex: 10,  top: 0, left: 0, overflow: 'visible'}}>
+<div style={{zIndex: -10,position:'relative',  top: 0, left: 0, overflow: 'visible'}}>
 {/* <div style="z-index: 999; position: sticky; top: 0; left: 0; overflow: visible"> */}
   <div style={{position: 'relative'}}>
   

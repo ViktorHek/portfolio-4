@@ -1,5 +1,5 @@
 import "./index.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import BigBg from "./animations/BigBg";
 import SmallBg from "./animations/SmallBg";
 // import wusiwygEditor from "./components/wysiwygEditor";
@@ -7,12 +7,28 @@ import Header from "./components/header/Header";
 import Container from "./components/container/Container";
 
 function App() {
+  const basePos = {
+    position: "fixed",
+    zIndex: 10000,
+    maxWidth: "500px",
+    maxHeight: "500px",
+
+    top: "50%",
+    bottom: "auto",
+    left: "50%",
+    right: "auto",
+
+    transform: "translate(-50%, -50%)",
+  };
+
+
   const [isMinimized, setIsMinimized] = useState(false);
   const [isOpen, setIsOpen] = useState(true);
+  const [atBottom, setAtBottom] = useState(false);
   const [text, setText] = useState("text");
   const [title, setTitle] = useState("title");
   const [conPos, setConPos] = useState({
-    position: "fixed",
+    position: "absolute",
     top: 200,
     left: 200,
     zIndex: 10000,
@@ -20,23 +36,33 @@ function App() {
     maxHeight: "500px",
   });
 
+  useEffect(() => {
+    const onscroll = () => {
+      const scrolledTo = window.scrollY + window.innerHeight;
+      const isReachBottom = document.body.scrollHeight === scrolledTo;
+      if (isReachBottom) {
+        setAtBottom(true)
+      } else {
+        setAtBottom(false)
+      }
+    };
+    window.addEventListener("scroll", onscroll);
+    return () => {
+      window.removeEventListener("scroll", onscroll);
+    };
+  }, []);
+
+
   function clickBg(event, id) {
-    console.log("event: ", event);
-    console.log("event2: ", window);
-    let toWide = event.pageX > 1000;
-    let toLow = event.pageY > 1000;
-
-    setConPos({
-      position: "fixed",
-      top: toLow ? "auto" : y,
-      bottom: toLow ? y : "auto",
-      left: toWide ? "auto" : x,
-      right: toWide ? x : "auto",
-      zIndex: 10000,
-      maxWidth: "500px",
-      maxHeight: "500px",
-    });
-
+    let toWide = event.clientX > 600;
+    let obj = {
+      ...basePos,
+      top: atBottom ? "auto" : event.pageY,
+      left: toWide ? "auto" : event.clientX,
+      bottom: atBottom ? 50 : "auto",
+      right: toWide ? window.innerWidth - event.clientX : "auto",
+    };
+    setConPos(obj);
     if (!isOpen) {
       setIsOpen(!isOpen);
     }
@@ -54,7 +80,7 @@ function App() {
           style={
             isMinimized
               ? {
-                  position: "absolute",
+                  position: "fixed",
                   bottom: 0,
                   right: 0,
                   zIndex: 10000,
@@ -73,7 +99,7 @@ function App() {
             isMinimized={isMinimized}
           />
         </div>
-      ) : null}{" "}
+      ) : null}
     </div>
   );
 }
