@@ -21,3 +21,12 @@ body {
   left: 0; */
   z-index: 999;
 }
+
+.d-flex {
+  display: flex;
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

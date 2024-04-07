@@ -11,14 +11,13 @@ function App() {
     position: "absolute",
     zIndex: 10000,
     maxWidth: "500px",
-    maxHeight: "500px",
     top: "auto",
     bottom: "auto",
     left: "auto",
     right: "auto",
   };
   const initCon = {
-    title: "Welcome!",
+    title: "Intro",
     text: (
       <div className="dd">
         <h1>tjo</h1>
@@ -43,16 +42,6 @@ function App() {
       window.removeEventListener("scroll", onscroll);
     };
   }, []);
-  useEffect(() => {
-    window.addEventListener("click", checkClick);
-    return () => {
-      window.removeEventListener("click", checkClick);
-    };
-  }, []);
-
-  function checkClick(event) {
-    console.log({ event });
-  }
 
   function clickBg(event, id) {
     let toWide = event.clientX > 600;
@@ -145,11 +134,10 @@ function App() {
           height: 100,
           top: 0,
           left: 0,
-          width: "50%",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "space-evenly",
+          justifyContent: "space-evenly", marginLeft: 30
         }}>
         <p style={{ fontSize: "2.2em", color: "#41b4be", whiteSpace: "nowrap" }}>Viktor Karlsson</p>
         <p style={{ fontSize: "1.5em", color: "#41b4be", whiteSpace: "nowrap" }}>
@@ -170,6 +158,7 @@ function App() {
                   title={con.title}
                   text={con.text}
                   isMinimized={con.isMinimized}
+                  // id={1337}
                   id={con.id}
                   style={con.pos}
                   startDrag={startDrag}

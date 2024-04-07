@@ -1,68 +1,20 @@
 import "./index.css";
-import { useEffect, useState } from "react";
+// import { workExperience, intro } from "../../data/index";
+// import intro from "../../data/intro";
+import htmlList from "../../data/index";
+// import workExperience from "../../data/workExperience";
 
 function Container(props) {
-  const { clickMin, clickClose, title, text, isMinimized, id, style, startDrag } = props;
-  // const [isMin, setIsMin] = useState(isMinimized)
-  const [sty, setSty] = useState(style)
-  // function min(val){
-  //   setIsMin(!isMin)
-  //   clickMin(!val)
-  // }
-//   useEffect(() => {
-//     dragElement(document.getElementById(id));
-//   }, [isMinimized]);
+  console.log({ htmlList });
+  const idHelper = [
+    { id: 1337, name: "intro" },
+    { id: 8, name: "workExperience" },
 
-//   // dragElement(document.getElementById(`cc${id}`));
-
-//   function dragElement(elmnt) {
-//     console.log("elmnt: ", elmnt);
-//     var pos1 = 0,
-//       pos2 = 0,
-//       pos3 = 0,
-//       pos4 = 0;
-//     if (document.getElementById(`cc${id}`)) {
-//       /* if present, the header is where you move the DIV from:*/
-//       document.getElementById(`cc${id}`).onmousedown = dragMouseDown;
-//     } else {
-//       /* otherwise, move the DIV from anywhere inside the DIV:*/
-//       elmnt.onmousedown = dragMouseDown;
-//     }
-
-//     function dragMouseDown(e) {
-//       e = e || window.event;
-//       e.preventDefault();
-//       // get the mouse cursor position at startup:
-//       pos3 = e.clientX;
-//       pos4 = e.clientY;
-//       document.onmouseup = closeDragElement;
-//       // call a function whenever the cursor moves:
-//       document.onmousemove = elementDrag;
-//     }
-
-//     function elementDrag(e) {
-//       e = e || window.event;
-//       e.preventDefault();
-//       // calculate the new cursor position:
-//       pos1 = pos3 - e.clientX;
-//       pos2 = pos4 - e.clientY;
-//       pos3 = e.clientX;
-//       pos4 = e.clientY;
-//       // set the element's new position:
-// let obj = {...style,top: elmnt.offsetTop - pos2 + "px", left:elmnt.offsetLeft - pos1 + "px", bottom:'auto',right:'auto' }
-//       // style.top = elmnt.offsetTop - pos2 + "px"
-//       // style.left = elmnt.offsetLeft - pos1 + "px"
-//       // elmnt.style.top = elmnt.offsetTop - pos2 + "px";
-//       // elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
-// setSty(obj)
-//     }
-// }
-
-    function closeDragElement() {
-      /* stop moving when mouse button is released:*/
-      document.onmouseup = null;
-      document.onmousemove = null;
-    }
+  ];
+  const { clickMin, clickClose, style, isMinimized, id, startDrag } = props;
+  const contentName = idHelper.find((el) => el.id === id).name;
+  const { title, html, size } = htmlList[contentName];
+  let modStyle = size === "big" ? { ...style, left: 100, maxWidth: 800 } : style;
 
   return (
     <>
@@ -81,7 +33,7 @@ function Container(props) {
           </div>
         </div>
       ) : (
-        <div style={style} id={`cc${id}`} draggable="true" onDragStart={startDrag}>
+        <div style={modStyle} id={`cc${id}`} draggable="true" onDragStart={startDrag}>
           <div className="app-container">
             {/* <div className="app-container" style={{ display: isClosed ? "none" : "block" }}> */}
             <div className="app-inner-container">
@@ -98,7 +50,11 @@ function Container(props) {
 
               <div className="box">
                 <div className="editor-backgrond">
-                  <div className="editor">{text}</div>
+                  {html}
+                  <div style={{ position: "absolute", bottom: 8, right: 15, color: "#a691df" }}>
+                    {id === 1337 ? 0 : id}/27
+                  </div>
+                  {/* <div className="editor">{text}</div> */}
                 </div>
               </div>
             </div>

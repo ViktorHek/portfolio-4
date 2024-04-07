@@ -2,10 +2,24 @@
   background-color: rgb(213, 213, 213);
   border: 2px solid black;
   max-width: 800px;
-  max-height: 700px;
+  /* max-height: 700px; */
   padding: 2px;
 }
-
+.content {
+  padding: 20px;
+}
+.content > p {
+  text-align: justify;
+  font-size: 1.2em;
+}
+.lid {
+  display: flex;
+}
+.lid > p {
+  color: #0b1350;
+  font-size: 1em;
+  margin-left: 3px;
+}
 .mini-app-container {
   background-color: rgb(213, 213, 213);
   border: 2px solid black;
@@ -20,7 +34,7 @@
 
 .app-inner-container {
   max-width: 100%;
-  max-height: 100%;
+  /* max-height: 100%; */
   background-color: grey;
   border: 1px solid black;
   /* padding: 2px; */
@@ -139,6 +153,9 @@
 
   flex-direction: column;
   margin: 2px;
+
+  max-height: 500px;
+  overflow: scroll;
 }
 
 .editor {
@@ -162,8 +179,8 @@
 }
 
 .editor-backgrond {
-  height: 300px;
-  width: 400px;
+  /* height: 300px;
+  width: 400px; */
   overflow: scroll;
   padding: 4px;
   background-color: whitesmoke;
