@@ -26,7 +26,7 @@ function App() {
     ),
     isMinimized: false,
     pos: { ...basePos, top: 200, left: 200 },
-    id: 1337,
+    id: 'intro',
   };
 
   const [atBottom, setAtBottom] = useState(false);

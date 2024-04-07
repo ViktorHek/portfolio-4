@@ -1,5 +1,4 @@
 const title = "Work Experience";
-const id = 8;
 const size = "big";
 const html = (
   <div className="content">
@@ -80,6 +79,6 @@ const html = (
   </div>
 );
 
-const workExperience = { title, id, size, html };
+const workExperience = { title, size, html };
 
 export default workExperience;

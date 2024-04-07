@@ -1,6 +1,4 @@
 const title = "Hobby Projects";
-const id = 12;
-
 const html = (
   <div className="content">
     <h3>TinyHans</h3>
@@ -62,6 +60,6 @@ const html = (
   </div>
 );
 
-const hobbyProjects = { title, id, html };
+const hobbyProjects = { title, html };
 
 export default hobbyProjects;

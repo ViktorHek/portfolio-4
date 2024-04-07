@@ -1,6 +1,4 @@
 const title = "Skills";
-const id = 1;
-
 const html = (
   <div className="content">
     <h3>Languages</h3>
@@ -40,6 +38,6 @@ const html = (
   </div>
 );
 
-const skills = { title, id, html };
+const skills = { title, html };
 
 export default skills;

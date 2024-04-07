@@ -21,7 +21,7 @@
   margin-left: 3px;
   text-align: flex-start;
 }
-.mini-app-container {
+.mini-app-container2 {
   background-color: rgb(213, 213, 213);
   border: 2px solid black;
   max-width: 300px;
@@ -33,7 +33,7 @@
   right: 1px; */
 }
 
-.app-inner-container {
+.app-inner-container2 {
   max-width: 100%;
   /* max-height: 100%; */
   background-color: grey;
@@ -41,7 +41,7 @@
   /* padding: 2px; */
 }
 
-.btn {
+.btn2 {
   height: 26px;
   width: 26px;
   background-color: #7b7e79;
@@ -58,7 +58,7 @@
   cursor: pointer;
 }
 
-.btn-dropdown {
+.btn-dropdown2 {
   justify-content: space-between;
   width: 45px;
   padding: 0px 5px;
@@ -67,7 +67,7 @@
   transition: height 0.3s ease;
 }
 
-.btn-dropdown-open {
+.btn-dropdown-open2 {
   height: 100px;
   justify-content: flex-end;
   width: 45px;
@@ -77,7 +77,7 @@
   overflow: hidden;
 }
 
-.btn-dropdown .arrow-down {
+.btn-dropdown2 .arrow-down2 {
   border-right: 2px solid black;
   border-bottom: 2px solid black;
   transform: rotate(45deg);
@@ -86,7 +86,7 @@
   transition: 0.3s;
 }
 
-.btn-dropdown-open .arrow-down {
+.btn-dropdown-open2 .arrow-down2 {
   border-right: 2px solid black;
   border-bottom: 2px solid black;
   transform: rotate(225deg);
@@ -95,7 +95,7 @@
   transition: 0.3s;
 }
 
-.dropdown-list {
+.dropdown-list2 {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -106,26 +106,26 @@
   padding: 10px;
 }
 
-.dropdown-list > span {
+.dropdown-list2 > span {
   width: 15px;
   height: 15px;
   padding: 2px;
   border-radius: 5px;
 }
 
-.dropdown-list > span:hover {
+.dropdown-list2 > span:hover {
   background-color: aquamarine;
   transition: 0.3s;
 }
 
-.btn:hover {
+.btn2:hover {
   background-color: rgb(86, 85, 85);
   border-right: 2px solid rgb(57, 56, 56);
   border-bottom: 2px solid rgb(57, 56, 56);
   border-left: 2px solid rgb(114, 111, 111);
   border-top: 2px solid rgb(114, 111, 111);
 }
-.btn-active {
+.btn-active2 {
   color: rgb(10, 69, 69);
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border-right: 2px solid rgb(39, 85, 111);
@@ -134,7 +134,7 @@
   border-top: 2px solid rgb(21, 132, 197);
   transition: 0.4s ease-out;
 }
-.btn-active:hover {
+.btn-active2:hover {
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   border-right: 2px solid rgb(39, 85, 111);
   border-bottom: 2px solid rgb(39, 85, 111);
@@ -142,11 +142,11 @@
   border-top: 2px solid rgb(21, 132, 197);
 }
 
-.btn-dropdown-open:hover {
+.btn-dropdown-open2:hover {
   background-color: #7c7e7a;
 }
 
-.box {
+.box2 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -156,10 +156,10 @@
   margin: 2px;
 
   max-height: 500px;
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
-.editor {
+.editor2 {
   min-height: 20px;
   max-height: 100%;
   width: 400px;
@@ -171,7 +171,7 @@
   flex-direction: column;
 }
 
-.placeholder {
+.placeholder2 {
   margin-right: 0px;
   height: 16px;
   border-right: 1px solid transparent;
@@ -179,16 +179,16 @@
   -webkit-animation: blink-animation 1.5s infinite;
 }
 
-.editor-backgrond {
+.editor-backgrond2 {
   /* height: 300px;
   width: 400px; */
-  overflow: scroll;
+  overflow-y: scroll;
   padding: 4px;
   background-color: whitesmoke;
   border: 1px solid whitesmoke;
 }
 
-.editor-backgrond-active {
+.editor-backgrond-active2 {
   border: 1px solid rgb(175, 184, 225);
   box-shadow: -3px 4px 15px rgba(0, 0, 0, 0.5);
 }
@@ -215,7 +215,7 @@
     border-right: 1px solid transparent;
   }
 }
-.header-container {
+.header-container2 {
   background-color: #080099;
   border: 1px solid black;
   height: 30px;
@@ -226,7 +226,7 @@
   align-items: center;
 }
 
-.header-min-btn > span {
+.header-min-btn2 > span {
   height: 5px;
   width: 12px;
 
@@ -236,7 +236,7 @@
   transition: 0.5s;
 }
 
-.header-close-btn > span {
+.header-close-btn2 > span {
   height: 18px;
   width: 3px;
   background-color: rgb(36, 34, 37);
@@ -244,28 +244,28 @@
   transition: 1s ease-in-out;
 }
 
-.header-close-btn > span:nth-child(1) {
+.header-close-btn2 > span:nth-child(1) {
   transform: rotate(45deg);
 }
-.header-close-btn > span:nth-child(2) {
+.header-close-btn2 > span:nth-child(2) {
   transform: rotate(-45deg);
 }
 
-.header-close-btn:hover > span {
+.header-close-btn2:hover > span {
   background-color: black;
 }
-.header-close-btn:hover > span:nth-child(1) {
+.header-close-btn2:hover > span:nth-child(1) {
   transform: rotate(405deg);
 }
-.header-close-btn:hover > span:nth-child(2) {
+.header-close-btn2:hover > span:nth-child(2) {
   transform: rotate(-225deg);
 }
-.header-min-btn:hover > span {
+.header-min-btn2:hover > span {
   height: 3px;
   width: 10px;
 }
 
-.header-text {
+.header-text2 {
   color: white;
   font-family: "Times New Roman", Times, serif;
   font-size: 1.4em;

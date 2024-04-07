@@ -1,5 +1,4 @@
 const title = "Education";
-const id = 13;
 const size = "big";
 const html = (
   <div className="content">
@@ -61,6 +60,6 @@ const html = (
   </div>
 );
 
-const education = { title, id, size, html };
+const education = { title, size, html };
 
 export default education;

@@ -6,6 +6,7 @@ import Toolbar from "./components/Toolbar";
 import handleKeys from "./funk/handleKeys";
 // import handleKeys from "./funk/handleKeys";
 import appendTag from "./funk/appendTag";
+import "./index.css";
 
 function WusiwygEditor() {
   const { ref, isEditorFocused, setIsEditorFocused } = HandleEditorFocus(true);
@@ -78,8 +79,7 @@ function WusiwygEditor() {
     newPlaceHolder.name = "placeholder";
     const siblings = Array.from(placeholder.parentElement.children);
     const currentIndex = siblings.indexOf(placeholder);
-    let sibling =
-      where === "left" ? "previousElementSibling" : "nextElementSibling";
+    let sibling = where === "left" ? "previousElementSibling" : "nextElementSibling";
     let child = where === "left" ? "lastChild" : "firstChild";
     let ajust = where === "left" ? "beforebegin" : "afterend";
     let isWordStart = currentIndex === 1 && where === "left";
@@ -90,8 +90,7 @@ function WusiwygEditor() {
       placeholder.remove();
     } else {
       const editor = document.getElementById("editor");
-      const firstSibling = editor.firstChild.firstChild.firstChild
-        .nextSibling || {
+      const firstSibling = editor.firstChild.firstChild.firstChild.nextSibling || {
         id: null,
       };
       const lastEl = editor.lastChild.lastChild.lastChild;
@@ -107,24 +106,31 @@ function WusiwygEditor() {
   }
 
   function clickOut(event) {
+    console.log(event);
     if (!isEditorFocused) return;
     if (!document.getElementById("placeholder")) return;
     if (!event.target.parentElement) return;
     if (!event.target.parentElement.parentElement) return;
     if (!event.target.parentElement.parentElement.parentElement) return;
-    const tag = document.createElement("p");
-    const placeholder = document.getElementById("placeholder");
-    placeholder.remove();
-    tag.id = "placeholder";
-    tag.class = "placeholder";
-    tag.className = "placeholder";
     if (
-      event.target.parentElement.parentElement.parentElement.id === "editor"
+      event.target.parentElement.parentElement.parentElement === "editor" ||
+      // event.target.parentElement.parentElement.id === "editor" ||
+      // event.target.parentElement.id === "editor" ||
+      event.target.id !== "editorbackground"
     ) {
-      event.target.insertAdjacentElement("afterend", tag);
-    } else {
-      const editor = document.getElementById("editor");
-      editor.lastChild.lastChild.appendChild(tag);
+      const tag = document.createElement("p");
+      const placeholder = document.getElementById("placeholder");
+      placeholder.remove();
+      tag.id = "placeholder";
+      tag.class = "placeholder";
+      tag.className = "placeholder";
+      if (event.target.parentElement.parentElement.parentElement.id === "editor") {
+        event.target.insertAdjacentElement("afterend", tag);
+      } else {
+        const editor = document.getElementById("editor");
+console.log({editor})
+        editor.lastChild.lastChild.appendChild(tag);
+      }
     }
   }
 
@@ -179,61 +185,35 @@ function WusiwygEditor() {
   }
 
   return (
-    <>
-      {isMinimized ? (
+    <div
+      id="box"
+      ref={ref}
+      onClick={() => setIsEditorFocused(true)}
+      className={`${isEditorFocused ? "box-active " : ""} box`}>
+      <Toolbar
+        newTag={newTag}
+        changePos={changePos}
+        active={{
+          boldActive: boldActive,
+          italicActive: italicActive,
+          pos: pos,
+        }}
+      />
+      <div
+        className={`${isEditorFocused ? "editor-backgrond-active " : ""} editor-backgrond`}
+        id="editorbackground">
         <div
-          className="mini-app-container"
-          style={{ display: isClosed ? "none" : "block" }}
-        >
-          <Header handleClickHeader={handleClickHeader} />
+          id="editor"
+          contentEditable={false}
+          className={`${isEditorFocused ? "editor-active " : ""} editor`}>
+          <span>
+            <span>
+              <span className="placeholder" id="placeholder"></span>
+            </span>
+          </span>
         </div>
-      ) : (
-        <div
-          className="app-container"
-          style={{ display: isClosed ? "none" : "block" }}
-        >
-          <div className="app-inner-container">
-            <Header handleClickHeader={handleClickHeader} />
-            <div
-              id="box"
-              ref={ref}
-              onClick={() => setIsEditorFocused(true)}
-              className={`${isEditorFocused ? "box-active " : ""} box`}
-            >
-              <Toolbar
-                newTag={newTag}
-                changePos={changePos}
-                active={{
-                  boldActive: boldActive,
-                  italicActive: italicActive,
-                  pos: pos,
-                }}
-              />
-              <div
-                className={`${
-                  isEditorFocused ? "editor-backgrond-active " : ""
-                } editor-backgrond`}
-              >
-                <div
-                  id="editor"
-                  contentEditable={false}
-                  className={`${
-                    isEditorFocused ? "editor-active " : ""
-                  } editor`}
-                >
-                  <span>
-                    <span>
-                      <span className="placeholder" id="placeholder"></span>
-                    </span>
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      )}
-    </>
+      </div>
+    </div>
   );
 }
-
 export default WusiwygEditor;
