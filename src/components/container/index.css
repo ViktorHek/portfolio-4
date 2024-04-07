@@ -13,12 +13,13 @@
   font-size: 1.2em;
 }
 .lid {
-  display: flex;
+  /* display: flex; */
 }
 .lid > p {
   color: #0b1350;
   font-size: 1em;
   margin-left: 3px;
+  text-align: flex-start;
 }
 .mini-app-container {
   background-color: rgb(213, 213, 213);

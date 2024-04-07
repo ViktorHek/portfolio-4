@@ -6,14 +6,8 @@ import htmlList from "../../data/index";
 
 function Container(props) {
   console.log({ htmlList });
-  const idHelper = [
-    { id: 1337, name: "intro" },
-    { id: 8, name: "workExperience" },
-
-  ];
   const { clickMin, clickClose, style, isMinimized, id, startDrag } = props;
-  const contentName = idHelper.find((el) => el.id === id).name;
-  const { title, html, size } = htmlList[contentName];
+  const { title, html, size } = htmlList[htmlList.idHelper.find((el) => el.id === id).name];
   let modStyle = size === "big" ? { ...style, left: 100, maxWidth: 800 } : style;
 
   return (
