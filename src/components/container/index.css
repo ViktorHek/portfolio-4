@@ -182,6 +182,7 @@
 .editor-backgrond2 {
   /* height: 300px;
   width: 400px; */
+  width: -webkit-fill-available;
   overflow-y: scroll;
   padding: 4px;
   background-color: whitesmoke;

@@ -8,15 +8,15 @@ const html = (
       world not confined by the laws of reality is fascinating to me. person, men jag har vissa
       budistiska drag. Jag tror att medelvägen är svaret på många frågor i vardagen. Jag stävar
       efter att få en vardagsrutin som jag kan behålla livet ut. Mina Hobbys är spel, kreativt
-      skapande, matlagning, segling, camping och brädspel.{" "}
+      skapande, matlagning, segling, camping och brädspel.
     </p>
     <p>
-      I take a lot of inspiration from buddhism. I believe the middle way, or what we in Sweden call
-      "lagon", is the anser to many questions in our day to day life.
+      I take a lot of inspiration from Buddhism. I believe the middle way, or what we in Sweden call
+      "lagom", is the answer to many questions in our day-to-day life.
     </p>
     <p>
-      My mind is a little all over the place, so I implement stuctures in my life to not reflect
-      that. therefore, these stuctures are important to me.
+      My mind is a little all over the place, so I implement structures in my life to not reflect
+      that. therefore, these structures are important to me.
     </p>
   </div>
 );

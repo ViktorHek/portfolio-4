@@ -7,7 +7,7 @@ function DvdScreen() {
   const boxWidth = 100;
   const colors = ["#749e2c", "#1b5489", "#891b73", "#001301FF"];
 
-  let interval1;
+  let interval;
   let x = 1;
   let y = 1;
   let down = true;
@@ -25,13 +25,17 @@ function DvdScreen() {
     const box = document.getElementById("dvd_box");
     box.style.height = `${boxHeight}px`;
     box.style.width = `${boxWidth}px`;
-    if (!interval1) {
-      interval1 = setInterval(changePos, 10);
+    if (!interval) {
+      interval = setInterval(changePos, 10);
     }
   }
 
   function changePos() {
     const box = document.getElementById("dvd_box");
+    if (!box) {
+      clearInterval(interval);
+      return;
+    }
     if (x === conatinerHeight - boxHeight || x === 0) {
       down = !down;
       changeColor();

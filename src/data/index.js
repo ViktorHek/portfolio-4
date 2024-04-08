@@ -12,6 +12,11 @@ import dwemmer from "./dwemmer";
 import pokemonCalc from "./pokemonCalc";
 import DvdScreen from "./DvdScreen";
 import quotes from "./quotes";
+import links from "./links";
+import contact from "./contact";
+import orangeDuddle from "./orangeDuddle";
+import movieIdees from "./movieIdees";
+import hussle from "./hussle";
 
 const htmlList = {
   intro: { ...intro, index: 0 },
@@ -28,7 +33,11 @@ const htmlList = {
   dwemmer: { ...dwemmer, index: 11 },
   pokemonCalc: { ...pokemonCalc, index: 12 },
   quotes: { ...quotes, index: 13 },
-  // editor: { ...editor, index: 13 },
+  links: { ...links, index: 14 },
+  contact: { ...contact, index: 15 },
+  orangeDuddle: { ...orangeDuddle, index: 16 },
+  movieIdees: { ...movieIdees, index: 17 },
+  hussle: { ...hussle, index: 18 },
 };
 
 export default htmlList;

@@ -15,12 +15,12 @@ const html = (
         Python, Bootstrap, Git, Node.js.
       </li>
       <li>
-        <strong>Talentech internship:&nbsp;</strong>I woked for the depatment that developed a
-        recruitment platform. Their codebase is a culmination of year of work from many differant
-        people. therefore, i quickly learned to read legasy-code, whrite scalable code and to
-        collaborate with colleagues in different roles. The cases assigned to me where everything
-        between obscure buggs to my own modals. If you, the reader, uses ReachMe. I can happily say
-        that I'm the one who created the modal you use to add me to the system.
+        <strong>Talentech internship:&nbsp;</strong>I worked for the department that developed a
+        recruitment platform. Their codebase is a culmination of years of work from many different
+        people. therefore, I quickly learned to read legacy code, write scalable code and to
+        collaborate with colleagues in different roles. The cases assigned to me were everything
+        from obscure bugs to my own modals. If you, the reader, use ReachMe. I can happily say
+        that I'm the one who created the modal you used to add me to the system.
       </li>
     </ul>
     <br />
@@ -29,9 +29,9 @@ const html = (
 
     <ul>
       <li>
-        <strong>Education:&nbsp;</strong>It was a very intence remote education where I studied
-        10h/day, every day for twelve weeks. We did pair-programming with full-stack application in
-        a agil workmethod.
+        <strong>Education:&nbsp;</strong>It was a very intense remote education where I studied
+        10h/day, every day for twelve weeks. We did pair programming with full-stack applications in
+        an agile work method.
       </li>
       <li>
         <strong>Skills:&nbsp;</strong>Javascript, Ruby, React, React Native, Redux, Node.js,

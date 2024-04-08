@@ -11,7 +11,7 @@ function App() {
     position: "absolute",
     zIndex: 10000,
     maxWidth: 500,
-    minWidth: 150,
+    minWidth: 300,
     top: "auto",
     bottom: "auto",
     left: "auto",
