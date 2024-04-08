@@ -11,7 +11,7 @@ function Container(props) {
   console.log({ htmlList });
   const { title, html, size, index } = htmlList[id]
     ? htmlList[id]
-    : { title: "error", html: "ops wrong id", size: null };
+    : { title: "Say something", html: "This duddle has nothing to say atm.", size: null };
   let modStyle = size === "big" ? { ...style, left: 100, maxWidth: 800 } : style;
 
   return (

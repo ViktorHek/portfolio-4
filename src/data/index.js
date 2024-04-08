@@ -11,6 +11,7 @@ import reference from "./reference";
 import dwemmer from "./dwemmer";
 import pokemonCalc from "./pokemonCalc";
 import DvdScreen from "./DvdScreen";
+import quotes from "./quotes";
 
 const htmlList = {
   intro: { ...intro, index: 0 },
@@ -26,6 +27,7 @@ const htmlList = {
   reference: { ...reference, index: 10 },
   dwemmer: { ...dwemmer, index: 11 },
   pokemonCalc: { ...pokemonCalc, index: 12 },
+  quotes: { ...quotes, index: 13 },
   // editor: { ...editor, index: 13 },
 };
 
