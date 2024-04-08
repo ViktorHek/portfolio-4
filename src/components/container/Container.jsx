@@ -4,11 +4,14 @@ import "./index.css";
 import htmlList from "../../data/index";
 // import workExperience from "../../data/workExperience";
 import WusiwygEditor from "../wysiwygEditor/WusiwygEditor";
+import DvdScreen from "../../data/DvdScreen";
 
 function Container(props) {
   const { clickMin, clickClose, style, isMinimized, id, startDrag } = props;
-  const { title, html, size } =
-    id === "editorDude" ? { title: null, html: null, size: null } : htmlList[id];
+  console.log({ htmlList });
+  const { title, html, size, index } = htmlList[id]
+    ? htmlList[id]
+    : { title: "error", html: "ops wrong id", size: null };
   let modStyle = size === "big" ? { ...style, left: 100, maxWidth: 800 } : style;
 
   return (
@@ -42,19 +45,22 @@ function Container(props) {
                   <span></span>
                 </div>
               </div>
-              {id === "editorDude" ? (
-                <WusiwygEditor />
-              ) : (
+              {htmlList[id] ? (
                 <div className="box2">
                   <div className="editor-backgrond2">
                     {html}
                     <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
-                      {id === 1337 ? 0 : id}/27
+                      {index}/27
                     </div>
                     {/* <div className="editor">{text}</div> */}
                   </div>
                 </div>
-              )}
+              ) : (
+
+                <WusiwygEditor />
+                // { id: String === "dvdScreen" ? <DvdScreen /> : null }
+
+                )}
             </div>
           </div>
         </div>
