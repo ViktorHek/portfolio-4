@@ -17,10 +17,11 @@ import contact from "./contact";
 import orangeDuddle from "./orangeDuddle";
 import movieIdees from "./movieIdees";
 import hussle from "./hussle";
+import Quiz from "./Quiz";
 
 const htmlList = {
   intro: { ...intro, index: 0 },
-  dvdScreen: { html: <DvdScreen/>, title: "DVD Screen", index: 1 },
+  dvdScreen: { html: <DvdScreen />, title: "DVD Screen", index: 1 },
   cv: { ...cv, index: 2 },
   pb: { ...pb, index: 3 },
   skills: { ...skills, index: 4 },
@@ -38,6 +39,7 @@ const htmlList = {
   orangeDuddle: { ...orangeDuddle, index: 16 },
   movieIdees: { ...movieIdees, index: 17 },
   hussle: { ...hussle, index: 18 },
+  quiz: { html: <Quiz />, title: "Quiz", index: 18 },
 };
 
 export default htmlList;

@@ -1,5 +1,5 @@
 const orangeDuddle = {
-  title: "Duddle",
+  title: "Doodle",
   html: (
     <div className="content">
       <svg

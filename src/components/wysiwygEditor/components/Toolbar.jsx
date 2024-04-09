@@ -36,7 +36,7 @@ function Toolbar(props) {
         <span>Tools</span>
         <span>Help</span>
       </div>
-      <div id="toolbar" className="toolbar">
+      {/* <div id="toolbar" className="toolbar">
         <div
           id="bold"
           onClick={() => props.newTag("bold")}
@@ -77,29 +77,9 @@ function Toolbar(props) {
               </div>
             )}
             <span className="arrow-down"></span>
-            {/* <div style={{ height: "18px", width: "18px" }}>
-              <AlignAnimation type={pos} />
-            </div>
-            <span className="arrow-down"></span> */}
           </div>
-          {/* {openPositionDropdown ? (
-            <div className="dropdown-list">
-              <span onClick={() => changePos("left")}>
-                <AlignAnimation type={"left"} />{" "}
-              </span>
-              <span onClick={() => changePos("center")}>
-                <AlignAnimation type={"center"} />{" "}
-              </span>
-              <span onClick={() => changePos("right")}>
-                <AlignAnimation type={"right"} />{" "}
-              </span>
-              <span onClick={() => changePos("strech")}>
-                <AlignAnimation type={"strech"} />{" "}
-              </span>
-            </div>
-          ) : null} */}
         </div>
-      </div>
+      </div> */}
     </>
   );
 }

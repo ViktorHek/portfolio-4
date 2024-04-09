@@ -10,7 +10,7 @@ function App() {
   const basePos = {
     position: "absolute",
     zIndex: 10000,
-    maxWidth: 500,
+    maxWidth: 800,
     minWidth: 300,
     top: "auto",
     bottom: "auto",

@@ -56,15 +56,15 @@ const dwemmer = {
         The whole point of creating the Numidium was in order to not be dependent on the gods. Both
         Mundus and oblivion will cease to exist if the conversation between Anu and Padomay stops. I
         believe Lord Kagrenac realized that the only way to get away from the gods was to travel
-        outside of both mundus and oblivion, to "The Gray Maybe". The Numidium was never intended to
+        outside of both mundus and oblivion, to "the gray maybe". The Numidium was never intended to
         destroy material things (even though it could, see Tiber Septims conquest over the Aldmeri
         Dominion of the Summerset Isles.) The Numidium was intended to destroy the walls between
-        mundus and "The Gray Maybe".
+        mundus and "the gray maybe".
       </p>
       <p>
         The reason why we have never heard of a dwemer is because they live in a dimention that no
         one else has visited. The reason why Yagrum Bagarn is still here is because the Numidium
-        created an opening between mundus and "The Gray Maybe" which was not connected to oblivion.
+        created an opening between mundus and "the gray maybe" which was not connected to oblivion.
         This theory also explains how Tiber Septim managed to defeat the military superior Aldmeri
         Dominion in less than an hour. He didn't (really) defeat them, he teleported them to "The
         Gray Maybe".

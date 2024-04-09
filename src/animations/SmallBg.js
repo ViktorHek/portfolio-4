@@ -2,6 +2,7 @@ function SmallBg({ clickBg }) {
   function handleClick(event, id) {
     return clickBg(event, id);
   }
+const eyeColor = 'black'
 // duddles x, vikimon, font, kluring kod fråga 
   return (
     <svg viewBox="0 0 500 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -193,7 +194,7 @@ function SmallBg({ clickBg }) {
           <line id="Line 63" x1="77.933" y1="601.25" x2="76.433" y2="603.848" stroke="black" />
           <line id="Line 64" x1="72.067" y1="603.848" x2="70.567" y2="601.25" stroke="black" />
         </g>
-        <g id={15} onClick={(event) => handleClick(event, 15)}>
+        <g id="dum" onClick={(event) => handleClick(event, "dum")}>
           <path
             id="Ellipse 78"
             d="M322.5 994C322.5 1134.58 214.798 1248.5 82 1248.5C-50.7983 1248.5 -158.5 1134.58 -158.5 994C-158.5 853.417 -50.7983 739.5 82 739.5C214.798 739.5 322.5 853.417 322.5 994Z"
@@ -427,7 +428,7 @@ function SmallBg({ clickBg }) {
           <circle id="Ellipse 132" cx="326" cy="847" r="3" fill="black" />
           <rect id="Rectangle 67" x="305" y="853" width="6" height="1" fill="black" />
         </g>
-        <g id={21} onClick={(event) => handleClick(event, 21)}>
+        <g id="quiz" onClick={(event) => handleClick(event, "quiz")}>
           <path
             id="Ellipse 67"
             d="M287.5 976.5C287.5 1013.61 283.865 1047.2 277.995 1071.49C275.059 1083.64 271.571 1093.43 267.716 1100.18C263.84 1106.97 259.693 1110.5 255.5 1110.5C251.307 1110.5 247.16 1106.97 243.284 1100.18C239.429 1093.43 235.941 1083.64 233.005 1071.49C227.135 1047.2 223.5 1013.61 223.5 976.5C223.5 939.386 227.135 905.803 233.005 881.512C235.941 869.362 239.429 859.565 243.284 852.818C247.16 846.032 251.307 842.5 255.5 842.5C259.693 842.5 263.84 846.032 267.716 852.818C271.571 859.565 275.059 869.362 277.995 881.512C283.865 905.803 287.5 939.386 287.5 976.5Z"
@@ -2948,34 +2949,34 @@ function SmallBg({ clickBg }) {
           <line id="Line 58" x1="243.5" y1="774" x2="243.5" y2="763.19" stroke="black" />
           <line id="Line 56" x1="237.419" y1="754.728" x2="243.307" y2="763.794" stroke="black" />
         </g>
-        <circle id="Ellipse 133" cx="342" cy="71" r="2" fill="black" />
-        <circle id="Ellipse 134" cx="367" cy="71" r="2" fill="black" />
-        <rect id="Rectangle 68" x="348" y="75" width="12" height="2" fill="black" />
-        <circle id="Ellipse 147" cx="16" cy="143" r="2" fill="black" />
-        <circle id="Ellipse 148" cx="41" cy="143" r="2" fill="black" />
-        <rect id="Rectangle 75" x="22" y="147" width="12" height="2" fill="black" />
-        <circle id="Ellipse 145" cx="66" cy="28" r="2" fill="black" />
-        <circle id="Ellipse 146" cx="91" cy="28" r="2" fill="black" />
-        <rect id="Rectangle 74" x="72" y="32" width="12" height="2" fill="black" />
-        <circle id="Ellipse 143" cx="131" cy="35" r="2" fill="black" />
-        <circle id="Ellipse 144" cx="156" cy="35" r="2" fill="black" />
-        <rect id="Rectangle 73" x="137" y="39" width="12" height="2" fill="black" />
-        <circle id="Ellipse 141" cx="185" cy="28" r="2" fill="black" />
-        <circle id="Ellipse 142" cx="210" cy="28" r="2" fill="black" />
-        <rect id="Rectangle 72" x="191" y="32" width="12" height="2" fill="black" />
-        <circle id="Ellipse 135_2" cx="191" cy="87" r="2" fill="black" />
-        <circle id="Ellipse 136_2" cx="216" cy="87" r="2" fill="black" />
-        <rect id="Rectangle 69_2" x="197" y="91" width="12" height="2" fill="black" />
-        <circle id="Ellipse 137" cx="293" cy="11" r="2" fill="black" />
-        <circle id="Ellipse 138" cx="318" cy="11" r="2" fill="black" />
-        <rect id="Rectangle 70" x="299" y="15" width="12" height="2" fill="black" />
+        <circle id="Ellipse 133" cx="342" cy="71" r="2" fill={eyeColor} />
+        <circle id="Ellipse 134" cx="367" cy="71" r="2" fill={eyeColor} />
+        <rect id="Rectangle 68" x="348" y="75" width="12" height="2" fill={eyeColor} />
+        <circle id="Ellipse 147" cx="16" cy="143" r="2" fill={eyeColor} />
+        <circle id="Ellipse 148" cx="41" cy="143" r="2" fill={eyeColor} />
+        <rect id="Rectangle 75" x="22" y="147" width="12" height="2" fill={eyeColor} />
+        <circle id="Ellipse 145" cx="66" cy="28" r="2" fill={eyeColor} />
+        <circle id="Ellipse 146" cx="91" cy="28" r="2" fill={eyeColor} />
+        <rect id="Rectangle 74" x="72" y="32" width="12" height="2" fill={eyeColor} />
+        <circle id="Ellipse 143" cx="131" cy="35" r="2" fill={eyeColor} />
+        <circle id="Ellipse 144" cx="156" cy="35" r="2" fill={eyeColor} />
+        <rect id="Rectangle 73" x="137" y="39" width="12" height="2" fill={eyeColor} />
+        <circle id="Ellipse 141" cx="185" cy="28" r="2" fill={eyeColor} />
+        <circle id="Ellipse 142" cx="210" cy="28" r="2" fill={eyeColor} />
+        <rect id="Rectangle 72" x="191" y="32" width="12" height="2" fill={eyeColor} />
+        <circle id="Ellipse 135_2" cx="191" cy="87" r="2" fill={eyeColor} />
+        <circle id="Ellipse 136_2" cx="216" cy="87" r="2" fill={eyeColor} />
+        <rect id="Rectangle 69_2" x="197" y="91" width="12" height="2" fill={eyeColor} />
+        <circle id="Ellipse 137" cx="293" cy="11" r="2" fill={eyeColor} />
+        <circle id="Ellipse 138" cx="318" cy="11" r="2" fill={eyeColor} />
+        <rect id="Rectangle 70" x="299" y="15" width="12" height="2" fill={eyeColor} />
         <circle
           id="Ellipse 139"
           cx="441.768"
           cy="29.768"
           r="2"
           transform="rotate(33.1352 441.768 29.768)"
-          fill="black"
+          fill={eyeColor}
         />
         <circle
           id="Ellipse 140"
@@ -2983,7 +2984,7 @@ function SmallBg({ clickBg }) {
           cy="43.4334"
           r="2"
           transform="rotate(33.1352 462.703 43.4334)"
-          fill="black"
+          fill={eyeColor}
         />
         <rect
           id="Rectangle 71"
@@ -2992,7 +2993,7 @@ function SmallBg({ clickBg }) {
           width="12"
           height="2"
           transform="rotate(33.1352 444.606 36.3972)"
-          fill="black"
+          fill={eyeColor}
         />
         <line id="Line 92" x1="471.168" y1="860.529" x2="485.168" y2="865.529" stroke="black" />
         <line id="Line 93" x1="433.832" y1="865.529" x2="447.832" y2="860.53" stroke="black" />

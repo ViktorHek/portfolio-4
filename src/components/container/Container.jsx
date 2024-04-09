@@ -1,18 +1,17 @@
 import "./index.css";
-// import { workExperience, intro } from "../../data/index";
-// import intro from "../../data/intro";
 import htmlList from "../../data/index";
-// import workExperience from "../../data/workExperience";
 import WusiwygEditor from "../wysiwygEditor/WusiwygEditor";
-import DvdScreen from "../../data/DvdScreen";
 
 function Container(props) {
   const { clickMin, clickClose, style, isMinimized, id, startDrag } = props;
-  console.log({ htmlList });
+
   const { title, html, size, index } = htmlList[id]
     ? htmlList[id]
     : { title: "Say something", html: "This duddle has nothing to say atm.", size: null };
   let modStyle = size === "big" ? { ...style, left: 100, maxWidth: 800 } : style;
+  // const [modStyle, setModStyle] = useState(
+  //   size === "big" ? { ...style, left: 100, maxWidth: 800 } : style
+  // );
 
   return (
     <>
@@ -47,6 +46,17 @@ function Container(props) {
               </div>
               {htmlList[id] ? (
                 <div className="box2">
+                  <div className="top-toolbar">
+                    <div className="left-border"></div>
+                    <div className="right-border"></div>
+                    <a href="" download="images/Viktor_Karlsson_PB.pdf">
+                      Resumé
+                    </a>
+                    <a>Edit</a>
+                    <a>View</a>
+                    <a>Tools</a>
+                    <a>Help</a>
+                  </div>
                   <div className="editor-backgrond2">
                     {html}
                     <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
@@ -56,11 +66,9 @@ function Container(props) {
                   </div>
                 </div>
               ) : (
-
                 <WusiwygEditor />
                 // { id: String === "dvdScreen" ? <DvdScreen /> : null }
-
-                )}
+              )}
             </div>
           </div>
         </div>
