@@ -42,9 +42,8 @@ function Quiz() {
       {win ? (
         <div className="content">
           <h1 style={{ textAlign: "center" }}>Winner!</h1>
-          <p>You will now receve the best award Sweden has to offer, the honor of winning.</p>
           <p>
-            In adition, you will gain access to the Toolbar. This will alow you to download my
+            Congratulations! You will gain access to the Toolbar. This will allow you to download my
             resume, personal letter and doodles
           </p>
         </div>

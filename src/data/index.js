@@ -20,6 +20,7 @@ import hussle from "./hussle";
 import Quiz from "./Quiz";
 import dnd from "./dnd";
 import font from "./font";
+import bigBg from "./bigBg";
 
 const htmlList = {
   intro: { ...intro, index: 0 },
@@ -44,6 +45,7 @@ const htmlList = {
   quiz: { html: <Quiz />, title: "Quiz", index: 19 },
   dnd: { ...dnd, index: 20 },
   font: { ...font, index: 21 },
+  bigBg: { ...bigBg, index: 22 },
 };
 
 export default htmlList;

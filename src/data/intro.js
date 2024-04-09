@@ -1,7 +1,8 @@
 const title = "Intro";
 const html = (
   <div className="content">
-    <p>Hello and welcome to my portfolio.</p>
+    <h2 style={{ textAlign: "center" }}>Hello and welcome to my portfolio.</h2>
+    <br />
     <p>
       Interact with the characters in order to progress through the site. After you have collected
       all 27 pop-up windows. You'll win and shall receive a reward.

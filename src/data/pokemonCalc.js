@@ -52,13 +52,27 @@ const pokemonCalc = {
                     5
                   </div>
                 </div>
-                <span style={{ whiteSpace: "nowrap" }}>&nbsp;+ 2</span>
+                <span
+                  style={{
+                    whiteSpace: "nowrap",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}>
+                  &nbsp;+ 2
+                </span>
               </div>
-              <div style={{ display: "flex", alignItems:'center' }}>
+              <div style={{ display: "flex", alignItems: "center" }}>
                 <span style={{ whiteSpace: "nowrap" }}>&nbsp;* Power *&nbsp;</span>
-                <div style={{display: 'flex', justifyContent:'center', alignItems: 'center', flexDirection:'column'}}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    flexDirection: "column",
+                  }}>
                   <div>attack_stat</div>
-                  <div style={{borderTop: '1px solid black'}}>defence_stat</div>
+                  <div style={{ borderTop: "1px solid black" }}>defence_stat</div>
                 </div>
               </div>
             </div>
@@ -74,11 +88,19 @@ const pokemonCalc = {
               50
             </span>
           </div>
-          <p style={{ whiteSpace: "nowrap" }}>&nbsp;+ 2</p>
+          <p
+            style={{
+              whiteSpace: "nowrap",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}>
+            &nbsp;+ 2
+          </p>
         </div>
         <p style={{ whiteSpace: "nowrap" }}>&nbsp; * STAB * Type1 * Type2 * random.</p>
       </div>
-<br/>
+      <br />
       <p>rounded down.</p>
     </div>
     // <div className="content">

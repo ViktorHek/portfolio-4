@@ -15,6 +15,15 @@
 .lid {
   display: flex;
 }
+.font-container {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+.font-container > svg {
+  height: 50px;
+  width: 50px;
+}
 .lid > p {
   color: #0b1350;
   font-size: 1em;
