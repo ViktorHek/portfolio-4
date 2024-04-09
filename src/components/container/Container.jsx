@@ -1,6 +1,7 @@
 import "./index.css";
 import htmlList from "../../data/index";
 import WusiwygEditor from "../wysiwygEditor/WusiwygEditor";
+import { useEffect, useState } from "react";
 
 function Container(props) {
   const { clickMin, clickClose, style, isMinimized, id, startDrag } = props;
@@ -12,6 +13,13 @@ function Container(props) {
   // const [modStyle, setModStyle] = useState(
   //   size === "big" ? { ...style, left: 100, maxWidth: 800 } : style
   // );
+  const [showTools, setShowTools] = useState(false);
+
+  useEffect(() => {
+    if (sessionStorage.getItem("quiz") === "true") {
+      setShowTools(true);
+    }
+  }, []);
 
   return (
     <>
@@ -46,21 +54,26 @@ function Container(props) {
               </div>
               {htmlList[id] ? (
                 <div className="box2">
-                  <div className="top-toolbar">
-                    <div className="left-border"></div>
-                    <div className="right-border"></div>
-                    <a href="" download="images/Viktor_Karlsson_PB.pdf">
-                      Resumé
-                    </a>
-                    <a>Edit</a>
-                    <a>View</a>
-                    <a>Tools</a>
-                    <a>Help</a>
-                  </div>
+                  {showTools ? (
+                    <div className="top-toolbar">
+                      <div className="left-border"></div>
+                      <div className="right-border"></div>
+                      <a href="" download="images/Viktor_Karlsson_CV.pdf">
+                        Resumé
+                      </a>
+                      <a href="" download="images/Viktor_Karlsson_PB.pdf">
+                        Letter
+                      </a>
+                      <a>Edit</a>
+                      <a>View</a>
+                      <a>Tools</a>
+                      <a>Help</a>
+                    </div>
+                  ) : null}
                   <div className="editor-backgrond2">
                     {html}
                     <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
-                      {index}/27
+                      {index}/26
                     </div>
                     {/* <div className="editor">{text}</div> */}
                   </div>

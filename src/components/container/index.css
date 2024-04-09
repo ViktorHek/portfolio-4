@@ -13,7 +13,7 @@
   font-size: 1.2em;
 }
 .lid {
-  /* display: flex; */
+  display: flex;
 }
 .lid > p {
   color: #0b1350;

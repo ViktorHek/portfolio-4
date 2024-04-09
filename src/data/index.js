@@ -18,6 +18,7 @@ import orangeDuddle from "./orangeDuddle";
 import movieIdees from "./movieIdees";
 import hussle from "./hussle";
 import Quiz from "./Quiz";
+import dnd from "./dnd";
 
 const htmlList = {
   intro: { ...intro, index: 0 },
@@ -39,7 +40,8 @@ const htmlList = {
   orangeDuddle: { ...orangeDuddle, index: 16 },
   movieIdees: { ...movieIdees, index: 17 },
   hussle: { ...hussle, index: 18 },
-  quiz: { html: <Quiz />, title: "Quiz", index: 18 },
+  quiz: { html: <Quiz />, title: "Quiz", index: 19 },
+  dnd: { ...dnd, index: 20 },
 };
 
 export default htmlList;

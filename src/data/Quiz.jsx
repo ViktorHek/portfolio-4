@@ -24,8 +24,9 @@ function Quiz() {
     }
   }
   function handleWin() {
-    console.log("win");
+    sessionStorage.setItem("quiz", true);
   }
+
   function getError(ans, id) {
     console.log(ans, id);
     let el = document.getElementById(id);
@@ -81,7 +82,10 @@ function Quiz() {
             </div>
           </fieldset>
           <fieldset id="fieldset3" name="fieldset3">
-            <legend>Who made all the artwork, the background, the duddles and animations for the whole page?</legend>
+            <legend>
+              Who made all the artwork, the background, the duddles and animations for the whole
+              page?
+            </legend>
             <div>
               <input type="radio" id="viktor1" name="fieldset3" value="viktor1" />
               <label for="viktor1">Viktor Kalrsson</label>

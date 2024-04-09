@@ -30,3 +30,12 @@ body {
   justify-content: center;
   align-items: center;
 }
+
+.flower {
+  animation: translate(100px) 2s;
+  /* animation: translate(100px) 2s timing-function delay iteration-count direction fill-mode; */
+}
+
+/* @keyframes moveUp {
+  transform: translate(100px)
+} */

@@ -3,7 +3,8 @@ function SmallBg({ clickBg }) {
     return clickBg(event, id);
   }
 const eyeColor = 'black'
-// duddles x, vikimon, font, kluring kod fråga 
+
+// duddles x, vikimon, font
   return (
     <svg viewBox="0 0 500 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g id="Frame1" clipPath="url(#clip0_1_2)">
@@ -116,7 +117,7 @@ const eyeColor = 'black'
           <line id="Line 84" x1="51.8706" y1="205.811" x2="56.7002" y2="204.517" stroke="black" />
           <line id="Line 85" x1="60.1294" y1="204.517" x2="64.959" y2="205.811" stroke="black" />
         </g>
-        <g id="grenn" onClick={(event) => handleClick(event, "grenn")}>
+        <g id="font" onClick={(event) => handleClick(event, "font")}>
           <path
             id="Ellipse 114"
             d="M314.5 448.5C314.5 480.057 308.075 508.602 297.712 529.239C287.333 549.906 273.088 562.5 257.5 562.5C241.912 562.5 227.667 549.906 217.288 529.239C206.925 508.602 200.5 480.057 200.5 448.5C200.5 416.943 206.925 388.398 217.288 367.761C227.667 347.094 241.912 334.5 257.5 334.5C273.088 334.5 287.333 347.094 297.712 367.761C308.075 388.398 314.5 416.943 314.5 448.5Z"
@@ -417,7 +418,7 @@ const eyeColor = 'black'
           <line id="Line 90" x1="165" y1="826.5" x2="155" y2="826.5" stroke="black" />
           <line id="Line 91" x1="190" y1="826.5" x2="180" y2="826.5" stroke="black" />
         </g>
-        <g id={20} onClick={(event) => handleClick(event, 20)}>
+        <g id="dnd" onClick={(event) => handleClick(event, "dnd")}>
           <path
             id="Ellipse 71"
             d="M368.5 956.5C368.5 993.587 361.681 1027.14 350.678 1051.4C339.654 1075.71 324.527 1090.5 308 1090.5C291.473 1090.5 276.346 1075.71 265.322 1051.4C254.319 1027.14 247.5 993.587 247.5 956.5C247.5 919.413 254.319 885.862 265.322 861.601C276.346 837.294 291.473 822.5 308 822.5C324.527 822.5 339.654 837.294 350.678 861.601C361.681 885.862 368.5 919.413 368.5 956.5Z"
@@ -1319,7 +1320,7 @@ const eyeColor = 'black'
           <line id="Line 49" x1="397.5" y1="771" x2="397.5" y2="783" stroke="black" />
           <line id="Line 48" x1="355.5" y1="771" x2="355.5" y2="783" stroke="black" />
         </g>
-        <g id="flower" onClick={(event) => handleClick(event, "flower")}>
+        <g id="flower" className="flower" onClick={(event) => handleClick(event, "flower")}>
           <path
             id="Ellipse 28"
             d="M168.5 919.5C168.5 927.088 162.554 934.082 152.661 939.209C142.792 944.322 129.125 947.5 114 947.5C98.8755 947.5 85.2076 944.322 75.3392 939.209C65.4457 934.082 59.5 927.088 59.5 919.5C59.5 911.912 65.4457 904.918 75.3392 899.791C85.2076 894.678 98.8755 891.5 114 891.5C129.125 891.5 142.792 894.678 152.661 899.791C162.554 904.918 168.5 911.912 168.5 919.5Z"
@@ -2923,7 +2924,7 @@ const eyeColor = 'black'
             fill="black"
           />
         </g>
-        <g id={27} onClick={(event) => handleClick(event, 27)}>
+        <g id="quotes_s_logo" onClick={(event) => handleClick(event, "quotes")}>
           <g id="Subtract_23">
             <mask id="path-556-inside-71_1_2" fill="white">
               <path

@@ -43,7 +43,8 @@ function App() {
       window.removeEventListener("scroll", onscroll);
     };
   }, []);
-
+ // två personer har sagt att popup rutan ska vara i screen
+// separat window för varje jobb
   function clickBg(event, id) {
     let toWide = event.clientX > 600;
     let obj = {
