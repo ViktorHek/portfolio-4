@@ -34,6 +34,7 @@ function App() {
   const [atBottom, setAtBottom] = useState(false);
   const [uppdate, setUpdate] = useState(false);
   const [conList, setConList] = useState([initCon]);
+  const [collection, setCollection] = useState([]);
 
   useEffect(() => {
     const onscroll = () => {
@@ -44,9 +45,9 @@ function App() {
       window.removeEventListener("scroll", onscroll);
     };
   }, []);
-  // två personer har sagt att popup rutan ska vara i screen
-  // separat window för varje jobb
+
   function clickBg(event, id) {
+    setCollection([...collection, id])
     let toWide = event.clientX > 600;
     let obj = {
       ...basePos,

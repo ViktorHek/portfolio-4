@@ -91,7 +91,5 @@ const pokemonCalc = {
     // </div>
   ),
 };
-// bugg i editor
-// samla på figurer 
-// bättre lösning för har man hittat innan 
+
 export default pokemonCalc;

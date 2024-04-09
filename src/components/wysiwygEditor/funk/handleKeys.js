@@ -44,24 +44,21 @@ function handleKeys(event, styles) {
         let secondWord = document.createElement("span");
         let puchFirst = true;
 
-        Array.prototype.forEach.call(
-          placeholder.parentElement.children,
-          function (el) {
-            if (el.id === "placeholder") {
-              puchFirst = false;
+        Array.prototype.forEach.call(placeholder.parentElement.children, function (el) {
+          if (el.id === "placeholder") {
+            puchFirst = false;
+          } else {
+            if (puchFirst) {
+              let p = document.createElement("p");
+              p.innerHTML = el.innerHTML;
+              firstWord.appendChild(p);
             } else {
-              if (puchFirst) {
-                let p = document.createElement("p");
-                p.innerHTML = el.innerHTML;
-                firstWord.appendChild(p);
-              } else {
-                let p = document.createElement("p");
-                p.innerHTML = el.innerHTML;
-                secondWord.appendChild(p);
-              }
+              let p = document.createElement("p");
+              p.innerHTML = el.innerHTML;
+              secondWord.appendChild(p);
             }
           }
-        );
+        });
         tempTag.insertAdjacentElement("afterend", firstWord);
         let tag = document.createElement("span");
         tag.name = "space";
@@ -82,28 +79,29 @@ function handleKeys(event, styles) {
       break;
     case "enter":
       let line = document.createElement("span");
-      line.innerHTML =
-        '<span><p></p><p class="placeholder" id="placeholder"></p></span>';
-      placeholder.parentElement.parentElement.insertAdjacentElement(
-        "afterend",
-        line
-      );
+      line.innerHTML = '<span><p></p><p class="placeholder" id="placeholder"></p></span>';
+      placeholder.parentElement.parentElement.insertAdjacentElement("afterend", line);
       placeholder.remove();
       break;
     case "backspace":
       if (placeholder.parentElement.children.length < 3) {
         if (placeholder.parentElement.parentElement.children.length < 2) {
-          placeholder.parentElement.parentElement.previousElementSibling.lastChild.appendChild(
-            newPlaceHolder
-          );
-          placeholder.parentElement.parentElement.remove();
-          placeholder.parentElement.remove();
-          placeholder.remove();
-
+          if (placeholder.parentElement.children.length < 3) {
+            // new code start
+            if (placeholder.previousElementSibling) {
+              placeholder.previousElementSibling.remove();
+            }
+          } else {
+            // new code end
+            placeholder.parentElement.parentElement.previousElementSibling.lastChild.appendChild(
+              newPlaceHolder
+            );
+            placeholder.parentElement.parentElement.remove();
+            placeholder.parentElement.remove();
+            placeholder.remove();
+          }
         } else {
-          placeholder.parentElement.previousElementSibling.appendChild(
-            newPlaceHolder
-          );
+          placeholder.parentElement.previousElementSibling.appendChild(newPlaceHolder);
           placeholder.parentElement.remove();
           placeholder.remove();
         }
@@ -114,7 +112,7 @@ function handleKeys(event, styles) {
     default:
       break;
   }
-  return
+  return;
 }
 
 export default handleKeys;
