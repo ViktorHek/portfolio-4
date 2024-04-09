@@ -5,6 +5,7 @@ import SmallBg from "./animations/SmallBg";
 // import wusiwygEditor from "./components/wysiwygEditor";
 import Header from "./components/header/Header";
 import Container from "./components/container/Container";
+// import aiKeyWords from "./utils/aiKeyWords.html";
 
 function App() {
   const basePos = {
@@ -27,7 +28,7 @@ function App() {
     ),
     isMinimized: false,
     pos: { ...basePos, top: 200, left: 200 },
-    id: 'intro',
+    id: "intro",
   };
 
   const [atBottom, setAtBottom] = useState(false);
@@ -43,8 +44,8 @@ function App() {
       window.removeEventListener("scroll", onscroll);
     };
   }, []);
- // två personer har sagt att popup rutan ska vara i screen
-// separat window för varje jobb
+  // två personer har sagt att popup rutan ska vara i screen
+  // separat window för varje jobb
   function clickBg(event, id) {
     let toWide = event.clientX > 600;
     let obj = {
@@ -139,7 +140,8 @@ function App() {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          justifyContent: "space-evenly", marginLeft: 30
+          justifyContent: "space-evenly",
+          marginLeft: 30,
         }}>
         <p style={{ fontSize: "2.2em", color: "#41b4be", whiteSpace: "nowrap" }}>Viktor Karlsson</p>
         <p style={{ fontSize: "1.5em", color: "#41b4be", whiteSpace: "nowrap" }}>
@@ -211,6 +213,7 @@ function App() {
           })}
         </div>
       ) : null}
+      {/* <aiKeyWords /> */}
     </div>
   );
 }

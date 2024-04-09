@@ -40,7 +40,6 @@ function Header() {
             return (
               <svg
                 fill="#0C134F"
-                v-for="drip in drips"
                 key={el.id}
                 className={el.class}
                 viewBox="0 0 400 400"
@@ -52,21 +51,15 @@ function Header() {
           })}
         </div>
 
-        {/* <div class="main_drop_container">
+        <div class="main_drop_container">
           {drops.map((drop) => {
             return (
+
               <div
-                xs="3"
-                sm="3"
-                md="3"
-                lg="3"
-                xl="3"
-                className="drop_container"
-                v-for="drop in drops"
+                className={drop.class}
                 key={drop.id}>
                 <svg
                   fill="#0C134F"
-                  className={drop.class}
                   id={drop.id}
                   viewBox="0 0 100 100"
                   preserveAspectRatio="none">
@@ -76,7 +69,26 @@ function Header() {
               </div>
             );
           })}
-        </div> */}
+        </div>
+        <div class="main_drop_container">
+          {drops.map((drop) => {
+            return (
+
+              <div
+                className={`${drop.class}2`}
+                key={drop.id}>
+                <svg
+                  fill="#0C134F"
+                  id={drop.id}
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="none">
+                  <circle cx="50" cy="71" r="25" />
+                  <path d="M50 3L74.2487 64.5H25.7513L50 3Z" />
+                </svg>
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
