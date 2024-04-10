@@ -4,3 +4,7 @@ samla på figurer
 bättre lösning för har man hittat innan 
 adding final popup window 
 fulfix för mobil
+fix flower
+add on dnd
+add on crach
+add final effect for collecting all popup windows

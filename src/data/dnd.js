@@ -1,3 +1,6 @@
+const testingShit = function testingShit() {
+  console.log("shit");
+};
 const dnd = {
   title: "My DnD Character",
   html: (
@@ -13,6 +16,7 @@ const dnd = {
       </fieldset>
       <p>
         <strong>Name:&nbsp;</strong> Kichtor Sonson
+        <button onClick={() => testingShit()}>click</button>
       </p>
     </div>
   ),

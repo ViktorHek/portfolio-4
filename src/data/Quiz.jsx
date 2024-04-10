@@ -1,10 +1,8 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
-function Quiz() {
+function Quiz(props) {
   const [win, setWin] = useState(false);
-  useEffect(() => {
-    if (win) handleWin();
-  }, [win]);
+
   function handleSubmit() {
     const asn1 = document.getElementById("CustomerFirst").checked;
     const asn2 = document.getElementById("digimon").checked;
@@ -16,15 +14,14 @@ function Quiz() {
     const asn3 = asn31 || asn32 || asn33;
     if (asn1 && asn2 && asn3 && asn4) {
       setWin(true);
+      sessionStorage.setItem("quiz", true);
+      return props.handleWin();
     } else {
       getError(asn1, "fieldset1");
       getError(asn2, "fieldset2");
       getError(asn3, "fieldset3");
       getError(asn4, "fieldset4");
     }
-  }
-  function handleWin() {
-    sessionStorage.setItem("quiz", true);
   }
 
   function getError(ans, id) {

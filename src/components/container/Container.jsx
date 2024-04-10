@@ -22,6 +22,10 @@ function Container(props) {
     }
   }, []);
 
+  function handleWin() {
+    setShowTools(true);
+  }
+
   return (
     <>
       {isMinimized ? (
@@ -72,7 +76,7 @@ function Container(props) {
                     </div>
                   ) : null}
                   <div className="editor-backgrond2">
-                    {id === "quiz" ? <Quiz /> : null}
+                    {id === "quiz" ? <Quiz handleWin={handleWin} /> : null}
                     {id !== "quiz" ? html : null}
                     <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
                       {index}/26
