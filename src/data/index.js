@@ -21,6 +21,8 @@ import Quiz from "./Quiz";
 import dnd from "./dnd";
 import font from "./font";
 import bigBg from "./bigBg";
+import Crach from "./Crach";
+import doodleList from "./doodleList";
 
 const htmlList = {
   intro: { ...intro, index: 0 },
@@ -46,6 +48,8 @@ const htmlList = {
   dnd: { ...dnd, index: 20 },
   font: { ...font, index: 21 },
   bigBg: { ...bigBg, index: 22 },
+  crach: { html: <Crach />, title: "Please don't", index: 23 },
+  doodleList: { ...doodleList, index: 24 },
 };
 
 export default htmlList;

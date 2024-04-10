@@ -1,11 +1,12 @@
 const bigBg = {
   title: "Imgage",
+  size: "big",
   html: (
-    <div >
-    {/* <div style={{ height: 400, width: 800 }}> */}
+    <div>
+      {/* <div style={{ height: 400, width: 800 }}> */}
       <svg
-        // width="800"
-        // height="400"
+        width="800"
+        height="400"
         viewBox="0 0 800 400"
         fill="none"
         xmlns="http://www.w3.org/2000/svg">

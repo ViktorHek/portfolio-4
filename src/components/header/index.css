@@ -31,7 +31,7 @@
   position: absolute;
   top: 0px;
   left: 0;
-  height: 3000px;
+  height: 4000px;
   width: 100%;
   margin: 0px;
   z-index: 99;
@@ -170,6 +170,9 @@
 @keyframes scroll {
   0% {
     transform: translateY(-50px);
+  }
+  20% {
+    transform: translateY(0px);
   }
   100% {
     transform: translateY(100%);

@@ -15,6 +15,12 @@
 .lid {
   display: flex;
 }
+.lid > p {
+  color: #0b1350;
+  font-size: 1em;
+  margin-left: 3px;
+  text-align: flex-start;
+}
 .font-container {
   display: flex;
   padding: 20px;
@@ -24,12 +30,23 @@
   height: 50px;
   width: 50px;
 }
-.lid > p {
-  color: #0b1350;
-  font-size: 1em;
-  margin-left: 3px;
-  text-align: flex-start;
+
+.doodle-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
+
+.doodle-list > div {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+}
+.doodle-list > div > img{
+  width: 100%;
+  height: 100%;
+}
+
 .mini-app-container2 {
   background-color: rgb(213, 213, 213);
   border: 2px solid black;
