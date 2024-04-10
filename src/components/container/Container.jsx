@@ -2,6 +2,7 @@ import "./index.css";
 import htmlList from "../../data/index";
 import WusiwygEditor from "../wysiwygEditor/WusiwygEditor";
 import { useEffect, useState } from "react";
+import Quiz from "../../data/Quiz";
 
 function Container(props) {
   const { clickMin, clickClose, style, isMinimized, id, startDrag } = props;
@@ -71,7 +72,8 @@ function Container(props) {
                     </div>
                   ) : null}
                   <div className="editor-backgrond2">
-                    {html}
+                    {id === "quiz" ? <Quiz /> : null}
+                    {id !== "quiz" ? html : null}
                     <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
                       {index}/26
                     </div>

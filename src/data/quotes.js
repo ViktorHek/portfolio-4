@@ -3,8 +3,9 @@ const quotes = {
   html: (
     <div className="content">
       <h4>Citat utan kontext</h4>
+      <br />
       <ul>
-        <li>Prata inte med mig \n om du inte svettas först</li>
+        <li>Prata inte med mig om du inte svettas först</li>
         <li>Jorden stormar genom rymden och här sitter vi o chillar</li>
         <li>Släpp ner maskinvärktyget!</li>
         <li>Vinröd basker står för fallskärmsjägare</li>

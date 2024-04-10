@@ -87,15 +87,15 @@ function Quiz() {
             </legend>
             <div>
               <input type="radio" id="viktor1" name="fieldset3" value="viktor1" />
-              <label for="viktor1">Viktor Kalrsson</label>
+              <label for="viktor1">Viktor Karlsson</label>
             </div>
             <div>
               <input type="radio" id="viktor2" name="fieldset3" value="viktor2" />
-              <label for="viktor2">Viktor Kalrsson</label>
+              <label for="viktor2">Viktor Karlsson</label>
             </div>
             <div>
               <input type="radio" id="viktor3" name="fieldset3" value="viktor3" />
-              <label for="viktor3">Viktor Kalrsson</label>
+              <label for="viktor3">Viktor Karlsson</label>
             </div>
           </fieldset>
           <fieldset id="fieldset4" name="fieldset4">
