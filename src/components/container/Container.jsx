@@ -3,10 +3,10 @@ import htmlList from "../../data/index";
 import WusiwygEditor from "../wysiwygEditor/WusiwygEditor";
 import { useEffect, useState } from "react";
 import Quiz from "../../data/Quiz";
+import Flower from "../../data/Flower";
 
 function Container(props) {
   const { clickMin, clickClose, style, isMinimized, id, startDrag } = props;
-
   const { title, html, size, index } = htmlList[id]
     ? htmlList[id]
     : { title: "Say something", html: "This duddle has nothing to say atm.", size: null };
@@ -15,6 +15,7 @@ function Container(props) {
   //   size === "big" ? { ...style, left: 100, maxWidth: 800 } : style
   // );
   const [showTools, setShowTools] = useState(false);
+  const special = ["quiz", "flower"];
 
   useEffect(() => {
     if (sessionStorage.getItem("quiz") === "true") {
@@ -24,6 +25,10 @@ function Container(props) {
 
   function handleWin() {
     setShowTools(true);
+  }
+
+  function fasthandle(id) {
+    console.log("fast click", id);
   }
 
   return (
@@ -77,17 +82,22 @@ function Container(props) {
                   ) : null}
                   <div className="editor-backgrond2">
                     {id === "quiz" ? <Quiz handleWin={handleWin} /> : null}
-                    {id !== "quiz" ? html : null}
-                    <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
+                    {id === "flower" ? <Flower fasthandle={fasthandle} /> : null}
+                    {special.includes(id) === false ? html : null}
+                    {/* <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
                       {index}/26
-                    </div>
+                    </div> */}
                     {/* <div className="editor">{text}</div> */}
                   </div>
                 </div>
               ) : (
                 <WusiwygEditor />
                 // { id: String === "dvdScreen" ? <DvdScreen /> : null }
+                // { id: String === "dvdScreen" ? <DvdScreen /> : null }
               )}
+              <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
+                {htmlList[id] ? index : 26}/26
+              </div>
             </div>
           </div>
         </div>

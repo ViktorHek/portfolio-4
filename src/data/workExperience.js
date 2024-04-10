@@ -53,7 +53,8 @@ const html = (
         <strong>Karlssons Skola:&nbsp;</strong>Substitute Teacher<p>| Mars 2020 - May 2020</p>
       </li>
       <li className="lid">
-        <strong>Västra Hisingens Stadsdelsförvaltning:&nbsp;</strong>Comunicatior internship
+        <strong>Västra Hisingens Stadsdelsförvaltning:&nbsp;</strong>
+        <span>Comunicatior internship</span>
         <p>| Mars 2019 - June 2019</p>
       </li>
       <li className="lid">

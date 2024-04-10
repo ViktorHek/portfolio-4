@@ -6,6 +6,7 @@ import SmallBg from "./animations/SmallBg";
 import Header from "./components/header/Header";
 import Container from "./components/container/Container";
 // import aiKeyWords from "./utils/aiKeyWords.html";
+import King from "./animations/King";
 
 function App() {
   const basePos = {
@@ -47,7 +48,7 @@ function App() {
   }, []);
 
   function clickBg(event, id) {
-    setCollection([...collection, id])
+    setCollection([...collection, id]);
     let toWide = event.clientX > 600;
     let obj = {
       ...basePos,
@@ -143,6 +144,7 @@ function App() {
           alignItems: "center",
           justifyContent: "space-evenly",
           marginLeft: 30,
+          zIndex: 999,
         }}>
         <p style={{ fontSize: "2.2em", color: "#41b4be", whiteSpace: "nowrap" }}>Viktor Karlsson</p>
         <p style={{ fontSize: "1.5em", color: "#41b4be", whiteSpace: "nowrap" }}>
@@ -214,7 +216,13 @@ function App() {
           })}
         </div>
       ) : null}
-      {/* <aiKeyWords /> */}
+      {/* <aiKeyWords /> */}{" "}
+      <div
+        className="outer-king-container"
+        // style={{ width: 100, height: 100, position: "absolute", bottom: 0, right: 20 }}>
+      >
+        <King />
+      </div>
     </div>
   );
 }

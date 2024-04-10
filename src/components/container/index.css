@@ -14,6 +14,8 @@
 }
 .lid {
   display: flex;
+  flex-wrap: wrap;
+  white-space: nowrap;
 }
 .lid > p {
   color: #0b1350;
@@ -42,7 +44,7 @@
   height: 200px;
   margin: 5px;
 }
-.doodle-list > div > img{
+.doodle-list > div > img {
   width: 100%;
   height: 100%;
 }
@@ -305,6 +307,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin: 2px 2px 0px 2px;
 }
 
 .header-min-btn2 > span {
