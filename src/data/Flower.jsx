@@ -18,7 +18,7 @@ function Flower({ fasthandle }) {
           <span onClick={(event) => fasthandle(event, "education")}>Education</span>
         </li>
         <li>
-          <span onClick={(event) => fasthandle(event, "CV")}>Resumé</span>
+          <span onClick={(event) => fasthandle(event, "cv")}>Resumé</span>
         </li>
         <li>
           <span onClick={(event) => fasthandle(event, "pb")}>Personal Letter</span>
@@ -27,10 +27,19 @@ function Flower({ fasthandle }) {
           <span onClick={(event) => fasthandle(event, "contact")}>Contact Information</span>
         </li>
         <li>
-          <span onClick={(event) => fasthandle(event, "workExperience")}>Reference</span>
+          <span onClick={(event) => fasthandle(event, "reference")}>Reference</span>
         </li>
         <li>
           <span onClick={(event) => fasthandle(event, "links")}>Links</span>
+        </li>
+        <li>
+          <span onClick={(event) => fasthandle(event, "links")}>Links</span>
+        </li>
+        <li>
+          <span onClick={(event) => fasthandle(event, "personality")}>Personality</span>
+        </li>
+        <li>
+          <span onClick={(event) => fasthandle(event, "journey")}>Journey</span>
         </li>
       </ul>
       <p>
