@@ -1,19 +1,8 @@
 const hussle = {
-  title: "Hustle",
+  title: "Design",
   html: (
     <div className="content">
-      <h2>List of business Idées</h2>
-      <h4>For the hustle grindset people</h4>
-      <ul>
-        <li>
-          <strong>Replacable Programming Language</strong>
-          <p>tjo</p>
-        </li>
-        <li>
-          <p>hej</p>
-          <p>tjo</p>
-        </li>
-      </ul>
+      <h2 style={{ textAlign: "center" }}>The idées behinde the styling of this portfolio.</h2>
     </div>
   ),
 };

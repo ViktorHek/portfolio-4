@@ -167,6 +167,26 @@
   animation-delay: 17s;
 }
 
+.side-drop {
+  width: 150px;
+  transform: rotate(-20deg);
+  animation: scroll 20s infinite;
+  animation-delay: 17s;
+  position: fixed;
+  top: -150px;
+  left: -55px;
+  animation: sidedrop 5s infinite linear;
+}
+
+@keyframes sidedrop {
+  0% {
+    top: -150px;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
 @keyframes scroll {
   0% {
     transform: translateY(-50px);

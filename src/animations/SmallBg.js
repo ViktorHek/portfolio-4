@@ -2924,7 +2924,7 @@ const eyeColor = 'black'
             fill="black"
           />
         </g>
-        <g id="quotes_s_logo" onClick={(event) => handleClick(event, "quotes")}>
+        <g id="quotes_s_logo" onClick={(event) => handleClick(event, "easterEgg")}>
           <g id="Subtract_23">
             <mask id="path-556-inside-71_1_2" fill="white">
               <path

@@ -9,16 +9,28 @@ import Container from "./components/container/Container";
 import King from "./animations/King";
 
 function App() {
-  const basePos = {
-    position: "absolute",
-    zIndex: 10000,
-    maxWidth: 800,
-    minWidth: 300,
-    top: "auto",
-    bottom: "auto",
-    left: "auto",
-    right: "auto",
-  };
+  const isTablet = false
+  // const isTablet = window.innerWidth < 700;
+  const basePos = isTablet
+    ? {
+        position: "absolute",
+        zIndex: 1000,
+        width: "90%",
+        top: "10%",
+        left: "5%",
+      }
+    : {
+        position: "absolute",
+        zIndex: 10000,
+        maxWidth: 800,
+        minWidth: 300,
+        top: "auto",
+        bottom: "auto",
+        left: "auto",
+        right: "auto",
+      };
+
+  console.log({ window });
   const initCon = {
     title: "Intro",
     text: (
@@ -28,7 +40,7 @@ function App() {
       </div>
     ),
     isMinimized: false,
-    pos: { ...basePos, top: 200, left: 200 },
+    pos: { ...basePos, top: isTablet ? "10%" : 200, left: isTablet ? "5%" : 200 },
     id: "intro",
   };
 
@@ -50,13 +62,15 @@ function App() {
   function clickBg(event, id) {
     setCollection([...collection, id]);
     let toWide = event.clientX > 600;
-    let obj = {
-      ...basePos,
-      top: atBottom ? "auto" : event.pageY,
-      left: toWide ? "auto" : event.clientX,
-      bottom: atBottom ? 50 : "auto",
-      right: toWide ? window.innerWidth - event.clientX : "auto",
-    };
+    let obj = isTablet
+      ? basePos
+      : {
+          ...basePos,
+          top: atBottom ? "auto" : event.pageY,
+          left: toWide ? "auto" : event.clientX,
+          bottom: atBottom ? 50 : "auto",
+          right: toWide ? window.innerWidth - event.clientX : "auto",
+        };
     let isClosed = conList
       .map((el) => {
         return el.id;
@@ -65,13 +79,6 @@ function App() {
     if (!isClosed) {
       let arr = conList;
       arr.push({
-        title: "Work Experience",
-        text: (
-          <div className="dd">
-            <h1>tjo</h1>
-            <p>bajs</p>
-          </div>
-        ),
         isMinimized: false,
         pos: obj,
         id: id,
@@ -162,10 +169,7 @@ function App() {
                 <Container
                   clickMin={minimized}
                   clickClose={removeCon}
-                  title={con.title}
-                  text={con.text}
                   isMinimized={con.isMinimized}
-                  // id={1337}
                   id={con.id}
                   style={con.pos}
                   startDrag={startDrag}

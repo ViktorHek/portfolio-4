@@ -23,7 +23,7 @@ import font from "./font";
 import bigBg from "./bigBg";
 import Crach from "./Crach";
 import doodleList from "./doodleList";
-import Flower from "./Flower";
+import easterEgg from "./easterEgg";
 
 const htmlList = {
   intro: { ...intro, index: 0 },
@@ -51,6 +51,7 @@ const htmlList = {
   bigBg: { ...bigBg, index: 22 },
   crach: { html: <Crach />, title: "Please don't", index: 23 },
   doodleList: { ...doodleList, index: 24 },
+  easterEgg: { ...easterEgg, index: 27 },
   flower: { html: 'penis', title: 'Index', index: 25 },
 };
 
