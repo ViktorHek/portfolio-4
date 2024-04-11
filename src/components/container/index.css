@@ -51,10 +51,12 @@
 
 .mini-app-container2 {
   background-color: rgb(213, 213, 213);
-  border: 2px solid black;
+  border-top: 2px solid black;
+  border-left: 2px solid black;
+  border-right: 2px solid black;
   max-width: 300px;
   max-height: 30px;
-  padding: 2px;
+  /* padding: 2px; */
   margin-left: 2px;
   /* position: absolute;
   bottom: 1px;

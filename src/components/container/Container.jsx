@@ -6,7 +6,7 @@ import Quiz from "../../data/Quiz";
 import Flower from "../../data/Flower";
 
 function Container(props) {
-  const { clickMin, clickClose, style, isMinimized, id, startDrag } = props;
+  const { clickMin, clickClose, style, isMinimized, id, startDrag, clickFlower } = props;
   const { title, html, size, index } = htmlList[id]
     ? htmlList[id]
     : { title: "Say something", html: "This duddle has nothing to say atm.", size: null };
@@ -25,10 +25,6 @@ function Container(props) {
 
   function handleWin() {
     setShowTools(true);
-  }
-
-  function fasthandle(id) {
-    console.log("fast click", id);
   }
 
   return (
@@ -82,7 +78,7 @@ function Container(props) {
                   ) : null}
                   <div className="editor-backgrond2">
                     {id === "quiz" ? <Quiz handleWin={handleWin} /> : null}
-                    {id === "flower" ? <Flower fasthandle={fasthandle} /> : null}
+                    {id === "flower" ? <Flower fasthandle={clickFlower} /> : null}
                     {special.includes(id) === false ? html : null}
                     {/* <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
                       {index}/26

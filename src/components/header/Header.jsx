@@ -27,14 +27,16 @@ function Header() {
       {/* <div style="z-index: 999; position: sticky; top: 0; left: 0; overflow: visible"> */}
       <div style={{ position: "relative" }}>
         {/* <img src="images/pexels-felix-mittermeier-956999.jpg" alt="" /> */}
+
         <svg
           width="100%"
           height="100%"
           viewBox="0 0 100% 100%"
           fill="none"
           xmlns="http://www.w3.org/2000/svg">
-          <rect id="base_rect" width="1440" height="100" fill="#0C134F" />
+          <rect id="base_rect" width="100%" height="100" fill="#0C134F" />
         </svg>
+
         <div class="main_drip_container">
           {drips.map((el) => {
             return (

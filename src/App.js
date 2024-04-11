@@ -23,7 +23,7 @@ function App() {
         position: "absolute",
         zIndex: 10000,
         maxWidth: 800,
-        minWidth: 300,
+        minWidth: 400,
         top: "auto",
         bottom: "auto",
         left: "auto",
@@ -138,6 +138,11 @@ function App() {
     return false;
   }
 
+  function clickFlower(event, id) {
+    clickBg(event, id)
+    console.log("flower: ", id)
+  }
+
   return (
     <div className="App" style={{ width: "100%" }} onDragOver={dragOver} onDrop={drop}>
       <div
@@ -173,6 +178,7 @@ function App() {
                   id={con.id}
                   style={con.pos}
                   startDrag={startDrag}
+                  clickFlower={clickFlower}
                 />
               );
             }
@@ -209,8 +215,6 @@ function App() {
                   <Container
                     clickMin={minimized}
                     clickClose={removeCon}
-                    title={con.title}
-                    text={con.text}
                     isMinimized={con.isMinimized}
                     id={con.id}
                   />
