@@ -6,8 +6,8 @@ import Quiz from "../../data/Quiz";
 import Flower from "../../data/Flower";
 
 function Container(props) {
-  const { clickMin, clickClose, style, isMinimized, id, startDrag, clickFlower } = props;
-  const { title, html, size, index } = htmlList[id]
+  const { clickMin, clickClose, style, isMinimized, id, startDrag, clickFlower, index } = props;
+  const { title, html, size } = htmlList[id]
     ? htmlList[id]
     : { title: "Say something", html: "This duddle has nothing to say atm.", size: null };
   // let modStyle = size === "big" ? { ...style, left: 100, maxWidth: 800 } : style;
@@ -92,7 +92,7 @@ function Container(props) {
                 // { id: String === "dvdScreen" ? <DvdScreen /> : null }
               )}
               <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
-                {htmlList[id] ? index : 26}/26
+                {index}/26
               </div>
             </div>
           </div>

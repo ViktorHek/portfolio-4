@@ -33,17 +33,21 @@ function App() {
   const initCon = {
     title: "Intro",
     isMinimized: false,
+    index: 0,
     pos: isTablet ? basePos : { ...basePos, top: 200, left: 200 },
     id: "intro",
   };
 
   const [uppdate, setUpdate] = useState(false);
-  const [collection, setCollection] = useState([]);
+  const [collection, setCollection] = useState(["intro"]);
   const [conList, setConList] = useState([initCon]);
   const [count, setCount] = useState(1);
 
   function clickBg(event, id) {
-    setCollection([...collection, id]);
+    if (collection.includes(id) === false) {
+      setCollection([...collection, id]);
+    }
+
     let toWide = event.clientX > 600;
     let toLow = document.body.scrollHeight - (window.scrollY + window.innerHeight) < 500;
     let obj = isTablet
@@ -62,10 +66,14 @@ function App() {
       .includes(id);
     if (!isClosed) {
       let arr = conList;
+      console.log({ collection });
       arr.push({
         isMinimized: false,
         pos: obj,
         id: id,
+        index: collection.includes(id)
+          ? collection.findIndex((el) => el === id)
+          : collection.length,
       });
       setConList(arr);
       setUpdate(!uppdate);
@@ -134,10 +142,6 @@ function App() {
     clickBg(fakeEvent, id);
   }
 
-  function getIndex(id) {
-    return conList.findIndex((el) => el.id === id);
-  }
-
   return (
     <div className="App" style={{ width: "100%" }} onDragOver={dragOver} onDrop={drop}>
       <div
@@ -167,14 +171,15 @@ function App() {
             if (!con.isMinimized) {
               return (
                 <Container
-                  clickMin={minimized}
-                  clickClose={removeCon}
                   isMinimized={con.isMinimized}
                   id={con.id}
                   style={con.pos}
+                  index={con.index}
+                  clickMin={minimized}
+                  clickClose={removeCon}
                   startDrag={startDrag}
                   clickFlower={clickFlower}
-                  index={getIndex(con.id)}
+                  key={con.id}
                 />
               );
             }
@@ -201,6 +206,7 @@ function App() {
                     clickClose={removeCon}
                     isMinimized={con.isMinimized}
                     id={con.id}
+                    key={con.id}
                   />
                 </div>
               );

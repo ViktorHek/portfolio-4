@@ -37,7 +37,7 @@ function Header() {
           <rect id="base_rect" width="100%" height="100" fill="#0C134F" />
         </svg>
 
-        <div class="main_drip_container">
+        <div className="main_drip_container">
           {drips.map((el) => {
             return (
               <svg
@@ -53,7 +53,7 @@ function Header() {
           })}
         </div>
 
-        <div class="main_drop_container">
+        <div className="main_drop_container">
           {drops.map((drop) => {
             return (
               <div className={drop.class} key={drop.id}>
@@ -65,7 +65,7 @@ function Header() {
             );
           })}
         </div>
-        <div class="main_drop_container">
+        <div className="main_drop_container">
           {drops.map((drop) => {
             return (
               <div className={`${drop.class}2`} key={drop.id}>
