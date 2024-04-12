@@ -7,15 +7,18 @@ function Crach() {
     <>
       {crach ? (
         <div className="content">
-          <div
-            style={{
-              position: "fixed",
-              top: 0,
-              left: 0,
-              width: "100vw",
-              height: "100vh",
-              backgroundColor: "rgb(0,0,0,85%)",
-            }}></div>
+          <div className="error-container">
+            <span style={{ color: "#e83b46" }}>Uncaught runtime errors:</span>
+            <div>
+              <span>ERROR</span>
+              <div>
+                Cannot read length of null (reading 'yore_dick') TypeError: Cannot read
+                properties of null (reading 'yore_dick') at theClub
+                (http://localhost:3000/static/js/bundle.js:11359:76) at
+                http://localhost:3000/static/js/bundle.js:10362:67
+              </div>
+            </div>
+          </div>
           <p>Do you want to crach the site?</p>
           <div>
             <button>Yes</button>

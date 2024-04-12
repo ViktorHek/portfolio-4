@@ -10,7 +10,7 @@ function Container(props) {
   const { title, html, size, index } = htmlList[id]
     ? htmlList[id]
     : { title: "Say something", html: "This duddle has nothing to say atm.", size: null };
-  let modStyle = size === "big" ? { ...style, left: 100, maxWidth: 800 } : style;
+  // let modStyle = size === "big" ? { ...style, left: 100, maxWidth: 800 } : style;
   // const [modStyle, setModStyle] = useState(
   //   size === "big" ? { ...style, left: 100, maxWidth: 800 } : style
   // );
@@ -44,7 +44,7 @@ function Container(props) {
           </div>
         </div>
       ) : (
-        <div style={modStyle} id={`cc${id}`} draggable="true" onDragStart={startDrag}>
+        <div style={style} id={`cc${id}`} draggable="true" onDragStart={startDrag}>
           <div className="app-container2">
             {/* <div className="app-container" style={{ display: isClosed ? "none" : "block" }}> */}
             <div className="app-inner-container2">

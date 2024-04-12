@@ -27,19 +27,19 @@ function Flower({ fasthandle }) {
           <span onClick={(event) => fasthandle(event, "contact")}>Contact Information</span>
         </li>
         <li>
-          <span onClick={(event) => fasthandle(event, "reference")}>Reference</span>
-        </li>
-        <li>
-          <span onClick={(event) => fasthandle(event, "links")}>Links</span>
-        </li>
-        <li>
-          <span onClick={(event) => fasthandle(event, "links")}>Links</span>
+          <span onClick={(event) => fasthandle(event, "skills")}>Competencies</span>
         </li>
         <li>
           <span onClick={(event) => fasthandle(event, "personality")}>Personality</span>
         </li>
         <li>
           <span onClick={(event) => fasthandle(event, "journey")}>Journey</span>
+        </li>
+        <li>
+          <span onClick={(event) => fasthandle(event, "reference")}>Reference</span>
+        </li>
+        <li>
+          <span onClick={(event) => fasthandle(event, "links")}>Links</span>
         </li>
       </ul>
       <p>
@@ -51,7 +51,10 @@ function Flower({ fasthandle }) {
         </li>
         <li>
           <span onClick={(event) => fasthandle(event, "editorDude")}>WYSIWYG-Editor</span>
+        </li>        <li>
+          <span onClick={(event) => fasthandle(event, "hussle")}>This Webpage</span>
         </li>
+
         <li>
           <span onClick={(event) => fasthandle(event, "dvdScreen")}>DVD screen</span>
         </li>
@@ -59,13 +62,13 @@ function Flower({ fasthandle }) {
           <span onClick={(event) => fasthandle(event, "font")}>My Font</span>
         </li>
         <li>
-          <span onClick={(event) => fasthandle(event, "orangeDuddle")}>Art</span>
-        </li>
-        <li>
-          <span onClick={(event) => fasthandle(event, "bigBg")}>Art, but bigger</span>
-        </li>
-        <li>
           <span onClick={(event) => fasthandle(event, "doodleList")}>Art Gallery</span>
+        </li>
+        <li>
+          <span onClick={(event) => fasthandle(event, "bigBg")}>Physical Art</span>
+        </li>
+        <li>
+          <span onClick={(event) => fasthandle(event, "orangeDuddle")}>Art, but bigger</span>
         </li>
       </ul>
       <p>
@@ -74,37 +77,25 @@ function Flower({ fasthandle }) {
 
       <ul>
         <li>
-          <span onClick={(event) => fasthandle(event, "workExperience")}>Work experience</span>
+          <span onClick={(event) => fasthandle(event, "dwemmer")}>Elder Scrolls Theory</span>
         </li>
         <li>
-          <span onClick={(event) => fasthandle(event, "workExperience")}>Work experience</span>
+          <span onClick={(event) => fasthandle(event, "pokemonCalc")}>Damage Calulation for Pokemon Red</span>
         </li>
         <li>
-          <span onClick={(event) => fasthandle(event, "workExperience")}>Work experience</span>
+          <span onClick={(event) => fasthandle(event, "crach")}>Crach The Site?</span>
         </li>
         <li>
-          <span onClick={(event) => fasthandle(event, "workExperience")}>Work experience</span>
+          <span onClick={(event) => fasthandle(event, "quotes")}>List of Quotes</span>
         </li>
         <li>
-          <span onClick={(event) => fasthandle(event, "workExperience")}>Work experience</span>
+          <span onClick={(event) => fasthandle(event, "dnd")}>DnD Character</span>
         </li>
         <li>
-          <span onClick={(event) => fasthandle(event, "workExperience")}>Work experience</span>
+          <span onClick={(event) => fasthandle(event, "quiz")}>Quiz</span>
         </li>
         <li>
-          <span onClick={(event) => fasthandle(event, "workExperience")}>Work experience</span>
-        </li>
-        <li>
-          <span onClick={(event) => fasthandle(event, "workExperience")}>Work experience</span>
-        </li>
-        <li>
-          <span onClick={(event) => fasthandle(event, "workExperience")}>Work experience</span>
-        </li>
-        <li>
-          <span onClick={(event) => fasthandle(event, "workExperience")}>Work experience</span>
-        </li>
-        <li>
-          <span onClick={(event) => fasthandle(event, "workExperience")}>Work experience</span>
+          <span onClick={(event) => fasthandle(event, "movieIdees")}>Movie Idées</span>
         </li>
       </ul>
     </div>
