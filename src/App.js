@@ -47,7 +47,20 @@ function App() {
     if (collection.includes(id) === false) {
       setCollection([...collection, id]);
     }
+    let isClosed = conList
+      .map((el) => {
+        return el.id;
+      })
+      .includes(id);
+    if (!isClosed) {
+      const index = collection.includes(id)
+        ? collection.findIndex((el) => el === id)
+        : collection.length;
+      addWindow(event, id, index);
+    }
+  }
 
+  function addWindow(event, id, index) {
     let toWide = event.clientX > 600;
     let toLow = document.body.scrollHeight - (window.scrollY + window.innerHeight) < 500;
     let obj = isTablet
@@ -59,25 +72,17 @@ function App() {
           bottom: toLow ? 50 : "auto",
           right: toWide ? window.innerWidth - event.clientX : "auto",
         };
-    let isClosed = conList
-      .map((el) => {
-        return el.id;
-      })
-      .includes(id);
-    if (!isClosed) {
-      let arr = conList;
-      console.log({ collection });
-      arr.push({
-        isMinimized: false,
-        pos: obj,
-        id: id,
-        index: collection.includes(id)
-          ? collection.findIndex((el) => el === id)
-          : collection.length,
-      });
-      setConList(arr);
-      setUpdate(!uppdate);
-    }
+
+    let arr = conList;
+    let isNew = collection.includes(id);
+    arr.push({
+      isMinimized: false,
+      pos: obj,
+      id: id,
+      index: index,
+    });
+    setConList(arr);
+    setUpdate(!uppdate);
   }
 
   function minimized(id) {
@@ -137,9 +142,9 @@ function App() {
     //   top: y,
     //   behavior: "smooth",
     // });
-    el.scrollIntoView();
+    // el.scrollIntoView();
     let fakeEvent = { pageY: window.scrollY + 100, clientX: 100 };
-    clickBg(fakeEvent, id);
+    addWindow(fakeEvent, id, "x");
   }
 
   return (

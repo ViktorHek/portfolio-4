@@ -34,6 +34,7 @@ body {
 
 .outer-king-container {
   position: fixed;
+  pointer-events: none;
   bottom: -1px;
   right: 20px;
   width: 200px;
@@ -60,8 +61,11 @@ body {
   60% {
     bottom: -250px;
   }
-  90% {
+  85% {
     bottom: -250px;
+  }
+  95% {
+    bottom: -1px;
   }
   100% {
     bottom: -1px;

@@ -4,18 +4,15 @@ import WusiwygEditor from "../wysiwygEditor/WusiwygEditor";
 import { useEffect, useState } from "react";
 import Quiz from "../../data/Quiz";
 import Flower from "../../data/Flower";
+import Intro from "../../data/Intro";
 
 function Container(props) {
   const { clickMin, clickClose, style, isMinimized, id, startDrag, clickFlower, index } = props;
-  const { title, html, size } = htmlList[id]
+  const { title, html } = htmlList[id]
     ? htmlList[id]
     : { title: "Say something", html: "This duddle has nothing to say atm.", size: null };
-  // let modStyle = size === "big" ? { ...style, left: 100, maxWidth: 800 } : style;
-  // const [modStyle, setModStyle] = useState(
-  //   size === "big" ? { ...style, left: 100, maxWidth: 800 } : style
-  // );
   const [showTools, setShowTools] = useState(false);
-  const special = ["quiz", "flower"];
+  const special = ["quiz", "flower", "intro"];
 
   useEffect(() => {
     if (sessionStorage.getItem("quiz") === "true") {
@@ -79,6 +76,7 @@ function Container(props) {
                   <div className="editor-backgrond2">
                     {id === "quiz" ? <Quiz handleWin={handleWin} /> : null}
                     {id === "flower" ? <Flower fasthandle={clickFlower} /> : null}
+                    {id === "intro" ? <Intro /> : null}
                     {special.includes(id) === false ? html : null}
                     {/* <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
                       {index}/26
