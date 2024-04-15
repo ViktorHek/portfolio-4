@@ -24,6 +24,7 @@ import bigBg from "./bigBg";
 import Crach from "./Crach";
 import doodleList from "./doodleList";
 import easterEgg from "./easterEgg";
+import final from "./final";
 import "./index.css"
 
 const htmlList = {
@@ -54,6 +55,7 @@ const htmlList = {
   doodleList: { ...doodleList },
   easterEgg: { ...easterEgg },
   flower: { html: "penis", title: "Index" },
+  final: { ...final },
 };
 
 export default htmlList;
