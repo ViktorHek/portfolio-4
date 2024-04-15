@@ -41,10 +41,9 @@ function App() {
   const [uppdate, setUpdate] = useState(false);
   const [collection, setCollection] = useState(["intro"]);
   const [conList, setConList] = useState([initCon]);
-  const [count, setCount] = useState(1);
 
   function clickBg(event, id) {
-    if (collection.includes(id) === false) {
+    if (collection.includes(id) === false && id !== "easterEgg") {
       setCollection([...collection, id]);
     }
     let isClosed = conList
@@ -56,7 +55,11 @@ function App() {
       const index = collection.includes(id)
         ? collection.findIndex((el) => el === id)
         : collection.length;
-      addWindow(event, id, index);
+      if ((id === "easterEgg")) {
+        addWindow(event, id, "x");
+      } else {
+        addWindow(event, id, index);
+      }
     }
   }
 

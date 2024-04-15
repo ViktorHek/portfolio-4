@@ -88,10 +88,10 @@ function handleKeys(event, styles) {
         if (placeholder.parentElement.parentElement.children.length < 2) {
           if (placeholder.parentElement.children.length < 3) {
             // new code start
-          //   if (placeholder.previousElementSibling) {
-          //     placeholder.previousElementSibling.remove();
-          //   }
-          // } else {
+            if (placeholder.previousElementSibling) {
+              placeholder.previousElementSibling.remove();
+            }
+          } else {
             // new code end
             placeholder.parentElement.parentElement.previousElementSibling.lastChild.appendChild(
               newPlaceHolder

@@ -24,6 +24,14 @@ function Container(props) {
     setShowTools(true);
   }
 
+  let newMiniTitle = title
+  if(id === "editorDude") {
+    newMiniTitle = "Editor"
+  }
+  if(id === "dwemmer") {
+    newMiniTitle = "TES theory"
+  }
+
   return (
     <>
       {isMinimized ? (
@@ -33,7 +41,7 @@ function Container(props) {
             <div className="header-min-btn2 btn2" onClick={() => clickMin(id)}>
               <span></span>
             </div>
-            <span className="header-text2">{id === "editorDude" ? "editor" : title}</span>
+            <span className="header-text2">{newMiniTitle}</span>
             <div className="header-close-btn2 btn2" onClick={() => clickClose(id)}>
               <span></span>
               <span></span>
