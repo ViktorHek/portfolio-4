@@ -13,9 +13,9 @@ function Crach() {
               <span>ERROR</span>
               <div>
                 Cannot read length of null (reading 'yore_dick') TypeError: Cannot read
-                properties of null (reading 'yore_dick') at theClub
-                (http://localhost:3000/static/js/bundle.js:11359:76) at
-                http://localhost:3000/static/js/bundle.js:10362:67
+                properties of null (reading 'yore_dick') at the_club
+                (http://localhost:3000/your/mon.js:11359:76) at
+                http://localhost:3000/your/mon.js:10362:67
               </div>
             </div>
           </div>

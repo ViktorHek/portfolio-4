@@ -39,8 +39,8 @@ const hussle = {
       </p>
       <p>
         There is very little styling when it comes to everything inside these windows. That's a
-        flex. Very few people can design something that looks good with default HTML. I
-        take pride in being one of those few.
+        flex. Very few people can design something that looks good with default HTML. I take pride
+        in being one of those few.
       </p>
       <p>
         Fun fact: I had an idea to add a function that opens a random window at random intervals.
@@ -51,11 +51,16 @@ const hussle = {
         <strong>Game</strong>
       </p>
       <p>
-        The game is pretty self-explanatory. I know most people don't care about me or who I am. So
-        I try to trigger the user into learning about me, not because they care how I am, but
-        because they want to win.
+        The idea is stolen from a game developer. They created a open world game with characters the
+        player can interact with to learn about the creator. Till this day, that's the best
+        portfolio I have ever seen. Do to my lack of a game engine, I had to use my creativity to
+        create something similar.
       </p>
-      <p>So if you read this, I win.</p>
+      <p>
+        The doodles was suposed to just be a background image. I fiddled around and found out that a
+        group of SVGs can be targeted by a onClick event. That's when I relized I could use my
+        background as a world and my doodles as characters.
+      </p>
     </div>
   ),
 };
