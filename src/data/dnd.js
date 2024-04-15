@@ -1,6 +1,3 @@
-const testingShit = function testingShit() {
-  console.log("shit");
-};
 const dnd = {
   title: "My DnD Character",
   html: (

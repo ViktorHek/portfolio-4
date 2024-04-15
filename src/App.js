@@ -29,7 +29,6 @@ function App() {
         right: "auto",
       };
 
-  console.log("i w: ", window.innerWidth);
   const initCon = {
     title: "Intro",
     isMinimized: false,
@@ -139,7 +138,6 @@ function App() {
 
   function clickFlower(event, id) {
     let el = document.getElementById(id);
-    console.log({ el });
     const y = el.getBoundingClientRect().top + window.scrollY;
     // window.scroll({
     //   top: y,

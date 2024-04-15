@@ -13,7 +13,6 @@ function appendTag(obj) {
     space.innerHTML = "&nbsp;";
     space.id = id+'x'
     tag.name = "space";
-    // console.log({tag})
     tag.appendChild(space);
   } else {
     tag.innerHTML = text;

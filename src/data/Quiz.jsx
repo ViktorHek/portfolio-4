@@ -10,7 +10,6 @@ function Quiz(props) {
     const asn32 = document.getElementById("viktor2").checked;
     const asn33 = document.getElementById("viktor3").checked;
     const asn4 = document.getElementById("graymaybe").checked;
-    console.log({ asn1 });
     const asn3 = asn31 || asn32 || asn33;
     if (asn1 && asn2 && asn3 && asn4) {
       setWin(true);
@@ -25,7 +24,6 @@ function Quiz(props) {
   }
 
   function getError(ans, id) {
-    console.log(ans, id);
     let el = document.getElementById(id);
     if (ans) {
       el.style.border = "none";

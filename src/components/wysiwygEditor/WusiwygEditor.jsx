@@ -31,12 +31,12 @@ function WusiwygEditor() {
       document.removeEventListener("selectionchange", selectionchange);
     };
   }, []);
-  useEffect(() => {
-    document.addEventListener("select", dick);
-    return () => {
-      document.removeEventListener("select", dick);
-    };
-  }, []);
+  // useEffect(() => {
+  //   document.addEventListener("select", handleSelect);
+  //   return () => {
+  //     document.removeEventListener("select", handleSelect);
+  //   };
+  // }, []);
 
   function selectionchange(event) {
     return;
@@ -44,10 +44,6 @@ function WusiwygEditor() {
     let tes = section.toString();
     let range = section.getRangeAt(0);
     let position = section.getRangeAt(0).getBoundingClientRect();
-  }
-
-  function dick(event) {
-    console.log("dick: ", event);
   }
 
   useKeys((event) => {
@@ -106,7 +102,6 @@ function WusiwygEditor() {
   }
 
   function clickOut(event) {
-    console.log(event);
     if (!isEditorFocused) return;
     if (!document.getElementById("placeholder")) return;
     if (!event.target.parentElement) return;
@@ -128,7 +123,6 @@ function WusiwygEditor() {
         event.target.insertAdjacentElement("afterend", tag);
       } else {
         const editor = document.getElementById("editor");
-console.log({editor})
         editor.lastChild.lastChild.appendChild(tag);
       }
     }
