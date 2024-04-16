@@ -10,8 +10,8 @@ function WusiwygEditor() {
   const [boldActive, setBoldActive] = useState(false);
   const [italicActive, setItalicActive] = useState(false);
   const [pos, setPos] = useState("left");
-  const [isClosed, setIsClosed] = useState(false);
-  const [isMinimized, setIsMinimized] = useState(false);
+  // const [isClosed, setIsClosed] = useState(false);
+  // const [isMinimized, setIsMinimized] = useState(false);
 
   const arrowKeys = ["ArrowDown", "ArrowUp", "ArrowRight", "ArrowLeft"];
 
