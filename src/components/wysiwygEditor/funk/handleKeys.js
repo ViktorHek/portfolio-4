@@ -1,5 +1,5 @@
-import { toBePartiallyChecked } from "@testing-library/jest-dom/matchers";
-import appendTag from "./appendTag";
+// import { toBePartiallyChecked } from "@testing-library/jest-dom/matchers";
+// import appendTag from "./appendTag";
 
 // const specialKeys = ["space", "backspace", "enter"];
 // const arrowKeys = ["ArrowDown", "ArrowUp", "ArrowRight", "ArrowLeft"];
@@ -13,7 +13,6 @@ function handleKeys(event, styles) {
   newPlaceHolder.className = "placeholder";
   newPlaceHolder.name = "placeholder";
 
-  let tags = [];
   switch (dir) {
     case `key${dir.slice(-1)}`:
       if (placeholder.parentElement.name === "space") {

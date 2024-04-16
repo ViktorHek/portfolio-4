@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 function DvdScreen() {
   const conatinerHeight = 340;
@@ -16,6 +16,7 @@ function DvdScreen() {
 
   useEffect(() => {
     init();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function init() {
@@ -51,7 +52,7 @@ function DvdScreen() {
   }
 
   function changeColor() {
-    const box = document.getElementById("dvd_box");
+    // const box = document.getElementById("dvd_box");
     for (let index = 0; index < 6; index++) {
       document.getElementById(`svg${index}`).style.fill = colors[colorIndex];
     }

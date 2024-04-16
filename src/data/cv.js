@@ -1,4 +1,4 @@
-const title = "CV";
+const title = "Resumé";
 const size = "big";
 const html = (
   <div className="content">
@@ -7,7 +7,7 @@ const html = (
       alt="CV"
       style={{ maxWidth: "95%", maxHeight: "95%" }}
     />
-    <a href="" download="images/Viktor_Karlsson_CV.pdf">
+    <a href="#" download="images/Viktor_Karlsson_CV.pdf">
       Download CV
     </a>
   </div>

@@ -1,11 +1,8 @@
 import { useState, useEffect } from "react";
 import useKeys from "./use-keys";
 import HandleEditorFocus from "./HandleEditorFocus";
-import Header from "./components/Header";
 import Toolbar from "./components/Toolbar";
 import handleKeys from "./funk/handleKeys";
-// import handleKeys from "./funk/handleKeys";
-import appendTag from "./funk/appendTag";
 import "./index.css";
 
 function WusiwygEditor() {
@@ -16,7 +13,6 @@ function WusiwygEditor() {
   const [isClosed, setIsClosed] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
 
-  const specialKeys = ["space", "backspace", "enter"];
   const arrowKeys = ["ArrowDown", "ArrowUp", "ArrowRight", "ArrowLeft"];
 
   useEffect(() => {
@@ -24,26 +20,29 @@ function WusiwygEditor() {
     return () => {
       window.removeEventListener("mousedown", clickOut);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   useEffect(() => {
     document.addEventListener("selectionchange", selectionchange);
     return () => {
       document.removeEventListener("selectionchange", selectionchange);
     };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   // useEffect(() => {
   //   document.addEventListener("select", handleSelect);
   //   return () => {
   //     document.removeEventListener("select", handleSelect);
   //   };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   // }, []);
 
   function selectionchange(event) {
     return;
-    let section = document.getSelection();
-    let tes = section.toString();
-    let range = section.getRangeAt(0);
-    let position = section.getRangeAt(0).getBoundingClientRect();
+    // let section = document.getSelection();
+    // let tes = section.toString();
+    // let range = section.getRangeAt(0);
+    // let position = section.getRangeAt(0).getBoundingClientRect();
   }
 
   useKeys((event) => {
@@ -169,14 +168,14 @@ function WusiwygEditor() {
     }
   }
 
-  function handleClickHeader(val) {
-    if (val === "min") {
-      setIsMinimized(!isMinimized);
-    }
-    if (val === "close") {
-      setIsClosed(!isClosed);
-    }
-  }
+  // function handleClickHeader(val) {
+  //   if (val === "min") {
+  //     setIsMinimized(!isMinimized);
+  //   }
+  //   if (val === "close") {
+  //     setIsClosed(!isClosed);
+  //   }
+  // }
 
   return (
     <div

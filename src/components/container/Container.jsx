@@ -18,6 +18,7 @@ function Container(props) {
     if (sessionStorage.getItem("quiz") === "true") {
       setShowTools(true);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function handleWin() {
@@ -72,16 +73,15 @@ function Container(props) {
                     <div className="top-toolbar">
                       <div className="left-border"></div>
                       <div className="right-border"></div>
-                      <a href="" download="images/Viktor_Karlsson_CV.pdf">
+                      <a href="#" download="images/Viktor_Karlsson_CV.pdf">
                         Resumé
                       </a>
-                      <a href="" download="images/Viktor_Karlsson_PB.pdf">
+                      <a href="#" download="images/Viktor_Karlsson_PB.pdf">
                         Letter
                       </a>
-                      <a>Edit</a>
-                      <a>View</a>
-                      <a>Tools</a>
-                      <a>Help</a>
+                      <a href="#" download="images/fred.png">
+                        Doodle
+                      </a>
                     </div>
                   ) : null}
                   <div className="editor-backgrond2">

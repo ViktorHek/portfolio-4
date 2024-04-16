@@ -1,4 +1,4 @@
-const title = "PB";
+const title = "Personal Letter";
 const size = "big";
 const html = (
   <div className="content">
@@ -7,7 +7,7 @@ const html = (
       alt="PB"
       style={{ maxWidth: "95%", maxHeight: "95%" }}
     />
-    <a href="" download="images/Viktor_Karlsson_PB.pdf">
+    <a href="#" download="images/Viktor_Karlsson_PB.pdf">
       Download PB
     </a>
   </div>

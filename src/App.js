@@ -1,5 +1,5 @@
 import "./index.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import SmallBg from "./animations/SmallBg";
 import Header from "./components/header/Header";
 import Container from "./components/container/Container";
@@ -82,7 +82,6 @@ function App() {
         };
 
     let arr = conList;
-    let isNew = collection.includes(id);
     arr.push({
       isMinimized: false,
       pos: obj,
@@ -142,9 +141,9 @@ function App() {
     return false;
   }
 
-  function clickFlower(event, id) {
-    let el = document.getElementById(id);
-    const y = el.getBoundingClientRect().top + window.scrollY;
+  function clickFlower(id) {
+    // let el = document.getElementById(id);
+    // const y = el.getBoundingClientRect().top + window.scrollY;
     // window.scroll({
     //   top: y,
     //   behavior: "smooth",
