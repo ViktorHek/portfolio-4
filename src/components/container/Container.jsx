@@ -31,6 +31,9 @@ function Container(props) {
   if(id === "dwemmer") {
     newMiniTitle = "TES theory"
   }
+  if(id === "pokemonCalc") {
+    newMiniTitle = "Damage Calc"
+  }
 
   return (
     <>

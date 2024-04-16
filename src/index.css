@@ -32,13 +32,15 @@ body {
   align-items: center;
 }
 
+ul > li {
+  margin: 4px 0px 4px 10px;
+}
+
 .outer-king-container {
   position: fixed;
   pointer-events: none;
   bottom: -1px;
   right: 20px;
-  width: 200px;
-  height: 240px;
   animation: moveking 30s 15s infinite ease-in-out;
 }
 

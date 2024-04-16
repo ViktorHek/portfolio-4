@@ -9,7 +9,7 @@ const final = {
         want. More information about me and the ability to hire me.
       </p>
       <p>
-        My "stage name"/"alter ego" (or whatever you call it) is "Hans Haydn". If you call me
+        My "alter ego" (or whatever you call it) is "Hans Haydn". If you call me
         "Hans", I will know that you actually took the time to go through my portfolio. This will
         give you a tremendous advantage when hiring me. If I'm forced to pick between two good jobs,
         I will pick the one that shows the most interest in me.

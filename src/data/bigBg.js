@@ -1,5 +1,5 @@
 const bigBg = {
-  title: "Imgage",
+  title: "Image",
   size: "big",
   html: (
     <div style={{ padding: 10 }}>

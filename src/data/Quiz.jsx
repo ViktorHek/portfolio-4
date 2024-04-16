@@ -77,7 +77,7 @@ function Quiz(props) {
           </fieldset>
           <fieldset id="fieldset3" name="fieldset3">
             <legend>
-              Who made all the artwork, the background, the duddles and animations for the whole
+              Who made all the artwork, background, duddles and animations for the whole
               page?
             </legend>
             <div>

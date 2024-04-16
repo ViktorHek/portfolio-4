@@ -63,8 +63,8 @@ function App() {
     console.log({collection})
     if(collection.length === 26){
       setTimeout(()=> {
-        addWindow(event, "final", 26);
-      },2000)
+        addWindow(event, "final", 27);
+      },400)
     }
   }
 

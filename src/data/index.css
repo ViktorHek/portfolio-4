@@ -69,15 +69,21 @@
 }
 
 .quiz > fieldset {
-  color: #0b1350;
+  /* color: #0b1350; */
   margin-top: 12px;
   box-shadow: 4px 3px 4px #0207262b;
-  padding-left: 8px;
+  padding: 2px 0px 2px 8px;
 }
+
 .quiz > fieldset > legend {
-  color: #0b1350;
+  /* color: #0b1350; */
   margin-bottom: 4px;
 }
+
+.quiz > fieldset > div{
+  margin: 2px 0px;
+}
+
 .content {
   padding: 20px;
   font-family: "Times New Roman", Times, serif;
@@ -122,3 +128,4 @@
   width: 100%;
   height: 100%;
 }
+
