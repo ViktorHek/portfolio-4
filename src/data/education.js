@@ -2,9 +2,12 @@ const education = {
   title: "Education",
   html: (
     <div className="content">
-      <h3>Chas Academy - Front-end Dev 400Yh</h3>
-      <p style={{ color: "#0b1350", margin: 4, fontSize: "1em" }}>August 2022 - Maj 2024</p>
-
+      <div className="d-flex rowcol">
+        <h3>Chas Academy - Front-end Dev 400Yh</h3>
+        <p style={{ color: "#0b1350", margin: "3px 8px", fontSize: "1em" }}>
+          August 2022 - Maj 2024
+        </p>
+      </div>
       <ul>
         <li>
           <strong>Education:&nbsp;</strong>I learned typescript, UX/UI and how to have a cohesive
@@ -24,9 +27,12 @@ const education = {
         </li>
       </ul>
       <br />
-      <h3>Craft Academy - Full-stack Dev</h3>
-      <p style={{ color: "#0b1350", margin: 4, fontSize: "1em" }}>October 2020 - February 2021</p>
-
+      <div className="d-flex rowcol">
+        <h3>Craft Academy - Full-stack Dev</h3>
+        <p style={{ color: "#0b1350", margin: "3px 8px", fontSize: "1em" }}>
+          October 2020 - February 2021
+        </p>
+      </div>
       <ul>
         <li>
           <strong>Education:&nbsp;</strong>It was a very intense remote education where I studied
@@ -39,18 +45,24 @@ const education = {
         </li>
       </ul>
       <br />
-      <h3>Gothenburg University</h3>
-      <p style={{ color: "#0b1350", margin: 4, fontSize: "1em" }}>January 2017 - December 2020</p>
-
+      <div className="d-flex rowcol">
+        <h3>Gothenburg University 180hp</h3>
+        <p style={{ color: "#0b1350", margin: "3px 8px", fontSize: "1em" }}>
+          January 2017 - December 2020
+        </p>
+      </div>
       <ul>
         <li>
           <strong>Education:&nbsp;</strong>Media - & Communicationsience
         </li>
       </ul>
       <br />
-      <h3>Marina Läroverket Gymnasium</h3>
-      <p style={{ color: "#0b1350", margin: 4, fontSize: "1em" }}>August 2012 - June 2015</p>
-
+      <div className="d-flex rowcol">
+        <h3>Marina Läroverket Gymnasium</h3>
+        <p style={{ color: "#0b1350", margin: "3px 8px", fontSize: "1em" }}>
+          August 2012 - June 2015
+        </p>
+      </div>
       <ul>
         <li>
           <strong>Education:&nbsp;</strong>SAM - Leadership & Communication

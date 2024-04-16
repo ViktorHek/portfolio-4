@@ -1,16 +1,21 @@
 const pokemonCalc = {
-  title: "Damage calculation in Pokemon Red",
+  title: "Damage Calculation",
   html: (
     <div
       style={{
         padding: 20,
       }}>
+      <p>
+        This is a simplified version of the calculation used in pokemon red to determine how much
+        damage an attack will do.
+      </p>
       <div
         style={{
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-evenly",
           alignItems: "center",
+          marginTop: 10
         }}>
         <div
           style={{

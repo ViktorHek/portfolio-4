@@ -60,7 +60,6 @@ function App() {
         addWindow(event, id, index);
       }
     }
-    console.log({ collection });
     if (collection.length === 26) {
       setTimeout(() => {
         addWindow(event, "final", 27);

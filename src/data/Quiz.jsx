@@ -45,10 +45,10 @@ function Quiz(props) {
       ) : (
         <div className="quiz">
           <h2>This is a quiz on everything you learned from my portfolio.</h2>
-          <fieldset id="fieldset1" name="fieldset1">
+          <fieldset id="fieldset1" name="fieldset1" className="quiz-fieldset">
             <legend>At what company did I get my first programmin job?</legend>
             <div>
-              <input name="fieldset1" type="radio" id="Talentech" value="Talentech" />
+              <input name="fieldset1" type="radio" id="Talentech" value="Talentech"/>
               <label for="Talentech">Talentech</label>
             </div>
             <div>
@@ -60,7 +60,7 @@ function Quiz(props) {
               <label for="Customertech">Customertech</label>
             </div>
           </fieldset>
-          <fieldset id="fieldset2" name="fieldset2">
+          <fieldset id="fieldset2" name="fieldset2" className="quiz-fieldset">
             <legend>Witch one is not one of my hobby projects?</legend>
             <div>
               <input type="radio" id="nocap" name="fieldset2" value="nocap" />
@@ -75,7 +75,7 @@ function Quiz(props) {
               <label for="digimon">Digimon 2: remake of digimon 1, but bigger</label>
             </div>
           </fieldset>
-          <fieldset id="fieldset3" name="fieldset3">
+          <fieldset id="fieldset3" name="fieldset3" className="quiz-fieldset">
             <legend>
               Who made all the artwork, background, duddles and animations for the whole
               page?
@@ -93,7 +93,7 @@ function Quiz(props) {
               <label for="viktor3">Viktor Karlsson</label>
             </div>
           </fieldset>
-          <fieldset id="fieldset4" name="fieldset4">
+          <fieldset id="fieldset4" name="fieldset4" className="quiz-fieldset">
             <legend>Why did the dwemer disappeared?</legend>
             <div>
               <input type="radio" id="graymaybe" name="fieldset4" value="graymaybe" />
@@ -110,9 +110,12 @@ function Quiz(props) {
               <label for="numidium">They became the skin of Numidium the brass god</label>
             </div>
           </fieldset>
-          <button onClick={handleSubmit} style={{ marginTop: "10px" }}>
+          <div className="windows-btn" style={{height: 20, width: 50}}>
+
+          <button onClick={handleSubmit} style={{height: "100%", width: "100%"}}>
             Submit
           </button>
+          </div>
         </div>
       )}
     </>

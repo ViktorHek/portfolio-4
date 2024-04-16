@@ -23,6 +23,33 @@ body {
   z-index: 999;
 }
 
+.windows-btn {
+  border: 2px solid black;
+  border-radius: 3px;
+  display: flex;
+  box-shadow: 3px 2px 6px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+}
+
+.windows-btn > * {
+  background-color: aliceblue;
+  text-decoration: none;
+  color: black;
+  border-right: 1px solid rgb(105, 106, 104);
+  border-bottom: 1px solid rgb(105, 106, 104);
+  border-top: 1px solid #c1d2b5;
+  border-left: 1px solid #c1d2b5;
+  transition: 0.5s;
+}
+
+.windows-btn > *:hover {
+  background-color: rgb(217, 235, 250);
+  border-right: 1px solid rgb(57, 56, 56);
+  border-bottom: 1px solid rgb(57, 56, 56);
+  border-left: 1px solid rgb(114, 111, 111);
+  border-top: 1px solid rgb(114, 111, 111);
+}
+
 .header-text-container {
   position: absolute;
   height: 100px;
@@ -135,8 +162,12 @@ ul > li {
   /* background: #555;  */
 }
 
-/* @media only screen and (max-width: 700px) {
-  body {
-    background-color: red;
+.rowcol {
+  flex-direction: row;
+}
+
+@media only screen and (max-width: 700px) {
+  .rowcol {
+    flex-direction: column;
   }
-} */
+}

@@ -2,9 +2,9 @@ const workExperience = {
   title: "Work Experience",
   html: (
     <div className="content">
-      <div className="d-flex">
+      <div className="d-flex rowcol">
         <h3>Talentech internship</h3>
-        <p style={{ color: "#0b1350", margin: 4, fontSize: "1em" }}>| November 2023 - April 2024</p>
+        <p style={{ color: "#0b1350", margin: "4px 5px", fontSize: "1em" }}>November 2023 - April 2024</p>
       </div>
 
       <ul>
@@ -26,9 +26,9 @@ const workExperience = {
         </li>
       </ul>
       <br />
-      <div className="d-flex">
+      <div className="d-flex rowcol">
         <h3>Customer First - Full-stack Developer</h3>
-        <p style={{ color: "#0b1350", margin: 4, fontSize: "1em" }}>| June 2021 - February 2022</p>
+        <p style={{ color: "#0b1350", margin: "4px 5px", fontSize: "1em" }}>June 2021 - February 2022</p>
       </div>
       <ul>
         <li>
@@ -49,24 +49,24 @@ const workExperience = {
         </li>
       </ul>
       <br />
-      <div className="d-flex">
+      <div className="d-flex rowcol">
         <h3>Other Work Experiences</h3>
-        <p style={{ color: "#0b1350", margin: 4, fontSize: "1em" }}>| June 1996 - May 2020</p>
+        <p style={{ color: "#0b1350", margin: "4px 5px", fontSize: "1em" }}>June 1996 - May 2020</p>
       </div>
       <ul>
         <li className="lid">
-          <strong>Karlssons Skola:&nbsp;</strong>Substitute Teacher<p>| Mars 2020 - May 2020</p>
+          <strong>Karlssons Skola:&nbsp;</strong>Substitute Teacher<p>Mars 2020 - May 2020</p>
         </li>
         <li className="lid">
           <strong>Västra Hisingens Stadsdelsförvaltning:&nbsp;</strong>
           <span>Comunicatior internship</span>
-          <p>| Mars 2019 - June 2019</p>
+          <p>Mars 2019 - June 2019</p>
         </li>
         <li className="lid">
-          <strong>Vigårda:&nbsp;</strong>Waiter | <p>July 2016 - February 2017</p>
+          <strong>Vigårda:&nbsp;</strong>Waiter <p>July 2016 - February 2017</p>
         </li>
         <li className="lid">
-          <strong>Utö Skola:&nbsp;</strong>Substitute Teacher<p>| Mars 2016 - May 2016</p>
+          <strong>Utö Skola:&nbsp;</strong>Substitute Teacher<p>Mars 2016 - May 2016</p>
         </li>
         <li className="lid">
           <strong>Carolas Lilla Trädgård:&nbsp;</strong>Gardener

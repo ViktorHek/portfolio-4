@@ -144,6 +144,7 @@
   min-height: 20px;
   max-height: 100%;
   width: 400px;
+  min-width: 200px;
   background-color: whitesmoke;
   cursor: text;
 }
@@ -253,4 +254,15 @@
   100% {
     border-right: 1px solid transparent;
   }
+}
+
+
+@media only screen and (max-width: 700px) {
+  .editor {
+    width: 100%;
+  }
+  .editor-backgrond {
+    width: auto;
+  }
+
 }
