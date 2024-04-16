@@ -73,13 +73,13 @@ function Container(props) {
                     <div className="top-toolbar">
                       <div className="left-border"></div>
                       <div className="right-border"></div>
-                      <a href="#" download="images/Viktor_Karlsson_CV.pdf">
+                      <a href="/#" download="images/Viktor_Karlsson_CV.pdf">
                         Resumé
                       </a>
-                      <a href="#" download="images/Viktor_Karlsson_PB.pdf">
+                      <a href="/#" download="images/Viktor_Karlsson_PB.pdf">
                         Letter
                       </a>
-                      <a href="#" download="images/fred.png">
+                      <a href="/#" download="images/fred.png">
                         Doodle
                       </a>
                     </div>
