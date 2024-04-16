@@ -17,4 +17,5 @@ const final = {
     </div>
   ),
 };
+
 export default final;

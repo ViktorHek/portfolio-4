@@ -54,17 +54,17 @@ function App() {
       const index = collection.includes(id)
         ? collection.findIndex((el) => el === id)
         : collection.length;
-      if ((id === "easterEgg")) {
+      if (id === "easterEgg") {
         addWindow(event, id, "x");
       } else {
         addWindow(event, id, index);
       }
     }
-    console.log({collection})
-    if(collection.length === 26){
-      setTimeout(()=> {
+    console.log({ collection });
+    if (collection.length === 26) {
+      setTimeout(() => {
         addWindow(event, "final", 27);
-      },400)
+      }, 400);
     }
   }
 
@@ -154,24 +154,10 @@ function App() {
   }
 
   return (
-    <div className="App" style={{ width: "100%" }} onDragOver={dragOver} onDrop={drop}>
-      <div
-        style={{
-          position: "absolute",
-          height: 100,
-          top: 0,
-          left: 0,
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "space-evenly",
-          marginLeft: 30,
-          zIndex: 999,
-        }}>
-        <p style={{ fontSize: "2.2em", color: "#41b4be", whiteSpace: "nowrap" }}>Viktor Karlsson</p>
-        <p style={{ fontSize: "1.5em", color: "#41b4be", whiteSpace: "nowrap" }}>
-          Front End Developer
-        </p>
+    <div className="App" onDragOver={dragOver} onDrop={drop}>
+      <div className="header-text-container">
+        <p>Viktor Karlsson</p>
+        <p>Front End Developer</p>
       </div>
       <Header />
       <div className="bg-container">
@@ -197,17 +183,7 @@ function App() {
           })
         : null}
       {conList.length ? (
-        <div
-          style={{
-            position: "fixed",
-            bottom: 0,
-            right: 0,
-            display: "flex",
-            flexDirection: "row-reverse",
-            flexWrap: "wrap-reverse",
-            width: "100%",
-            zIndex: 99999,
-          }}>
+        <div className="minimized-main-container">
           {conList.map((con) => {
             if (con.isMinimized) {
               return (
@@ -225,9 +201,7 @@ function App() {
           })}
         </div>
       ) : null}
-      <div
-        className="outer-king-container"
-      >
+      <div className="outer-king-container">
         <King />
       </div>
     </div>
