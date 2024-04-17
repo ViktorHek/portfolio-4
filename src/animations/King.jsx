@@ -4,7 +4,7 @@ function King() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="king-container">
+    <div className="king-container" style={{ pointerEvents: "none" }}>
       {open ? (
         <div className="bubble">
           <span>Psst! scroll down to find more doodles</span>
@@ -15,8 +15,12 @@ function King() {
         // height="120"
         viewBox="0 0 100 120"
         fill="none"
+        style={{ pointerEvents: "none" }}
         xmlns="http://www.w3.org/2000/svg">
-        <g clipPath="url(#clip0_1_2)" onClick={() => setOpen(!open)}>
+        <g
+          clipPath="url(#clip0_1_2)"
+          onClick={() => setOpen(!open)}
+          style={{ pointerEvents: "auto" }}>
           <rect width="100" height="120" fill="none" />
           <path
             d="M99.5 119.5C99.5 142.206 93.9212 162.738 84.9277 177.577C75.9287 192.426 63.565 201.5 50 201.5C36.435 201.5 24.0713 192.426 15.0723 177.577C6.07881 162.738 0.5 142.206 0.5 119.5C0.5 96.7942 6.07881 76.262 15.0723 61.4228C24.0713 46.5745 36.435 37.5 50 37.5C63.565 37.5 75.9287 46.5745 84.9277 61.4228C93.9212 76.262 99.5 96.7942 99.5 119.5Z"

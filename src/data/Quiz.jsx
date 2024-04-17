@@ -1,35 +1,75 @@
 import { useState } from "react";
+import Checkbox from "../components/Checkbox";
 
 function Quiz(props) {
   const [win, setWin] = useState(false);
+  const [form, setForm] = useState({
+    q1: [
+      { text: "Talentech", checked: false },
+      { text: "Customer First", checked: false },
+      { text: "Customertech", checked: false },
+    ],
+    q2: [
+      { text: "AI-NoCap: self made AI bot (that isn't an AI bot)", checked: false },
+      { text: "TinyHans: WYSIWUG-editor", checked: false },
+      { text: "Digimon 2: remake of digimon 1, but bigger", checked: false },
+    ],
+    q3: [
+      { text: "Viktor Karlsson", checked: false },
+      { text: "Viktor Karlsson", checked: false },
+      { text: "Viktor Karlsson", checked: false },
+    ],
+    q4: [
+      { text: "They traveled to 'the gray maybe'", checked: false },
+      { text: "They became the skin of Numidium the brass god", checked: false },
+      {
+        text: "They reached chim and realised they are just a dream in the god-head.",
+        checked: false,
+      },
+    ],
+  });
+  const [up, setUp] = useState(false);
 
   function handleSubmit() {
-    const asn1 = document.getElementById("CustomerFirst").checked;
-    const asn2 = document.getElementById("digimon").checked;
-    const asn31 = document.getElementById("viktor1").checked;
-    const asn32 = document.getElementById("viktor2").checked;
-    const asn33 = document.getElementById("viktor3").checked;
-    const asn4 = document.getElementById("graymaybe").checked;
-    const asn3 = asn31 || asn32 || asn33;
-    if (asn1 && asn2 && asn3 && asn4) {
+    const {q1,q2,q3,q4}=form;
+    const ans1 = q1[1].checked
+    const ans2 = q2[2].checked
+    const ans3 = q3[0].checked || q3[1].checked||q3[2].checked
+    const ans4 = q4[0].checked
+
+    if (ans1 && ans2 && ans3 && ans4) {
       setWin(true);
       sessionStorage.setItem("quiz", true);
       return props.handleWin();
     } else {
-      getError(asn1, "fieldset1");
-      getError(asn2, "fieldset2");
-      getError(asn3, "fieldset3");
-      getError(asn4, "fieldset4");
+      getError(ans1, "fieldset1");
+      getError(ans2, "fieldset2");
+      getError(ans3, "fieldset3");
+      getError(ans4, "fieldset4");
     }
   }
 
   function getError(ans, id) {
     let el = document.getElementById(id);
     if (ans) {
-      el.style.border = "none";
+      el.style.borderColor = "green";
     } else {
-      el.style.border = "2px solid red";
+      el.style.borderColor = "red";
     }
+  }
+
+  function handleClick1(question, i) {
+    let obj = form;
+    obj[question].forEach((el, index) => {
+      if (index === i) {
+        el.checked = true;
+      } else {
+        el.checked = false;
+      }
+    });
+    console.log(obj);
+    setForm(obj);
+    setUp(!up);
   }
 
   return (
@@ -45,76 +85,77 @@ function Quiz(props) {
       ) : (
         <div className="quiz">
           <h2>This is a quiz on everything you learned from my portfolio.</h2>
+          <br /> 
           <fieldset id="fieldset1" name="fieldset1" className="quiz-fieldset">
-            <legend>At what company did I get my first programmin job?</legend>
-            <div>
-              <input name="fieldset1" type="radio" id="Talentech" value="Talentech"/>
-              <label for="Talentech">Talentech</label>
-            </div>
-            <div>
-              <input name="fieldset1" type="radio" id="CustomerFirst" value="CustomerFirst" />
-              <label for="CustomerFirst">Customer First</label>
-            </div>
-            <div>
-              <input name="fieldset1" type="radio" id="Customertech" value="Customertech" />
-              <label for="Customertech">Customertech</label>
-            </div>
+            <legend className="title-s">Where did I get my first programming job?</legend>
+            {form.q1.map((el, index) => {
+              return (
+                <div>
+                  <Checkbox
+                    check={el.checked}
+                    text={el.text}
+                    handleClick={handleClick1}
+                    question={"q1"}
+                    index={index}
+                  />
+                </div>
+              );
+            })}
           </fieldset>
           <fieldset id="fieldset2" name="fieldset2" className="quiz-fieldset">
-            <legend>Witch one is not one of my hobby projects?</legend>
-            <div>
-              <input type="radio" id="nocap" name="fieldset2" value="nocap" />
-              <label for="nocap">AI-NoCap: self made AI bot (that isn't an AI bot)</label>
-            </div>
-            <div>
-              <input type="radio" id="TinyHans" name="fieldset2" value="TinyHans" />
-              <label for="TinyHans">TinyHans: WYSIWUG-editor</label>
-            </div>
-            <div>
-              <input type="radio" id="digimon" name="fieldset2" value="digimon" />
-              <label for="digimon">Digimon 2: remake of digimon 1, but bigger</label>
-            </div>
+            <legend className="title-s">Witch one is not one of my hobby projects?</legend>
+            {form.q2.map((el, index) => {
+              return (
+                <div>
+                  <Checkbox
+                    check={el.checked}
+                    text={el.text}
+                    handleClick={handleClick1}
+                    question={"q2"}
+                    index={index}
+                  />
+                </div>
+              );
+            })}
           </fieldset>
           <fieldset id="fieldset3" name="fieldset3" className="quiz-fieldset">
-            <legend>
-              Who made all the artwork, background, duddles and animations for the whole
-              page?
+            <legend className="title-s">
+              Who made all the artwork, styling and animations for the page?
             </legend>
-            <div>
-              <input type="radio" id="viktor1" name="fieldset3" value="viktor1" />
-              <label for="viktor1">Viktor Karlsson</label>
-            </div>
-            <div>
-              <input type="radio" id="viktor2" name="fieldset3" value="viktor2" />
-              <label for="viktor2">Viktor Karlsson</label>
-            </div>
-            <div>
-              <input type="radio" id="viktor3" name="fieldset3" value="viktor3" />
-              <label for="viktor3">Viktor Karlsson</label>
-            </div>
+            {form.q3.map((el, index) => {
+              return (
+                <div>
+                  <Checkbox
+                    check={el.checked}
+                    text={el.text}
+                    handleClick={handleClick1}
+                    question={"q3"}
+                    index={index}
+                  />
+                </div>
+              );
+            })}
           </fieldset>
           <fieldset id="fieldset4" name="fieldset4" className="quiz-fieldset">
-            <legend>Why did the dwemer disappeared?</legend>
-            <div>
-              <input type="radio" id="graymaybe" name="fieldset4" value="graymaybe" />
-              <label for="graymaybe">They traveled to 'the gray maybe'</label>
-            </div>
-            <div>
-              <input type="radio" id="chim" name="fieldset4" value="chim" />
-              <label for="chim">
-                They reached chim and realised they are just a dream in the god-head.
-              </label>
-            </div>
-            <div>
-              <input type="radio" id="numidium" name="fieldset4" value="numidium" />
-              <label for="numidium">They became the skin of Numidium the brass god</label>
-            </div>
+            <legend className="title-s">Why did the dwemer disappeared?</legend>
+            {form.q4.map((el, index) => {
+              return (
+                <div>
+                  <Checkbox
+                    check={el.checked}
+                    text={el.text}
+                    handleClick={handleClick1}
+                    question={"q4"}
+                    index={index}
+                  />
+                </div>
+              );
+            })}
           </fieldset>
-          <div className="windows-btn" style={{height: 20, width: 50}}>
-
-          <button onClick={handleSubmit} style={{height: "100%", width: "100%"}}>
-            Submit
-          </button>
+          <div className="windows-btn" style={{ height: 20, width: 50 }}>
+            <button onClick={handleSubmit} style={{ height: "100%", width: "100%" }}>
+              Submit
+            </button>
           </div>
         </div>
       )}

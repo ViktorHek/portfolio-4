@@ -3,9 +3,10 @@ const dwemmer = {
   size: "big",
   html: (
     <div className="content">
-      <h2>What Happend to the Dwemer?</h2>
+      <p className="title">What Happend to the Dwemer?</p>
       <br />
-      <h4>Backstory</h4>
+      <br />
+      <p className="title-s">Backstory</p>
       <br />
       <p>
         The dwemer, or deep-elves, was a remnant of the early aldmer. They are well known for their
@@ -24,20 +25,22 @@ const dwemmer = {
         conversation reached its conclusion sure must have scared them. When the dwemers found the
         heart of Lorkan, the dead god, Lord Kagrenac started working on the biggest technological
         advancement in the history of Mundus. With the power to manipulate the voice of gods, Lord
-        Kagremac built a one thousand feet tall automaton that would use the heart of Lorkan as its power source.
-        Lord Kagrenac built Numidium, the brass God of destruction. But when the Numidium was
-        activated, a dragonend started and all the dwemer disappeared. Everyone except one, Yagrum
-        Bagarn. He was in oblivion at the time (this will be relevant later). This occured
-        thousands of years ago and no one has heard anything about what happened to the dwemer.
+        Kagremac built a one thousand feet tall automaton that would use the heart of Lorkan as its
+        power source. Lord Kagrenac built Numidium, the brass God of destruction. But when the
+        Numidium was activated, a dragonend started and all the dwemer disappeared. Everyone except
+        one, Yagrum Bagarn. He was in oblivion at the time (this will be relevant later). This
+        occured thousands of years ago and no one has heard anything about what happened to the
+        dwemer.
       </p>
 
       <br />
-      <h4>What happend?</h4>
+      <br />
+      <p className="title-s">What happend?</p>
       <br />
       <p>
         There are two common theories and I think both are wrong. the first one is called zero-sum.
-        The theory is that by the power of the Numidium and through their global communication system, all
-        dwemer reached chim and realised that they are just a dream in the god-head.
+        The theory is that by the power of the Numidium and through their global communication
+        system, all dwemer reached chim and realised that they are just a dream in the god-head.
         When reaching chim there are two outcomes. You realize that you don't actually exist and
         disappear or you realize that you don't actually need to exist and you become a god. I don't
         like this theory because the dwemer already knew that they were the result of a

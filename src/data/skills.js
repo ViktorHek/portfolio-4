@@ -2,7 +2,19 @@ const skills = {
   title: "Skills",
   html: (
     <div className="content">
-      <h3>Languages</h3>
+      <fieldset id="lang" name="lang" className="quiz-fieldset">
+        <legend className="title">Languages</legend>
+        <ul>
+          <li name="lang">Javascript</li>
+          <li name="lang">Typescript</li>
+          <li name="lang">Ruby</li>
+          <li name="lang">Python</li>
+          <li name="lang">HTML</li>
+          <li name="lang">CSS</li>
+          <li name="lang">SQL</li>
+        </ul>
+      </fieldset>
+
       <br />
       <ul>
         <li>Javascript</li>
