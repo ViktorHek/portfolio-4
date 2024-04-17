@@ -39,30 +39,7 @@
 .error-container > div > div {
   line-height: 1.5;
   font-size: 1rem;
-  font-family: Menlo, Consolas, monospace;
-}
-
-.quiz {
-  margin: 20px;
-}
-
-.quiz-fieldset {
-  /* color: #0b1350; */
-  margin-top: 12px;
-  box-shadow: 4px 3px 4px #0207262b;
-  padding: 5px 0px 5px 8px;
-}
-
-.quiz-fieldset > legend {
-  /* color: #0b1350; */
-  margin-bottom: 4px;
-}
-
-.quiz-fieldset > div{
-  margin: 4px 0px;
-}
-.quiz-fieldset > div > input{
-  margin-right: 4px;;
+  /* font-family: Menlo, Consolas, monospace; */
 }
 
 .content {
@@ -71,7 +48,7 @@
 }
 .content > p {
   text-align: justify;
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
 }
 .lid {
   display: flex;

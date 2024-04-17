@@ -23,64 +23,62 @@ const dnd = {
       </p>
       <br />
       <p>
-        <strong>Eldritch Invocations:&nbsp;</strong>
-      </p>
-      <ul style={{ paddingLeft: 20 }}>
-        <li>Shroud of Ulban</li>
-        <li>Agonizing Blast</li>
-      </ul>
-      <br />
-      <p>
         <strong>Pact Boon:&nbsp;</strong> Pact of the Tome
       </p>
       <br />
-      <p>
-        <strong>Skills:&nbsp;</strong>
-      </p>
-      <ul style={{ paddingLeft: 20 }}>
-        <li>Arcana</li>
-        <li>Deception</li>
-        <li>History</li>
-        <li>Persuasion</li>
-      </ul>
+      <fieldset id="lang" name="lang">
+        <legend className="title-s">Eldritch Invocations</legend>
+        <ul>
+          <li>Shroud of Ulban</li>
+          <li>Agonizing Blast</li>
+        </ul>
+      </fieldset>
       <br />
-      <p>
-        <strong>Abilitys:&nbsp;</strong>
-      </p>
-      <ul style={{ paddingLeft: 20 }}>
-        <li>STR - 8</li>
-        <li>DEX - 15</li>
-        <li>CON - 14</li>
-        <li>INT - 12</li>
-        <li>WIS - 10</li>
-        <li>CHA - 16</li>
-      </ul>
+      <fieldset id="lang" name="lang">
+        <legend className="title-s">Skills</legend>
+        <ul>
+          <li>Arcana</li>
+          <li>Deception</li>
+          <li>History</li>
+          <li>Persuasion</li>
+        </ul>
+      </fieldset>
       <br />
-      <p>
-        <strong>Spells:&nbsp;</strong>
-      </p>
-      <div style={{ display: "flex", justifyContent: "space-around" }}>
-        <div>
-          <p style={{ fontStyle: "italic" }}>Cantrips</p>
-          <ul>
-            <li>Eldritch Blast</li>
-            <li>Minor Illusion</li>
-          </ul>
-        </div>
-        <div>
-          <p style={{ fontStyle: "italic" }}>Spells</p>
+      <fieldset id="lang" name="lang">
+        <legend className="title-s">Abilitys</legend>
+        <ul>
+          <li>STR - 8</li>
+          <li>DEX - 15</li>
+          <li>CON - 14</li>
+          <li>INT - 12</li>
+          <li>WIS - 10</li>
+          <li>CHA - 16</li>
+        </ul>
+      </fieldset>
+      <br />
+      <fieldset id="lang" name="lang">
+        <legend className="title-s">Spells</legend>
+        <div style={{ display: "flex", justifyContent: "flex-start" }}>
+          <div>
+            <p style={{ fontStyle: "italic" }}>Cantrips</p>
+            <ul>
+              <li>Eldritch Blast</li>
+              <li>Minor Illusion</li>
+            </ul>
+          </div>
+          <div style={{ marginLeft: "20px" }}>
+            <p style={{ fontStyle: "italic" }}>Spells</p>
 
-          <ul>
-            <li>Expeditious Retreat</li>
-            <li>Unseen Servant</li>
-          </ul>
+            <ul>
+              <li>Expeditious Retreat</li>
+              <li>Unseen Servant</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div>
-        <br />
-        <p>
-          <strong>Backstory</strong>
-        </p>
+      </fieldset>
+      <br />
+      <fieldset id="lang" name="lang">
+        <legend className="title-s">Backstory</legend>
         <p>
           Kichtor grew up in a life of luxury but was also quite separated from the rest of the
           world. His family owned a small case and made money scamming other towns and cities for
@@ -113,7 +111,7 @@ const dnd = {
           So he goes on a journey to see, do and understand everything in the universe in order to
           meet his god.
         </p>
-      </div>
+      </fieldset>
     </div>
   ),
 };

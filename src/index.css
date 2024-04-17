@@ -107,19 +107,29 @@ body {
   font-size: 1.2em;
   font-weight: 600;
   font-family: monospace;
-
   line-height: 0.5rem;
 }
 
-fieldset[class="title-s"] {
-  padding: 0px 5px;
+fieldset {
+  margin-top: 20px;
+  box-shadow: 4px 3px 4px #0207262b;
+  padding: 5px 10px 10px 8px;
+  border-color: #0b1350;
 }
 
-fieldset {
-  margin-top: 12px;
-  box-shadow: 4px 3px 4px #0207262b;
-  padding: 2px 0px 2px 8px;
-  border-color: #0b1350;
+fieldset > legend {
+  padding: 0px 5px;
+  margin-bottom: 4px;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: monospace;
+  line-height: 0.5rem;
+}
+
+fieldset > .sub {
+  color: #0b1350;
+  font-size: 0.8em;
+  margin-left: 6px;
 }
 
 ul {
@@ -136,6 +146,7 @@ ul > li {
   bottom: -1px;
   right: 20px;
   animation: moveking 30s 15s infinite ease-in-out;
+  font-family: "Times New Roman", Times, serif;
 }
 
 @keyframes moveking {

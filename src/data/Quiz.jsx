@@ -31,11 +31,11 @@ function Quiz(props) {
   const [up, setUp] = useState(false);
 
   function handleSubmit() {
-    const {q1,q2,q3,q4}=form;
-    const ans1 = q1[1].checked
-    const ans2 = q2[2].checked
-    const ans3 = q3[0].checked || q3[1].checked||q3[2].checked
-    const ans4 = q4[0].checked
+    const { q1, q2, q3, q4 } = form;
+    const ans1 = q1[1].checked;
+    const ans2 = q2[2].checked;
+    const ans3 = q3[0].checked || q3[1].checked || q3[2].checked;
+    const ans4 = q4[0].checked;
 
     if (ans1 && ans2 && ans3 && ans4) {
       setWin(true);
@@ -83,72 +83,64 @@ function Quiz(props) {
           </p>
         </div>
       ) : (
-        <div className="quiz">
+        <div className="content">
           <h2>This is a quiz on everything you learned from my portfolio.</h2>
-          <br /> 
-          <fieldset id="fieldset1" name="fieldset1" className="quiz-fieldset">
+          <br />
+          <fieldset id="fieldset1" name="fieldset1">
             <legend className="title-s">Where did I get my first programming job?</legend>
             {form.q1.map((el, index) => {
               return (
-                <div>
-                  <Checkbox
-                    check={el.checked}
-                    text={el.text}
-                    handleClick={handleClick1}
-                    question={"q1"}
-                    index={index}
-                  />
-                </div>
+                <Checkbox
+                  check={el.checked}
+                  text={el.text}
+                  handleClick={handleClick1}
+                  question={"q1"}
+                  index={index}
+                />
               );
             })}
           </fieldset>
-          <fieldset id="fieldset2" name="fieldset2" className="quiz-fieldset">
+          <fieldset id="fieldset2" name="fieldset2">
             <legend className="title-s">Witch one is not one of my hobby projects?</legend>
             {form.q2.map((el, index) => {
               return (
-                <div>
-                  <Checkbox
-                    check={el.checked}
-                    text={el.text}
-                    handleClick={handleClick1}
-                    question={"q2"}
-                    index={index}
-                  />
-                </div>
+                <Checkbox
+                  check={el.checked}
+                  text={el.text}
+                  handleClick={handleClick1}
+                  question={"q2"}
+                  index={index}
+                />
               );
             })}
           </fieldset>
-          <fieldset id="fieldset3" name="fieldset3" className="quiz-fieldset">
+          <fieldset id="fieldset3" name="fieldset3">
             <legend className="title-s">
               Who made all the artwork, styling and animations for the page?
             </legend>
             {form.q3.map((el, index) => {
               return (
-                <div>
-                  <Checkbox
-                    check={el.checked}
-                    text={el.text}
-                    handleClick={handleClick1}
-                    question={"q3"}
-                    index={index}
-                  />
-                </div>
+                <Checkbox
+                  check={el.checked}
+                  text={el.text}
+                  handleClick={handleClick1}
+                  question={"q3"}
+                  index={index}
+                />
               );
             })}
           </fieldset>
-          <fieldset id="fieldset4" name="fieldset4" className="quiz-fieldset">
+          <fieldset id="fieldset4" name="fieldset4">
             <legend className="title-s">Why did the dwemer disappeared?</legend>
             {form.q4.map((el, index) => {
               return (
-                <div>
-                  <Checkbox
-                    check={el.checked}
-                    text={el.text}
-                    handleClick={handleClick1}
-                    question={"q4"}
-                    index={index}
-                  />
-                </div>
+                <Checkbox
+                  check={el.checked}
+                  text={el.text}
+                  handleClick={handleClick1}
+                  question={"q4"}
+                  index={index}
+                />
               );
             })}
           </fieldset>

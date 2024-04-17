@@ -10,7 +10,7 @@ console.log('gg: ', index)
   // }
 
   return (
-    <div style={{ display: "flex", alignItems: "center" }}>
+    <div style={{ display: "flex", alignItems: "center", margin: '5px 0px' }}>
       <div
         style={
           check
