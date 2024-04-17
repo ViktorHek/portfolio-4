@@ -2,7 +2,53 @@ const journey = {
   title: "My Journey",
   html: (
     <div className="content">
-      <p>
+      <fieldset>
+        <legend>Past</legend>
+        <p>
+          I gew up curios and wanted to try different careers before setteling on one. Resulting in
+          a broad education, media & communication science. Found programming by sheer coincidence
+          through YouTube. Witch lead me to a course where I learned everything i needed to further
+          educate myself. As soon as I got my first job as a full-stack developer. I stoped looking
+          for what to do with my life and desided to dedicate it to creating code.
+        </p>
+        <p>
+          When I started working i had 12 weeks of education. After three months I got my own client
+          that I was responsible for. I'm very grateful for the trust they put in me. Based on my
+          work, they concluded that I had the capability to handle my own client. The pressure got
+          to me and when more job requirement was added to me, I folded. Six months after my
+          employment I was supposed to have a meeting with the boss and talk about my cases, salary
+          and work tasks. I saw that as a good opportunity to discuss my problems. But my boss
+          canceled the meeting so my cases, salary and work tasks were decided without my input. I
+          asked about the meeting to no avail. I resigned shortly after that.
+        </p>
+        <p>
+          I desided to hit the books. They say that the more you know about something, the more you
+          realize that you don't know anything. I knew I had a lot to learn and thanks to my
+          internship at Talentech, I did. It's a company with a full-scale development team. Packed
+          with compitent back-end/front-end developers, UX designers, QA testers and I was a
+          spounche in the middle absobing everything i could learn.
+        </p>
+      </fieldset>
+      <fieldset>
+        <legend>Present</legend>
+        <p>
+          I'm curently looking for employment, have you seen him? But I also try to enjoy the time I
+          get to spend on my hobby projects.
+        </p>
+        <p style={{ color: "rgb(121, 124, 113)" }}>Last updated: 2024-040-17</p>
+      </fieldset>
+      <fieldset>
+        <legend>Future</legend>
+        <p>
+          My dream is to become something I call a full-full-stack developer. Someone that knows
+          front-end, back-end and a littl bit of everything regarding code. I strongly beleve that
+          my knowlegde in back-end development has improved me as a front-end developer. That
+          concetp on steroids is someon who can create a fully featured application by himself. That
+          me in maybe 20 years. I have no desire to do big solo projects, I just want to be able to
+          do them
+        </p>
+      </fieldset>
+      {/* <p>
         When I grew up, I didn't know what I wanted to be. I liked working with others. So I decided
         on a broad education with social aspects, media & communication science. But in the back of
         my head, I always had a dream of working with creating stuff using my skills and
@@ -31,7 +77,7 @@ const journey = {
         realize that you don't know anything. I knew I had a lot to learn and thanks to my
         internship at Talentech, I sure did. Now I'm looking forward to my new dream of becoming a
         full-full-stack developer, someone who can do anything.
-      </p>
+      </p> */}
     </div>
   ),
 };

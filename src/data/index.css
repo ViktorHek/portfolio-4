@@ -63,7 +63,6 @@
 }
 .font-container {
   display: flex;
-  padding: 20px;
   flex-wrap: wrap;
 }
 .font-container > svg {

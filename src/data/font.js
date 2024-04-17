@@ -1,7 +1,7 @@
 const font = {
   title: "My Font",
   html: (
-    <div className="font-container">
+    <div className="content font-container">
       {/* <svg
         // :width="letter.width"
         // :height="letter.height"
