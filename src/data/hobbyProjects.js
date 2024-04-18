@@ -7,23 +7,32 @@ const hobbyProjects = {
         <ul>
           <li>
             <strong>Description:&nbsp;</strong>TinyHans is a what-you-see-is-what-you-get(WYSIWYG)
-            editor. A text editor that displays how the text will look in real-time.
+            editor. A text editor that displays how the text will look like in real-time.
           </li>
           <li>
             <strong>Functionality:&nbsp;</strong>Typing letters A-Z and numbers 0-9, remove
             characters, new line, move placeholder by arrow/mouse, make text bold/italic and change
             alignment.
           </li>
-          <li>Contrary to the most popular option, TinyMCE, I don't use [contentEditable].</li>
+          {/* <li>TinyHans uses key press event and creates a letter, word or new line. The most common WYSIWYG-editor uses contentEditable. </li> */}
           <li>
-            <strong>Tools:&nbsp;</strong>Javascript & React. No external librarys.
+            <strong>Tools:&nbsp;</strong>
+            <ul>
+              <li>Javascript</li>
+              <li>React</li>
+            </ul>
           </li>
         </ul>
       </fieldset>
 
       <br />
       <fieldset>
-        <legend>Vikimon</legend>
+        <legend>Vikimon</legend>{" "}
+        <a
+          style={{ color: "#0b1350", margin: 4, fontSize: "1em" }}
+          href="https://github.com/ViktorHek/vikimon">
+          Link
+        </a>
         <ul>
           <li>
             <strong>Description:&nbsp;</strong>A recreation of the pokemon red game from 1996. The
@@ -37,14 +46,14 @@ const hobbyProjects = {
             changed. Description on how is in the Readme.
           </li>
           <li>
-            <strong>Tools:&nbsp;</strong>Javascript, React & Axios
+            <strong>Tools:&nbsp;</strong>
+            <ul>
+              <li>Javascript</li>
+              <li>React</li>
+              <li>Axios</li>
+            </ul>
           </li>
         </ul>
-        <a
-          style={{ color: "#0b1350", margin: 4, fontSize: "1em" }}
-          href="https://github.com/ViktorHek/vikimon">
-          Link
-        </a>
       </fieldset>
 
       <br />
@@ -56,8 +65,7 @@ const hobbyProjects = {
             ownership of.
           </li>
           <li>
-            <strong>Collection:&nbsp;</strong>Containers, dropdowns, buttons, slime-animation, icons
-            and a font.
+            <strong>Collection:&nbsp;</strong>Containers, dropdowns, buttons, icons and a font.
           </li>
         </ul>
       </fieldset>
@@ -73,7 +81,11 @@ const hobbyProjects = {
             <strong>Functionality:&nbsp;</strong>Both doos have a counter. The AI selects the one
             with the lowest count. This is the reason for the name "No Cap".
           </li>
-          <strong>Tools:&nbsp;</strong>Javascript & Node.js. no external librarys.
+          <strong>Tools:&nbsp;</strong>
+          <ul>
+            <li>Javascript</li>
+            <li>Node.js</li>
+          </ul>
         </ul>
       </fieldset>
     </div>

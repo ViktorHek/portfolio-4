@@ -7,24 +7,35 @@ const workExperience = {
         <p className="sub">November 2023 - April 2024</p>
         <ul>
           <li>
-            <strong>Company:&nbsp;</strong>Talentech is a global company that provides a recruitment
-            platform.
+            <strong>Company:&nbsp;</strong>Talentech is a global company that provides HR,
+            recruitment and everything around. I worked for the department that developed a
+            recruitment platform named ReachMe.
           </li>
           <li>
-            <strong>Skills:&nbsp;</strong>Typescript, UX/UI, Angular, Cypress, Agile development,
-            Python, Bootstrap, Git, Node.js.
+            <strong>Description:&nbsp;</strong>Talentechs codebase is a culmination of years of work
+            from many different people. therefore, I quickly learned to read legacy-code, write
+            scalable code and to collaborate with colleagues in different roles. The cases assigned
+            to me were everything from obscure bugs to my own modals. If you, the reader, use
+            ReachMe. I can happily say that I'm the one who created the modal you used to add me to
+            the system.
           </li>
           <li>
-            <strong>Description:&nbsp;</strong>I worked for the department that developed a
-            recruitment platform. Their codebase is a culmination of years of work from many
-            different people. therefore, I quickly learned to read legacy-code, write scalable code
-            and to collaborate with colleagues in different roles. The cases assigned to me were
-            everything from obscure bugs to my own modals. If you, the reader, use ReachMe. I can
-            happily say that I'm the one who created the modal you used to add me to the system.
+            <strong>Skills:&nbsp;</strong>
+            <ul>
+              <li>Typescript</li>
+              <li>UX/UI</li>
+              <li>Angular</li>
+              <li>Cypress</li>
+              <li>Agile development</li>
+              <li>Python</li>
+              <li>Bootstrap</li>
+              <li>Git</li>
+              <li>Node.js</li>
+            </ul>
           </li>
         </ul>
       </fieldset>
-
+      <br />
       <fieldset>
         <legend>Customer First - Full-stack Developer</legend>
         <p className="sub">June 2021 - February 2022</p>
@@ -34,16 +45,27 @@ const workExperience = {
             communication platform with phone, mail, chatts and a lot of focus on customizability.
           </li>
           <li>
-            <strong>Skills:&nbsp;</strong>Javascript, Vue, Vuex, React Native, jQuery, SQL, Node.js,
-            WebSocket, Git, JWT.
-          </li>
-          <li>
             <strong>Cases:&nbsp;</strong>It started with smaller features, joining customer meetings
             and listening in on planning sessions. After three months I got my own client. This gave
             me the opportunity to be part of a real project from beginning to end. My most important
             lesson was to know my own ability. I use that knowledge to help clients understand what
-            is possible, how much resources a feature will require and (most importantly) be able to
-            provide better alternatives.
+            is possible, how much resources a feature will require and be able to provide better
+            solutions.
+          </li>
+          <li>
+            <strong>Skills:&nbsp;</strong>
+            <ul>
+              <li>Javascript</li>
+              <li>Vue</li>
+              <li>Vuex</li>
+              <li>React Native</li>
+              <li>jQuery</li>
+              <li>SQL</li>
+              <li>Node.js</li>
+              <li>WebSocket</li>
+              <li>Git</li>
+              <li>JWT</li>
+            </ul>
           </li>
         </ul>
       </fieldset>

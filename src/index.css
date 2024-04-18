@@ -41,6 +41,7 @@ body {
   border-top: 1px solid #c1d2b5;
   border-left: 1px solid #c1d2b5;
   transition: 0.5s;
+  padding: 2px;
 }
 
 .windows-btn > *:hover {
@@ -111,7 +112,6 @@ body {
 }
 
 fieldset {
-  margin-top: 20px;
   box-shadow: 4px 3px 4px #0207262b;
   padding: 5px 10px 10px 8px;
   border-color: #0b1350;
@@ -119,11 +119,11 @@ fieldset {
 
 fieldset > legend {
   padding: 0px 5px;
-  margin-bottom: 4px;
+  margin-bottom: 12px;
   font-size: 1.2em;
   font-weight: 600;
   font-family: monospace;
-  line-height: 0.5rem;
+
 }
 
 fieldset > .sub {
