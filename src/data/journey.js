@@ -5,14 +5,14 @@ const journey = {
       <fieldset>
         <legend>Past</legend>
         <p>
-          I gew up curios and wanted to try different careers before setteling on one. Resulting in
+          I grew up curious and wanted to try different careers before settling on one. Resulting in
           a broad education, media & communication science. Found programming by sheer coincidence
-          through YouTube. Witch lead me to a course where I learned everything i needed to further
-          educate myself. As soon as I got my first job as a full-stack developer. I stoped looking
-          for what to do with my life and desided to dedicate it to creating code.
+          through YouTube. Witch led me to a course where I learned everything I needed to further
+          educate myself. As soon as I got my first job as a full-stack developer. I stopped looking
+          for what to do with my life and decided to dedicate it to creating code.
         </p>
         <p>
-          When I started working i had 12 weeks of education. After three months I got my own client
+          When I started working I had 12 weeks of education. After three months I got my own client
           that I was responsible for. I'm very grateful for the trust they put in me. Based on my
           work, they concluded that I had the capability to handle my own client. The pressure got
           to me and when more job requirement was added to me, I folded. Six months after my
@@ -22,30 +22,30 @@ const journey = {
           asked about the meeting to no avail. I resigned shortly after that.
         </p>
         <p>
-          I desided to hit the books. They say that the more you know about something, the more you
+          I decided to hit the books. They say that the more you know about something, the more you
           realize that you don't know anything. I knew I had a lot to learn and thanks to my
           internship at Talentech, I did. It's a company with a full-scale development team. Packed
-          with compitent back-end/front-end developers, UX designers, QA testers and I was a
-          spounche in the middle absobing everything i could learn.
+          with competent back-end/front-end developers, UX designers, QA testers and I was a sponge
+          in the middle absorbing everything I could learn.
         </p>
       </fieldset>
       <fieldset>
         <legend>Present</legend>
         <p>
-          I'm curently looking for employment, have you seen him? But I also try to enjoy the time I
-          get to spend on my hobby projects.
+          I'm currently looking for employment, have you seen him? But I also try to enjoy the time
+          I get to spend on my hobby projects.
         </p>
         <p style={{ color: "rgb(121, 124, 113)" }}>Last updated: 2024-040-17</p>
       </fieldset>
       <fieldset>
         <legend>Future</legend>
         <p>
-          My dream is to become something I call a full-full-stack developer. Someone that knows
-          front-end, back-end and a littl bit of everything regarding code. I strongly beleve that
-          my knowlegde in back-end development has improved me as a front-end developer. That
-          concetp on steroids is someon who can create a fully featured application by himself. That
-          me in maybe 20 years. I have no desire to do big solo projects, I just want to be able to
-          do them
+          My dream is to become something I call a full-full-stack developer. Someone who knows
+          front-end, back-end and a little bit of everything regarding code. I strongly believe that
+          my knowledge in back-end development has improved me as a front-end developer. That
+          concept on steroids is someone who can create a fully featured application by himself.
+          That me in maybe 20 years. I have no desire to do big solo projects, I just want to be
+          able to do them.
         </p>
       </fieldset>
       {/* <p>

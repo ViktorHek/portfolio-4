@@ -25,7 +25,7 @@ const hussle = {
       <fieldset>
         <legend className="title-s">Windows</legend>
         <p>
-          The pop-up windows are inspired by Windows 3.1 and is a representation of how my mind
+          The pop-up windows are inspired by Windows 3.1 and are a representation of how my mind
           works. Cluttered, unorganized but packed with ideas, projects and information that
           interest me. Some windows might seem random and out of place. But this is (for better or
           worse) what occupies my mind every single day.
@@ -37,27 +37,27 @@ const hussle = {
         </p>
         <p>
           There is very little styling when it comes to everything inside these windows. That's a
-          flex. Very few people can design something that looks good with HTML. I take pride
-          in being one of those few.
+          flex. Very few people can design something that looks good with HTML. I take pride in
+          being one of those few.
         </p>
         <p>
           Fun fact: I had an idea to add a function that opens a random window at random intervals.
-          But desided it would be to annoying for the user
+          But decided it would be too annoying for the user
         </p>
       </fieldset>
       <br />
       <fieldset>
         <legend className="title-s">Game</legend>
         <p>
-          The idea is stolen from a game developer. They created a open world game with characters
+          The idea is stolen from a game developer. They created an open-world game with characters
           the player can interact with to learn about the creator. Till this day, that's the best
-          portfolio I have ever seen. Do to my lack of a game engine, I had to use my creativity to
+          portfolio I have ever seen. Due to my lack of a game engine, I had to use my creativity to
           create something similar.
         </p>
         <p>
-          The doodles was suposed to just be a background image. I fiddled around and found out that
-          a group of SVGs can be targeted by a onClick event. That's when I relized I could use my
-          background as a world and my doodles as characters.
+          The doodles were supposed to just be a background image. I fiddled around and found out
+          that a group of SVGs can be targeted by an onClick event. That's when I realized I could
+          use my background as a world and my doodles as characters.
         </p>
       </fieldset>
     </div>

@@ -65,7 +65,14 @@ const hobbyProjects = {
             ownership of.
           </li>
           <li>
-            <strong>Collection:&nbsp;</strong>Containers, dropdowns, buttons, icons and a font.
+            <strong>Collection:&nbsp;</strong>
+            <ul>
+              <li>Containers</li>
+              <li>Dropdowns</li>
+              <li>Buttons</li>
+              <li>Icons</li>
+              <li>Fonts</li>
+            </ul>
           </li>
         </ul>
       </fieldset>

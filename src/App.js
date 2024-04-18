@@ -59,6 +59,8 @@ function App() {
       } else {
         addWindow(event, id, index);
       }
+    } else {
+      minimized(id)
     }
     if (collection.length === 26) {
       setTimeout(() => {

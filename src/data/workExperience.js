@@ -13,11 +13,11 @@ const workExperience = {
           </li>
           <li>
             <strong>Description:&nbsp;</strong>Talentechs codebase is a culmination of years of work
-            from many different people. therefore, I quickly learned to read legacy-code, write
-            scalable code and to collaborate with colleagues in different roles. The cases assigned
-            to me were everything from obscure bugs to my own modals. If you, the reader, use
-            ReachMe. I can happily say that I'm the one who created the modal you used to add me to
-            the system.
+            from many different people. therefore, I quickly learned to read legacy code, write
+            scalable code and collaborate with colleagues in different roles. The cases assigned to
+            me were everything from obscure bugs to my own modals. If you, the reader, use ReachMe.
+            I can happily say that I'm the one who created the modal you used to add me to the
+            system.
           </li>
           <li>
             <strong>Skills:&nbsp;</strong>
@@ -42,14 +42,14 @@ const workExperience = {
         <ul>
           <li>
             <strong>Company:&nbsp;</strong>Customer First is a smaller B2B company that provides a
-            communication platform with phone, mail, chatts and a lot of focus on customizability.
+            communication platform with phone, mail, chats and a lot of focus on customizability.
           </li>
           <li>
             <strong>Cases:&nbsp;</strong>It started with smaller features, joining customer meetings
-            and listening in on planning sessions. After three months I got my own client. This gave
-            me the opportunity to be part of a real project from beginning to end. My most important
-            lesson was to know my own ability. I use that knowledge to help clients understand what
-            is possible, how much resources a feature will require and be able to provide better
+            and listening in on planning sessions. After three months I got my own client. This
+            allowed me to be part of a real project from beginning to end. My most important lesson
+            was to know my own ability. I use that knowledge to help clients understand what is
+            possible, how much resources a feature will require and be able to provide better
             solutions.
           </li>
           <li>

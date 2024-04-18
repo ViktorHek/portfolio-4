@@ -9,6 +9,9 @@ const links = {
         <li>
           <a href="https://github.com/ViktorHek">Github</a>
         </li>
+        <li>
+          <a href="https://github.com/ViktorHek/vikimon">Vikimon</a>
+        </li>
       </ul>
     </div>
   ),

@@ -3,10 +3,10 @@ const personality = {
   html: (
     <div className="content">
       <p>
-        I'm a simple man with simple needs. I like programming because it alows me to expres my
-        creativety and create applications. I like long walks because it ease my mind and is a good
-        way to stay in shape without to much effort. I also like games, the ide of experiencing a
-        world not confined by the laws of reality is fascinating to me.
+        I'm a simple man with simple needs. I like programming because it allows me to express my
+        creativity and create applications. I like long walks because they ease my mind and are a
+        good way to stay in shape without too much effort. I also like games, the idea of
+        experiencing a world not confined by the laws of reality is fascinating to me.
       </p>
       <p>
         I take a lot of inspiration from Buddhism. I believe the middle way, or what we in Sweden

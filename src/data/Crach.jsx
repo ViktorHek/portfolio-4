@@ -43,7 +43,7 @@ function Crach() {
               </div>
             </div>
           </div>
-          <p>Do you want to crach the site?</p>
+          <p>Do you want to crash the site?</p>
           <div
             style={{
               width: "50%",
@@ -63,7 +63,7 @@ function Crach() {
         </div>
       ) : (
         <div className="content">
-          <p>Do you want to crach the site?</p>
+          <p>Do you want to crash the site?</p>
           <div
             style={{
               width: "50%",

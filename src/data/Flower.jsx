@@ -4,9 +4,10 @@ function Flower({ fasthandle }) {
       <p>Hello! My name is flower and I work here as a refference manual. </p>
       <p>
         If you don't want to go through the hustle of finding all 25 pop-up windows, you'll find all
-        of them below. But know that if you open a pop-up window trough me, it won't be added to
-        youre colleded windows.
+        of them below. But know that if you open a pop-up window through me, you'll still have to
+        find the doodle associated with that window to win.
       </p>
+      <br />
       <fieldset>
         <legend>Relevant Info</legend>
         <ul>
@@ -42,6 +43,7 @@ function Flower({ fasthandle }) {
           </li>
         </ul>
       </fieldset>
+      <br />
       <fieldset>
         <legend>Projects</legend>
 
@@ -51,7 +53,7 @@ function Flower({ fasthandle }) {
           </li>
           <li>
             <span onClick={() => fasthandle("editorDude")}>WYSIWYG-Editor</span>
-          </li>{" "}
+          </li>
           <li>
             <span onClick={() => fasthandle("hussle")}>This Webpage</span>
           </li>
@@ -72,6 +74,7 @@ function Flower({ fasthandle }) {
           </li>
         </ul>
       </fieldset>
+      <br />
       <fieldset>
         <legend>Fun and Random</legend>
 

@@ -63,6 +63,7 @@ body {
   justify-content: space-evenly;
   margin-left: 30px;
   z-index: 999;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .header-text-container > p:nth-child(1) {
@@ -119,11 +120,10 @@ fieldset {
 
 fieldset > legend {
   padding: 0px 5px;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   font-size: 1.2em;
   font-weight: 600;
   font-family: monospace;
-
 }
 
 fieldset > .sub {

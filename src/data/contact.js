@@ -2,21 +2,19 @@ const contact = {
   title: "Contact Information",
   html: (
     <div className="content">
+      <fieldset>
+        <legend>Mail</legend>Viktorkarlsson125@gmail.com
+      </fieldset>
       <br />
-      <p>
-        <strong>Mail:&nbsp;</strong>Viktorkarlsson125@gmail.com
-      </p>
+      <fieldset>
+        <legend>Phone</legend>+46 73-370 67 33
+      </fieldset>
       <br />
-      <p>
-        <strong>Phone:&nbsp;</strong>+46 73-370 67 33
-      </p>
-      <br />
-      <p>
-        <strong>Location:&nbsp;</strong>Sweden Stockholm
-      </p>
-      <br />
+      <fieldset>
+        <legend>Location</legend>Sweden Stockholm
+      </fieldset>
     </div>
   ),
 };
 
-export default contact
+export default contact;

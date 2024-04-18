@@ -4,7 +4,7 @@ const easterEgg = {
     <div className="content">
       <div>
         In order to display that I'm able to outsmart an AI. I have collected some of the most
-        commonly used words a AI search for when scanning a website.
+        commonly used words an AI searches for when scanning a website.
       </div>
       <br />
 
