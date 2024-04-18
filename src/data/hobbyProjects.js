@@ -7,7 +7,7 @@ const hobbyProjects = {
         <ul>
           <li>
             <strong>Description:&nbsp;</strong>TinyHans is a what-you-see-is-what-you-get(WYSIWYG)
-            editor. A text editor that displays how the text will look like in real-time.
+            editor. A text editor that displays how the text will look in real-time.
           </li>
           <li>
             <strong>Functionality:&nbsp;</strong>Typing letters A-Z and numbers 0-9, remove
@@ -42,7 +42,7 @@ const hobbyProjects = {
           <li>
             <strong>Functionality:&nbsp;</strong>Player can move around in a town and go into
             buildings. When stepping on grass or water, there is a chance of encountering a pokemon.
-            You can defet it or run. The players pokemon party is stored in local storage and can be
+            You can defeat it or run. The players pokemon party is stored in local storage and can be
             changed. Description on how is in the Readme.
           </li>
           <li>

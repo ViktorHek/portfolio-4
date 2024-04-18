@@ -76,10 +76,10 @@ function Quiz(props) {
     <>
       {win ? (
         <div className="content">
-          <h1 style={{ textAlign: "center" }}>Winner!</h1>
+          <h1 style={{ textAlign: "center" }}>Winner!</h1> <br />
           <p>
             Congratulations! You will gain access to the Toolbar. This will allow you to download my
-            resume, personal letter and doodles
+            resume, personal letter and a doodle
           </p>
         </div>
       ) : (
@@ -100,6 +100,7 @@ function Quiz(props) {
               );
             })}
           </fieldset>
+          <br />
           <fieldset id="fieldset2" name="fieldset2">
             <legend className="title-s">Witch one is not one of my hobby projects?</legend>
             {form.q2.map((el, index) => {
@@ -114,6 +115,7 @@ function Quiz(props) {
               );
             })}
           </fieldset>
+          <br />
           <fieldset id="fieldset3" name="fieldset3">
             <legend className="title-s">
               Who made all the artwork, styling and animations for the page?
@@ -130,6 +132,7 @@ function Quiz(props) {
               );
             })}
           </fieldset>
+          <br />
           <fieldset id="fieldset4" name="fieldset4">
             <legend className="title-s">Why did the dwemer disappeared?</legend>
             {form.q4.map((el, index) => {

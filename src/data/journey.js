@@ -29,14 +29,16 @@ const journey = {
           in the middle absorbing everything I could learn.
         </p>
       </fieldset>
+      <br />
       <fieldset>
         <legend>Present</legend>
         <p>
           I'm currently looking for employment, have you seen him? But I also try to enjoy the time
           I get to spend on my hobby projects.
         </p>
-        <p style={{ color: "rgb(121, 124, 113)" }}>Last updated: 2024-040-17</p>
+        <p style={{ color: "rgb(121, 124, 113)" }}>Last updated: 2024-04-17</p>
       </fieldset>
+      <br />
       <fieldset>
         <legend>Future</legend>
         <p>
@@ -44,7 +46,7 @@ const journey = {
           front-end, back-end and a little bit of everything regarding code. I strongly believe that
           my knowledge in back-end development has improved me as a front-end developer. That
           concept on steroids is someone who can create a fully featured application by himself.
-          That me in maybe 20 years. I have no desire to do big solo projects, I just want to be
+          That's me in maybe 20 years. I have no desire to do big solo projects, I just want to be
           able to do them.
         </p>
       </fieldset>

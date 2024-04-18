@@ -67,24 +67,36 @@ function WusiwygEditor() {
 
   function movePlaceholder(where) {
     let placeholder = document.getElementById("placeholder");
+    const editor = document.getElementById("editor");
     let newPlaceHolder = document.createElement("p");
     newPlaceHolder.id = "placeholder";
     newPlaceHolder.class = "placeholder";
     newPlaceHolder.className = "placeholder";
     newPlaceHolder.name = "placeholder";
+
+    if (editor.lastElementChild.lastElementChild.lastElementChild.id === "placeholder") {
+      if (placeholder.previousElementSibling) {
+        if (placeholder.previousElementSibling.innerHTML === "&nbsp;" && where === "left") {
+          placeholder.parentElement.previousElementSibling.appendChild(newPlaceHolder);
+          placeholder.remove();
+          return;
+        }
+      }
+    }
+
     const siblings = Array.from(placeholder.parentElement.children);
     const currentIndex = siblings.indexOf(placeholder);
     let sibling = where === "left" ? "previousElementSibling" : "nextElementSibling";
     let child = where === "left" ? "lastChild" : "firstChild";
     let ajust = where === "left" ? "beforebegin" : "afterend";
+    let isInit = currentIndex === 0 && where === "left";
     let isWordStart = currentIndex === 1 && where === "left";
     let isWordEnd = currentIndex === siblings.length - 1 && where === "right";
-
-    if (!isWordStart && !isWordEnd) {
+    console.log({ isWordEnd });
+    if (!isWordStart && !isWordEnd && !isInit) {
       placeholder[sibling].insertAdjacentElement(ajust, newPlaceHolder);
       placeholder.remove();
     } else {
-      const editor = document.getElementById("editor");
       const firstSibling = editor.firstChild.firstChild.firstChild.nextSibling || {
         id: null,
       };
@@ -103,9 +115,9 @@ function WusiwygEditor() {
   function clickOut(event) {
     if (!isEditorFocused) return;
     if (!document.getElementById("placeholder")) return;
-    if (!event.target.parentElement) return;
-    if (!event.target.parentElement.parentElement) return;
-    if (!event.target.parentElement.parentElement.parentElement) return;
+    if (event.target.parentElement === null) return;
+    if (event.target.parentElement.parentElement === null) return;
+    if (event.target.parentElement.parentElement.parentElement === null) return;
     if (
       event.target.parentElement.parentElement.parentElement === "editor" ||
       // event.target.parentElement.parentElement.id === "editor" ||
@@ -113,17 +125,19 @@ function WusiwygEditor() {
       event.target.id !== "editorbackground"
     ) {
       const tag = document.createElement("p");
-      const placeholder = document.getElementById("placeholder");
-      placeholder.remove();
       tag.id = "placeholder";
       tag.class = "placeholder";
       tag.className = "placeholder";
+      console.log({ event });
       if (event.target.parentElement.parentElement.parentElement.id === "editor") {
         event.target.insertAdjacentElement("afterend", tag);
       } else {
         const editor = document.getElementById("editor");
         editor.lastChild.lastChild.appendChild(tag);
       }
+      const placeholder = document.getElementById("placeholder");
+      placeholder.remove();
+
     }
   }
 

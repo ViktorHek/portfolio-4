@@ -7,6 +7,7 @@
 function handleKeys(event, styles) {
   const dir = event.code.toLowerCase();
   const placeholder = document.getElementById("placeholder");
+  const editor = document.getElementById("editor");
   let newPlaceHolder = document.createElement("p");
   newPlaceHolder.id = "placeholder";
   newPlaceHolder.class = "placeholder";
@@ -83,14 +84,27 @@ function handleKeys(event, styles) {
       placeholder.remove();
       break;
     case "backspace":
+      if (
+        editor.children.length === 1 &&
+        editor.firstElementChild.children.length === 1 &&
+        editor.firstElementChild.firstElementChild.children.length === 1
+      ) {
+        break;
+      }
+      if (editor.firstChild.firstChild.firstChild.nextElementSibling) {
+        if (editor.firstChild.firstChild.firstChild.nextElementSibling.id === "placeholder") {
+          placeholder.previousElementSibling.remove();
+          break;
+        }
+      }
       if (placeholder.parentElement.children.length < 3) {
         if (placeholder.parentElement.parentElement.children.length < 2) {
           if (placeholder.parentElement.children.length < 3) {
             // new code start
-            if (placeholder.previousElementSibling) {
-              placeholder.previousElementSibling.remove();
-            }
-          } else {
+            //   if (placeholder.previousElementSibling) {
+            //     placeholder.previousElementSibling.remove();
+            //   }
+            // } else {
             // new code end
             placeholder.parentElement.parentElement.previousElementSibling.lastChild.appendChild(
               newPlaceHolder
@@ -105,7 +119,9 @@ function handleKeys(event, styles) {
           placeholder.remove();
         }
       } else {
-        placeholder.previousElementSibling.remove();
+        if (placeholder.previousElementSibling) {
+          placeholder.previousElementSibling.remove();
+        }
       }
       break;
     default:

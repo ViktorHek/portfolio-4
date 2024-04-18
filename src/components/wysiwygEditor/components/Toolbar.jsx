@@ -1,32 +1,32 @@
-// import { useState, useEffect } from "react";
-// import AlignAnimation from "../animations/AlignAnimation";
+import { useState, useEffect } from "react";
+import AlignAnimation from "../animations/AlignAnimation";
 import "../styles/toolbar.css";
 
-function Toolbar() {
-// function Toolbar(props) {
-  // const [boldActive, setBoldActive] = useState(props.active.boldActive);
-  // const [italicActive, setItalicActive] = useState(props.active.italicActive);
-  // const [pos, setPos] = useState(props.active.pos);
-  // const [openPositionDropdown, setOpenPositionDropdown] = useState(false);
+// function Toolbar() {
+function Toolbar(props) {
+  const [boldActive, setBoldActive] = useState(props.active.boldActive);
+  const [italicActive, setItalicActive] = useState(props.active.italicActive);
+  const [pos, setPos] = useState(props.active.pos);
+  const [openPositionDropdown, setOpenPositionDropdown] = useState(false);
 
-  // useEffect(() => {
-  //   setBoldActive(props.active.boldActive);
-  //   setItalicActive(props.active.italicActive);
-  //   setPos(props.active.pos);
-  // }, [props]);
+  useEffect(() => {
+    setBoldActive(props.active.boldActive);
+    setItalicActive(props.active.italicActive);
+    setPos(props.active.pos);
+  }, [props]);
 
-  // function handleOpenDropdown(type) {
-  //   if (type === "pos") {
-  //     setOpenPositionDropdown(!openPositionDropdown);
-  //   }
-  // }
+  function handleOpenDropdown(type) {
+    if (type === "pos") {
+      setOpenPositionDropdown(!openPositionDropdown);
+    }
+  }
 
-  // function changePos(pos) {
-  //   if (openPositionDropdown) {
-  //     setOpenPositionDropdown(!openPositionDropdown);
-  //   }
-  //   props.changePos(pos);
-  // }
+  function changePos(pos) {
+    if (openPositionDropdown) {
+      setOpenPositionDropdown(!openPositionDropdown);
+    }
+    props.changePos(pos);
+  }
 
   return (
     <>
@@ -37,7 +37,7 @@ function Toolbar() {
         <span>Tools</span>
         <span>Help</span>
       </div>
-      {/* <div id="toolbar" className="toolbar">
+      <div id="toolbar" className="toolbar">
         <div
           id="bold"
           onClick={() => props.newTag("bold")}
@@ -80,7 +80,7 @@ function Toolbar() {
             <span className="arrow-down"></span>
           </div>
         </div>
-      </div> */}
+      </div>
     </>
   );
 }
