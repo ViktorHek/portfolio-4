@@ -26,7 +26,11 @@ const journey = {
           realize that you don't know anything. I knew I had a lot to learn and thanks to my
           internship at Talentech, I did. It's a company with a full-scale development team. Packed
           with competent back-end/front-end developers, UX designers, QA testers and I was a sponge
-          in the middle absorbing everything I could learn.
+          in the middle absorbing everything I could learn. My main takeaway from Talentech is how
+          to work with other people. When it comes to both my hobby project and my work experience I
+          was used to creating code that works for me and makes sense to me. Talentech taught me how
+          to create code that makes sense for someone else 5 years in the future. They gave me the
+          structure and mindset that is required when working with other people.
         </p>
       </fieldset>
       <br />

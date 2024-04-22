@@ -63,6 +63,7 @@ function App() {
       minimized(id)
     }
     if (collection.length === 26) {
+      setCollection([...collection, "final"]);
       setTimeout(() => {
         addWindow(event, "final", 27);
       }, 400);
@@ -79,7 +80,7 @@ function App() {
           top: toLow ? "auto" : event.pageY,
           left: toWide ? "auto" : event.clientX,
           bottom: toLow ? 50 : "auto",
-          right: toWide ? window.innerWidth - event.clientX : "auto",
+          right: toWide ? window.innerWidth - event.clientX : "auto"
         };
 
     let arr = conList;

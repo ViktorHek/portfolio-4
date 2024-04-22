@@ -1,5 +1,5 @@
 const dwemmer = {
-  title: "Elder Scroll Lore Theory",
+  title: "Elder Scroll Theory",
   size: "big",
   html: (
     <div className="content">
