@@ -39,6 +39,9 @@ const skills = {
           <li>Agil Development</li>
           <li>Scrum</li>
           <li>Test Driven Development</li>
+          <li>Docker</li>
+          <li>PWA</li>
+          <li>REST</li>
         </ul>
       </fieldset>
     </div>

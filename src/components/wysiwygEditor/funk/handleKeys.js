@@ -84,6 +84,7 @@ function handleKeys(event, styles) {
       placeholder.remove();
       break;
     case "backspace":
+      console.log('gg: ', placeholder.previousElementSibling)
       if (
         editor.children.length === 1 &&
         editor.firstElementChild.children.length === 1 &&

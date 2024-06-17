@@ -6,7 +6,7 @@ import handleKeys from "./funk/handleKeys";
 import "./index.css";
 
 function WusiwygEditor() {
-  const { ref, isEditorFocused, setIsEditorFocused } = HandleEditorFocus(true);
+  const { ref, isEditorFocused, setIsEditorFocused } = HandleEditorFocus(false);
   const [boldActive, setBoldActive] = useState(false);
   const [italicActive, setItalicActive] = useState(false);
   const [pos, setPos] = useState("left");
