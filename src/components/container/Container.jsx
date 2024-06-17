@@ -40,7 +40,6 @@ function Container(props) {
     <>
       {isMinimized ? (
         <div className="mini-app-container2">
-          {/* <div className="mini-app-container" style={{ display: isClosed ? "none" : "block" }}> */}
           <div className="header-container2">
             <div className="header-min-btn2 btn2" onClick={() => clickMin(id)}>
               <span></span>
@@ -55,7 +54,6 @@ function Container(props) {
       ) : (
         <div style={style} id={`cc${id}`} draggable="true" onDragStart={startDrag}>
           <div className="app-container2">
-            {/* <div className="app-container" style={{ display: isClosed ? "none" : "block" }}> */}
             <div className="app-inner-container2">
               <div className="header-container2">
                 <div className="header-min-btn2 btn2" onClick={() => clickMin(id)}>

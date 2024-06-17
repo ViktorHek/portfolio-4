@@ -59,57 +59,41 @@ function WusiwygEditor() {
   function handleArrows(key) {
     if (key === "ArrowRight") {
       movePlaceholder("right");
-    }
-    if (key === "ArrowLeft") {
+    } else {
       movePlaceholder("left");
     }
+    // if (key === "ArrowLeft") {
+    //   movePlaceholder("left");
+    // }
   }
 
   function movePlaceholder(where) {
-    let placeholder = document.getElementById("placeholder");
+    const placeholder = document.getElementById("placeholder");
     const editor = document.getElementById("editor");
     let newPlaceHolder = document.createElement("p");
     newPlaceHolder.id = "placeholder";
-    newPlaceHolder.class = "placeholder";
     newPlaceHolder.className = "placeholder";
-    newPlaceHolder.name = "placeholder";
 
-    if (editor.lastElementChild.lastElementChild.lastElementChild.id === "placeholder") {
-      if (placeholder.previousElementSibling) {
-        if (placeholder.previousElementSibling.innerHTML === "&nbsp;" && where === "left") {
-          placeholder.parentElement.previousElementSibling.appendChild(newPlaceHolder);
-          placeholder.remove();
-          return;
+    const sibling = where === "left" ? "previousElementSibling" : "nextElementSibling";
+    const child = where === "left" ? "lastChild" : "firstChild";
+    const initChild = where === "left" ? "firstChild" : "lastChild";
+    const pos = where === "left" ? "beforebegin" : "afterend";
+    let target = undefined;
+    if (placeholder[sibling]) {
+      target = placeholder[sibling];
+    } else {
+      if (placeholder.parentElement[sibling]) {
+        target = placeholder.parentElement[sibling][child];
+      } else {
+        if (placeholder.parentElement.parentElement[sibling]) {
+          target = placeholder.parentElement.parentElement[sibling][child][child];
+        } else {
+          target = editor[initChild][initChild][initChild];
         }
       }
     }
-
-    const siblings = Array.from(placeholder.parentElement.children);
-    const currentIndex = siblings.indexOf(placeholder);
-    let sibling = where === "left" ? "previousElementSibling" : "nextElementSibling";
-    let child = where === "left" ? "lastChild" : "firstChild";
-    let ajust = where === "left" ? "beforebegin" : "afterend";
-    let isInit = currentIndex === 0 && where === "left";
-    let isWordStart = currentIndex === 1 && where === "left";
-    let isWordEnd = currentIndex === siblings.length - 1 && where === "right";
-    console.log({ isWordEnd });
-    if (!isWordStart && !isWordEnd && !isInit) {
-      placeholder[sibling].insertAdjacentElement(ajust, newPlaceHolder);
-      placeholder.remove();
-    } else {
-      const firstSibling = editor.firstChild.firstChild.firstChild.nextSibling || {
-        id: null,
-      };
-      const lastEl = editor.lastChild.lastChild.lastChild;
-      if (firstSibling.id === "placeholder" || lastEl.id === "placeholder") {
-        return;
-      }
-      const target = placeholder.parentElement[sibling]
-        ? placeholder.parentElement[sibling][child]
-        : placeholder.parentElement.parentElement[sibling][child][child];
-      target.insertAdjacentElement("afterend", newPlaceHolder);
-      placeholder.remove();
-    }
+    target.insertAdjacentElement(pos, newPlaceHolder);
+    placeholder.remove();
   }
 
   function clickOut(event) {
@@ -137,7 +121,6 @@ function WusiwygEditor() {
       }
       const placeholder = document.getElementById("placeholder");
       placeholder.remove();
-
     }
   }
 
