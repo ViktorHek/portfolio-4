@@ -41,11 +41,11 @@ function Container(props) {
       {isMinimized ? (
         <div className="mini-app-container2">
           <div className="header-container2">
-            <div className="header-min-btn2 btn2" onClick={() => clickMin(id)}>
+            <div className="header-min-btn2 btn" onClick={() => clickMin(id)}>
               <span></span>
             </div>
             <span className="header-text2">{newMiniTitle}</span>
-            <div className="header-close-btn2 btn2" onClick={() => clickClose(id)}>
+            <div className="header-close-btn2 btn" onClick={() => clickClose(id)}>
               <span></span>
               <span></span>
             </div>
@@ -56,11 +56,11 @@ function Container(props) {
           <div className="app-container2">
             <div className="app-inner-container2">
               <div className="header-container2">
-                <div className="header-min-btn2 btn2" onClick={() => clickMin(id)}>
+                <div className="header-min-btn2 btn" onClick={() => clickMin(id)}>
                   <span></span>
                 </div>
                 <span className="header-text2">{id === "editorDude" ? "WUSIWUG-Editor" : title}</span>
-                <div className="header-close-btn2 btn2" onClick={() => clickClose(id)}>
+                <div className="header-close-btn2 btn" onClick={() => clickClose(id)}>
                   <span></span>
                   <span></span>
                 </div>

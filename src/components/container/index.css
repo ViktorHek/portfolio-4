@@ -61,31 +61,6 @@
   /* padding: 2px; */
 }
 
-.btn2 {
-  height: 26px;
-  width: 26px;
-  background-color: #7b7e79;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  border-right: 2px solid rgb(105, 106, 104);
-  border-bottom: 2px solid rgb(105, 106, 104);
-  border-top: 2px solid #c1d2b5;
-  border-left: 2px solid #c1d2b5;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.btn2:hover {
-  background-color: rgb(86, 85, 85);
-  border-right: 2px solid rgb(57, 56, 56);
-  border-bottom: 2px solid rgb(57, 56, 56);
-  border-left: 2px solid rgb(114, 111, 111);
-  border-top: 2px solid rgb(114, 111, 111);
-}
-
 .box2 {
   display: flex;
   justify-content: center;
