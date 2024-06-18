@@ -1,11 +1,12 @@
 import { useState, useEffect, useRef } from "react";
 
 function HandleEditorFocus(init) {
-  const [isEditorFocused, setIsEditorFocused] = useState(init)
-  const ref = useRef(null)
+  const [isEditorFocused, setIsEditorFocused] = useState(init);
+  const ref = useRef(null);
   function handleClickOutsideEditor(event) {
-    if(ref.current && !ref.current.contains(event.target)) {
-      setIsEditorFocused(false)
+    if (ref.current && !ref.current.contains(event.target)) {
+      console.log("hej");
+      setIsEditorFocused(false);
     }
   }
   useEffect(() => {
@@ -17,4 +18,4 @@ function HandleEditorFocus(init) {
   return { ref, isEditorFocused, setIsEditorFocused };
 }
 
-export default HandleEditorFocus
+export default HandleEditorFocus;

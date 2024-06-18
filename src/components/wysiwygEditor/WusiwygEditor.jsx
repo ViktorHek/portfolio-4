@@ -10,10 +10,6 @@ function WusiwygEditor() {
   const [boldActive, setBoldActive] = useState(false);
   const [italicActive, setItalicActive] = useState(false);
   const [pos, setPos] = useState("left");
-  // const [isClosed, setIsClosed] = useState(false);
-  // const [isMinimized, setIsMinimized] = useState(false);
-
-  const arrowKeys = ["ArrowDown", "ArrowUp", "ArrowRight", "ArrowLeft"];
 
   useEffect(() => {
     window.addEventListener("mousedown", clickOut);
@@ -49,52 +45,9 @@ function WusiwygEditor() {
     event.preventDefault();
     if (!isEditorFocused) return;
     let styles = getStyle();
-    if (arrowKeys.includes(event.code)) {
-      handleArrows(event.code);
-    } else {
-      handleKeys(event, styles);
-    }
+      handleKeys(event.code, styles);
+
   });
-
-  function handleArrows(key) {
-    if (key === "ArrowRight") {
-      movePlaceholder("right");
-    } else {
-      movePlaceholder("left");
-    }
-    // if (key === "ArrowLeft") {
-    //   movePlaceholder("left");
-    // }
-  }
-
-  function movePlaceholder(where) {
-    const placeholder = document.getElementById("placeholder");
-    const editor = document.getElementById("editor");
-    let newPlaceHolder = document.createElement("p");
-    newPlaceHolder.id = "placeholder";
-    newPlaceHolder.className = "placeholder";
-
-    const sibling = where === "left" ? "previousElementSibling" : "nextElementSibling";
-    const child = where === "left" ? "lastChild" : "firstChild";
-    const initChild = where === "left" ? "firstChild" : "lastChild";
-    const pos = where === "left" ? "beforebegin" : "afterend";
-    let target = undefined;
-    if (placeholder[sibling]) {
-      target = placeholder[sibling];
-    } else {
-      if (placeholder.parentElement[sibling]) {
-        target = placeholder.parentElement[sibling][child];
-      } else {
-        if (placeholder.parentElement.parentElement[sibling]) {
-          target = placeholder.parentElement.parentElement[sibling][child][child];
-        } else {
-          target = editor[initChild][initChild][initChild];
-        }
-      }
-    }
-    target.insertAdjacentElement(pos, newPlaceHolder);
-    placeholder.remove();
-  }
 
   function clickOut(event) {
     if (!isEditorFocused) return;
