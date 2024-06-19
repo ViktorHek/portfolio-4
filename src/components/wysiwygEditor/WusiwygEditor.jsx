@@ -57,10 +57,12 @@ function WusiwygEditor() {
     if (event.target.parentElement.parentElement.parentElement === null) return;
     if (
       event.target.parentElement.parentElement.parentElement === "editor" ||
-      // event.target.parentElement.parentElement.id === "editor" ||
-      // event.target.parentElement.id === "editor" ||
+      event.target.parentElement.parentElement.id === "editor" ||
+      event.target.parentElement.id === "editor" ||
       event.target.id !== "editorbackground"
     ) {
+      const editor = document.getElementById("editor");
+      editor.focus()
       const tag = document.createElement("p");
       tag.id = "placeholder";
       tag.class = "placeholder";
@@ -69,7 +71,6 @@ function WusiwygEditor() {
       if (event.target.parentElement.parentElement.parentElement.id === "editor") {
         event.target.insertAdjacentElement("afterend", tag);
       } else {
-        const editor = document.getElementById("editor");
         editor.lastChild.lastChild.appendChild(tag);
       }
       const placeholder = document.getElementById("placeholder");
