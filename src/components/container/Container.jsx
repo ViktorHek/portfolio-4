@@ -87,16 +87,10 @@ function Container(props) {
                     {id === "flower" ? <Flower fasthandle={clickFlower} /> : null}
                     {id === "intro" ? <Intro /> : null}
                     {special.includes(id) === false ? html : null}
-                    {/* <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
-                      {index}/26
-                    </div> */}
-                    {/* <div className="editor">{text}</div> */}
                   </div>
                 </div>
               ) : (
                 <WusiwygEditor />
-                // { id: String === "dvdScreen" ? <DvdScreen /> : null }
-                // { id: String === "dvdScreen" ? <DvdScreen /> : null }
               )}
               <div style={{ position: "absolute", bottom: 10, right: 28, color: "#a691df" }}>
                 {index}/26

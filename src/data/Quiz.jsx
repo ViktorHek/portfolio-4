@@ -76,12 +76,13 @@ function Quiz(props) {
     <>
       {win ? (
         <div className="content">
-          {/* <h1 style={{ textAlign: "center" }}>Winner!</h1> <br /> */}
-          <fieldset><legend>Winner!</legend>          <p>
-            Congratulations! You will gain access to the Toolbar. This will allow you to download my
-            resume, personal letter and a doodle
-          </p>
-</fieldset>
+          <fieldset>
+            <legend>Winner!</legend>
+            <p>
+              You will now gain access to the Toolbar. This will allow you to download
+              my resume, personal letter and a doodle
+            </p>
+          </fieldset>
         </div>
       ) : (
         <div className="content">

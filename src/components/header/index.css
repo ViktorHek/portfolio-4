@@ -1,4 +1,10 @@
-/* // $slimeColor: #14ee0c; */
+#base_rect {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .main_drip_container {
   position: absolute;
   top: 99px;
@@ -6,13 +12,13 @@
   height: 300px;
   width: 100%;
   margin: 0px;
-
   overflow: hidden;
   display: grid;
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
   z-index: 99;
 }
+
 .crazy_drip_container {
   position: absolute;
   top: 87px;
@@ -20,11 +26,11 @@
   height: 60%;
   width: 100%;
   margin: 0px;
-
   overflow: hidden;
   display: grid;
   grid-auto-flow: column;
 }
+
 .main_drop_container {
   display: flex;
   flex-direction: row;
@@ -39,131 +45,44 @@
   grid-auto-columns: 1fr;
   grid-auto-flow: column;
 }
-.drip-xs {
+
+.drop {
+  width: 100%;
+  margin: 0px auto;
+  transform: translateY(-130px);
+  animation: scroll 20s infinite;
+}
+
+.drip {
   display: flex;
   justify-content: center;
   width: 100%;
   animation: drip-effect ease-in-out 10s infinite;
   height: 20%;
+}
+
+.xs {
   animation-delay: 0s;
 }
-.drip-small {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  animation: drip-effect ease-in-out 10s infinite;
-  height: 20%;
+.small {
   animation-delay: 2s;
 }
-.drip-medium {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  animation: drip-effect ease-in-out 10s infinite;
-  height: 20%;
+.medium {
   animation-delay: 5s;
 }
-.drip-big {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  animation: drip-effect ease-in-out 10s infinite;
-  height: 20%;
+.big {
   animation-delay: 7s;
 }
-#base_rect {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-@keyframes drip-effect {
-  0% {
-    height: 20%;
-  }
-  50% {
-    height: 100%;
-  }
-  100% {
-    height: 20%;
-  }
-}
-.drop_container {
-  /* display: flex; */
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  /* top: 100px; */
-
-  overflow: hidden;
-  transform: translateY(-50px);
-  animation: scroll 20s infinite;
-}
-.drop-xs {
-  width: 150px;
-  margin: 0px auto;
-  transform: translateY(-50px);
-  /* animation: scroll 10s infinite; */
-  animation: scroll 20s infinite;
-  animation-delay: 0s;
-}
-.drop-small {
-  width: 150px;
-  margin: 0px auto;
-  transform: translateY(-50px);
-  animation: scroll 20s infinite;
-
-  animation-delay: 2s;
-}
-.drop-medium {
-  width: 150px;
-  margin: 0px auto;
-  transform: translateY(-50px);
-  animation: scroll 20s infinite;
-
-  animation-delay: 5s;
-}
-.drop-big {
-  width: 150px;
-  margin: 0px auto;
-  transform: translateY(-50px);
-  /* animation: scroll 10s infinite; */
-  animation: scroll 20s infinite;
-
-  animation-delay: 7s;
-}
-.drop-xs2 {
-  width: 150px;
-  margin: 0px auto;
-  transform: translateY(-50px);
-  /* animation: scroll 10s infinite; */
-  animation: scroll 20s infinite;
+.xs2 {
   animation-delay: 10s;
 }
-.drop-small2 {
-  width: 150px;
-  margin: 0px auto;
-  transform: translateY(-50px);
-  animation: scroll 20s infinite;
-
+.small2 {
   animation-delay: 12s;
 }
-.drop-medium2 {
-  width: 150px;
-  margin: 0px auto;
-  transform: translateY(-50px);
-  animation: scroll 20s infinite;
-
+.medium2 {
   animation-delay: 15s;
 }
-.drop-big2 {
-  width: 150px;
-  margin: 0px auto;
-  transform: translateY(-50px);
-  /* animation: scroll 10s infinite; */
-  animation: scroll 20s infinite;
-
+.big2 {
   animation-delay: 17s;
 }
 
@@ -178,6 +97,18 @@
   animation: sidedrop 5s infinite linear;
 }
 
+@keyframes drip-effect {
+  0% {
+    height: 20%;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 20%;
+  }
+}
+
 @keyframes sidedrop {
   0% {
     top: -150px;
@@ -189,7 +120,7 @@
 
 @keyframes scroll {
   0% {
-    transform: translateY(-50px);
+    transform: translateY(-1300px);
   }
   20% {
     transform: translateY(0px);

@@ -2,16 +2,16 @@ import "./index.css";
 
 function Header() {
   const drips = [
-    { id: 1, class: "drip-xs", color: "fill: #0C134F;" },
-    { id: 3, class: "drip-medium", color: "fill: #0C134F;" },
-    { id: 2, class: "drip-small", color: "fill: #0C134F;" },
-    { id: 4, class: "drip-big", color: "fill: #0C134F;" },
+    { id: 1, class: "xs", color: "fill: #0C134F;" },
+    { id: 3, class: "medium", color: "fill: #0C134F;" },
+    { id: 2, class: "small", color: "fill: #0C134F;" },
+    { id: 4, class: "big", color: "fill: #0C134F;" },
   ];
   const drops = [
-    { id: 1, class: "drop-xs", color: "fill: #0C134F;" },
-    { id: 3, class: "drop-medium", color: "fill: #0C134F;" },
-    { id: 2, class: "drop-small", color: "fill: #0C134F;" },
-    { id: 4, class: "drop-big", color: "fill: #0C134F;" },
+    { id: 1, class: "xs", color: "fill: #0C134F;" },
+    { id: 3, class: "medium", color: "fill: #0C134F;" },
+    { id: 2, class: "small", color: "fill: #0C134F;" },
+    { id: 4, class: "big", color: "fill: #0C134F;" },
   ];
 
   return (
@@ -43,7 +43,7 @@ function Header() {
               <svg
                 fill="#0C134F"
                 key={el.id}
-                className={el.class}
+                className={`drip ${el.class}`}
                 viewBox="0 0 400 400"
                 xmlns="http://www.w3.org/2000/svg"
                 preserveAspectRatio="none">
@@ -56,7 +56,7 @@ function Header() {
         <div className="main_drop_container">
           {drops.map((drop) => {
             return (
-              <div className={drop.class} key={drop.id}>
+              <div className={`drop ${drop.class}`} key={drop.id}>
                 <svg fill="#0C134F" id={drop.id} viewBox="0 0 100 100" preserveAspectRatio="none">
                   <circle cx="50" cy="71" r="25" />
                   <path d="M50 3L74.2487 64.5H25.7513L50 3Z" />
@@ -68,7 +68,7 @@ function Header() {
         <div className="main_drop_container">
           {drops.map((drop) => {
             return (
-              <div className={`${drop.class}2`} key={drop.id}>
+              <div className={`drop ${drop.class}2`} key={drop.id}>
                 <svg fill="#0C134F" id={drop.id} viewBox="0 0 100 100" preserveAspectRatio="none">
                   <circle cx="50" cy="71" r="25" />
                   <path d="M50 3L74.2487 64.5H25.7513L50 3Z" />
