@@ -4,6 +4,7 @@ import SmallBg from "./animations/SmallBg";
 import Header from "./components/header/Header";
 import Container from "./components/container/Container";
 import King from "./animations/King";
+import Keyboard from "./components/wysiwygEditor/components/Keyboard";
 
 function App() {
   const isTablet = window.innerWidth < 768;
@@ -206,6 +207,7 @@ function App() {
       <div className="outer-king-container">
         <King />
       </div>
+      <Keyboard/>
     </div>
   );
 }

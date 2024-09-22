@@ -62,7 +62,6 @@ function WusiwygEditor() {
       event.target.id !== "editorbackground"
     ) {
       const editor = document.getElementById("editor");
-      editor.focus()
       const tag = document.createElement("p");
       tag.id = "placeholder";
       tag.class = "placeholder";
@@ -133,7 +132,8 @@ function WusiwygEditor() {
       id="box"
       ref={ref}
       onClick={() => setIsEditorFocused(true)}
-      className={`${isEditorFocused ? "box-active " : ""} box`}>
+      className={`${isEditorFocused ? "box-active " : ""} box`}
+    >
       <Toolbar
         newTag={newTag}
         changePos={changePos}
