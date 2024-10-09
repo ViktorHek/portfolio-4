@@ -1,8 +1,8 @@
 import { useEffect } from "react";
 
 function DvdScreen() {
-  const conatinerHeight = 340;
-  const conatinerWidth = 480;
+  const conatinerHeight = 320;
+  const conatinerWidth = 300;
   const boxHeight = 40;
   const boxWidth = 100;
   const colors = ["#749e2c", "#1b5489", "#891b73", "#001301FF"];
