@@ -4,7 +4,7 @@ import SmallBg from "./animations/SmallBg";
 import Header from "./components/header/Header";
 import Container from "./components/container/Container";
 import King from "./animations/King";
-import Keyboard from "./components/wysiwygEditor/components/Keyboard";
+// import Keyboard from "./components/wysiwygEditor/components/Keyboard";
 
 function App() {
   const isTablet = window.innerWidth < 768;
@@ -61,7 +61,7 @@ function App() {
         addWindow(event, id, index);
       }
     } else {
-      minimized(id)
+      minimized(id);
     }
     if (collection.length === 26) {
       setCollection([...collection, "final"]);
@@ -81,7 +81,7 @@ function App() {
           top: toLow ? "auto" : event.pageY,
           left: toWide ? "auto" : event.clientX,
           bottom: toLow ? 50 : "auto",
-          right: toWide ? window.innerWidth - event.clientX : "auto"
+          right: toWide ? window.innerWidth - event.clientX : "auto",
         };
 
     let arr = conList;
@@ -182,6 +182,8 @@ function App() {
                   key={con.id}
                 />
               );
+            } else {
+              return null;
             }
           })
         : null}
@@ -200,6 +202,8 @@ function App() {
                   />
                 </div>
               );
+            } else {
+              return null;
             }
           })}
         </div>
