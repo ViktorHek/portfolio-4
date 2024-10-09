@@ -78,7 +78,7 @@ const workExperience = {
             <strong>Karlssons Skola:&nbsp;</strong>Substitute Teacher<p>Mars 2020 - May 2020</p>
           </li>
           <li className="lid">
-            <strong>Västra Hisingens Stadsdelsförvaltning:&nbsp;</strong>
+            <strong>Västra Hisingens</strong>&nbsp;<strong>Stadsdelsförvaltning:&nbsp;</strong>
             <span>Comunicatior internship</span>
             <p>Mars 2019 - June 2019</p>
           </li>
