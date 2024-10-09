@@ -207,7 +207,7 @@ function App() {
       <div className="outer-king-container">
         <King />
       </div>
-      <Keyboard/>
+      {/* <Keyboard/> */}
     </div>
   );
 }

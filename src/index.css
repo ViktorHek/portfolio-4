@@ -143,7 +143,7 @@ ul > li {
   pointer-events: none;
   bottom: -1px;
   right: 20px;
-  /* animation: moveking 30s 15s infinite ease-in-out; */
+  animation: moveking 30s 15s infinite ease-in-out;
   font-family: "Times New Roman", Times, serif;
 }
 
