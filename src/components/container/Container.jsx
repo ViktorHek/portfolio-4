@@ -27,7 +27,7 @@ function Container(props) {
 
   let newMiniTitle = title
   if(id === "editorDude") {
-    newMiniTitle = "WUSIWUG-Editor"
+    newMiniTitle = "WYSIWYG-Editor"
   }
   if(id === "dwemmer") {
     newMiniTitle = "TES theory"
@@ -59,7 +59,7 @@ function Container(props) {
                 <div className="header-min-btn2 btn" onClick={() => clickMin(id)}>
                   <span></span>
                 </div>
-                <span className="header-text2">{id === "editorDude" ? "WUSIWUG-Editor" : title}</span>
+                <span className="header-text2">{id === "editorDude" ? "WYSIWYG-Editor" : title}</span>
                 <div className="header-close-btn2 btn" onClick={() => clickClose(id)}>
                   <span></span>
                   <span></span>
